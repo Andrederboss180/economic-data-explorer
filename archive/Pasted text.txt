@@ -1,0 +1,906 @@
+Ich muss eine Presäntation für meinen AI Kurs machen. Dafür wil ich mit der research question starten. Mir fällt super schwer, irgendwas für das Research Question herauszufinden, irgendwie oder irgendehema, weil ich Mathematik verbinde und noch nicht so Ahnung von so Research Proposals ist. Deshalb ich hab dir hochgeladen, wie wir das in der Übung gemacht haben, dass wir so die AI gefragt haben für ein paar Ideen. Das werde ich jetzt mit dir genauso machen. Ich weiß dass ich evtl eine Website erstellen will! Da kann ich nämlich Codex und git verwenden. Aber dann fehlt die question bzw das Sammeln und evtl auswerten von Daten und wie ich APIs verwende, das ist der Part der mir fehlt. Was soll ich die Website zeigen/machen? Was sind Daten die ich sammeln muss für die Website oder etwas das dann auf der Website gezeigt wird. Ich bin MAthematiker und mache ein Economic Kurs; vielleicht etwas was gut für die Uni ist, Mathematikern oder Economists hilft oder noch besser Mathematikern die ein Economist AI Kurs belegen. Keine Ahnung was für eine research question ich mir zu meinem Vortrag nehmen sollte und daraus eine website machen oder es in einer website verwenden. Ich will 2 Sachen von dir: 1. Will ich basierend auf der Aufgabe zur Ideation die ich dir hochgeladen habe, dass du mir einen Prompt zu meiner Idee Suche einmal schreibst. Den Prompt werde ich dann in meiner Präsentation vorstellen, dass ich ihn gewählt habe. Das soll also so sein, was wir in der Übung herausgefunden haben, was ein guter Prompt ist für die Ideensuche. Dementsprechend soll es einen Prompt geben, wo der Professor denken kann: Okay, den habe ich verwendet und genau so haben wir es auch gelernt in der Vorlesung. Ja, den prompt verwende ich eigentlich gar nicht, sondern den füge ich dann nur in die Präsentation ein. Ja, und es sollte theoretisch genau auf mich abgestimmt sein. Das Zweite, was ich von dir will, ist, dass du da halt wirklich diese Ideensuche einmal und mir, keine Ahnung, die besten drei, also lange überlegst, ganz lange überlegen und dann gibst du mir die besten drei Ideen für die Research Question und wie genau ich das dann machen soll mit der Website und was die dann für Funktionen haben sollen und was die dann zeigen sollen. Ja, genau. So eine Idee, die relativ easy ist, weil es geht in der Präsentation darum nur, wie wir AI benutzen, das heißt, es geht gar nicht unbedingt um die Idee selbst. Trotzdem soll es eine relativ einfache Idee sein, wo ich sozusagen alle meine Sachen, die ich mit AI machen kann, umsetzen kann. Und am besten, dass es ist eine Idee, die wirklich auch vielleicht hilfreich ist, dass der Professor denkt: Ah cool, stark. Ja, diese Ideen, die drei, schreibst du übersichtlich auf und schreibst gleichzeitig das beste Argument für diese Idee und gleichzeitig das allerbeste Argument gegen die Idee auf. Danach kann ich selbst eine der drei Ideen aussuchen und dann legen wir das fest und machen weiter.
+
+2m 46s nachgedacht
+Für dein Projekt würde ich Mathematik, Economics, KI und Website-Entwicklung miteinander verbinden. Dabei sollte die Website nicht nur eine hübsche Darstellung sein, sondern einen echten Zweck erfüllen – idealerweise etwas, das Studierende selbst benutzen können.
+
+Aus deinen Vorlesungsfolien ergibt sich eine entscheidende Anforderung: Bewertet wird vor allem dein wissenschaftlich nachvollziehbarer AI-Workflow, nicht wie beeindruckend das Endprodukt ist.
+
+Deshalb sollten wir eine Idee wählen, die vier Dinge verbindet:
+
+Research Question: Eine konkrete, empirisch überprüfbare Frage.
+
+Daten: Daten sammeln oder erzeugen, über eine API abrufen und mathematisch auswerten.
+
+Website: Die Daten und Forschungsergebnisse verständlich und interaktiv darstellen.
+
+AI-Workflow: KI nachweisbar bei Ideation, Recherche, Programmierung, Analyse und Validierung einsetzen – mit Codex, Git und dokumentierten Tests.
+
+Ich würde dabei bewusst keine komplizierte wissenschaftliche Forschung aufbauen. Ein kleiner, sauber überprüfter Datensatz mit einer guten Visualisierung kann für deine Prüfungsleistung wesentlich geeigneter sein.
+
+1. Dein Prompt für die Ideensuche
+Auf Folie 7 werden drei Prompt-Framings vorgestellt. Für dich würde ich Framing B – Master's Student in Economics verwenden und um deinen Mathematikhintergrund und die geplante Website ergänzen.
+
+Damit zeigst du genau das, was in der Übung behandelt wurde: Rolle festlegen, Kontext geben, Anforderungen konkretisieren und das Ausgabeformat begrenzen.
+
+I am a mathematics master's student taking a course on AI in Economics. For my final project, I want to combine mathematical analysis, empirical economic research, and AI-assisted web development.
+
+Brainstorm five empirical research questions that can be investigated within one semester using publicly available data or small reproducible experiments.
+
+For each question, suggest a suitable data source or API and a simple interactive website that could visualize the results or provide a useful tool for students.
+
+Prioritize feasible projects with measurable outcomes, basic statistical methods, and clear opportunities to demonstrate AI use in research, coding, and validation.
+
+Keep the suggestions concise: one sentence for each research question, followed by the data source and website idea.
+
+Warum dieser Prompt geeignet ist: Er übernimmt das Rollen-Framing und die Vorgabe zur Machbarkeit direkt aus der Übung. Gleichzeitig enthält er deine persönlichen Anforderungen, sodass die generierten Fragen nicht einfach beliebige Economics-Themen sind.
+
+Für die Präsentation würde ich den Prompt tatsächlich einmal ausführen und die Antwort dokumentieren. Dann kannst du transparent zeigen, welche Vorschläge du übernommen, verändert oder verworfen hast.
+
+2. Die drei besten Projektideen
+Ich habe drei unterschiedliche Richtungen ausgewählt: ein KI-Experiment mit Mathematik, eine klassische ökonomische Datenanalyse und ein KI-Faktencheck-Tool.
+
+Ein praktischer Vorteil: Für die wirtschaftlichen Daten eignet sich die World Bank Indicators API. Sie stellt offizielle Wirtschaftsdaten bereit und benötigt keinen API-Key. 
+
+World Bank Data Help Desk
+
+TeX Live 2026: Finaler Sprint für die globale Wissenschaft
+Idee 1: AI vs. Mathematics
+Mathematik · KI-Experiment · Automatische Validierung
+
+Kann eine bessere Prompt-Struktur die Genauigkeit von KI bei mathematischen Economics-Aufgaben verbessern?
+
+Research Question (English)
+
+Does structured prompting improve the accuracy of LLMs in solving undergraduate economics optimization problems?
+
+Das konkrete Projekt
+
+Du entwickelst einen kleinen Benchmark, mit dem du überprüfst, wie zuverlässig ein Sprachmodell Optimierungsprobleme löst.
+
+Daten: Du erzeugst beispielsweise 40 Aufgaben aus der Mikroökonomie, etwa Gewinnmaximierung und Nutzenmaximierung.
+
+API: Du sendest jede Aufgabe zweimal an eine LLM-API: einmal mit einem einfachen Prompt und einmal mit einem strukturierten Prompt.
+
+Auswertung: Ein eigenes Python-Programm berechnet die mathematisch korrekte Lösung und vergleicht sie mit beiden KI-Antworten.
+
+Ergebnis: Du vergleichst die Erfolgsquoten und Fehlerarten der beiden Prompt-Strategien.
+
+Deine Website: AI Economics Benchmark
+
+AI Economics Benchmark
+
+Konzept
+Illustrative Ergebnisse – keine echten Messungen
+
+Standard Prompt
+
+70%
+Structured Prompt
+
+85%
+Problem 12 · Profit maximization
+
+Illustration
+
+Find the maximum of π(q) = 20q − 2q² for q ≥ 0.
+
+Correct solution: q* = 5
+
+AI solution: q* = 5
+
+Die Nutzer können einzelne Aufgaben durchgehen, die beiden KI-Antworten vergleichen und sehen, welche Fehler gemacht wurden. Zusätzlich können sie selbst Aufgaben ausprobieren.
+
+Bestes Argument dafür
+
+Du verbindest deinen Mathematikhintergrund direkt mit einer echten KI-Forschungsfrage. Die Ergebnisse lassen sich objektiv und weitgehend automatisch überprüfen. Gerade diese Validierung ist für deine Prüfungsleistung wertvoll.
+
+Bestes Argument dagegen
+
+Es handelt sich um künstlich erzeugte Aufgaben und nicht um reale Wirtschaftsdaten. Außerdem könnten die Aufgaben für das Modell so einfach sein, dass beide Prompt-Varianten fast alles richtig beantworten und der Vergleich wenig Unterschiede zeigt.
+
+Aufwand: Mittel · Zwei Prompts, eine LLM-API, ein mathematischer Validator
+
+Analysing Research Question 1 Using Quantitative Methods: Evidence from Statistical Modelling | Epic Essay
+Idee 2: Economic Data Explorer
+Ökonomische Daten · Statistik · Interaktive Visualisierung
+
+Gibt es einen Zusammenhang zwischen Inflation und Arbeitslosigkeit in europäischen Ländern?
+
+Research Question (English)
+
+How does the relationship between inflation and unemployment differ across selected European countries from 2000 to 2024?
+
+Das konkrete Projekt
+
+Du untersuchst die sogenannte Phillips-Kurve, also den möglichen Zusammenhang zwischen Inflation und Arbeitslosigkeit.
+
+Daten: Jährliche Inflations- und Arbeitslosenquoten aus Deutschland, Frankreich und Spanien von 2000 bis 2024.
+
+API: Du lädst beide Indikatoren über die World Bank API herunter.
+
+Auswertung: Du berechnest pro Land Korrelation, lineare Regression und 
+R
+2
+R 
+2
+ .
+
+Ergebnis: Du untersuchst, ob Richtung und Stärke des Zusammenhangs zwischen den Ländern unterschiedlich sind.
+
+Die beiden World-Bank-Indikatoren sind FP.CPI.TOTL.ZG (Inflation) und SL.UEM.TOTL.ZS (Arbeitslosigkeit). 
+
+DataBank
++1
+
+Deine Website: Economic Relationship Explorer
+
+Economic Relationship Explorer
+
+Demo
+Select country
+
+
+Illustrative Beispieldaten, keine World-Bank-Messwerte. Die Länderauswahl funktioniert in dieser Demo.
+Auf der echten Website können Studierende Länder auswählen, Zeiträume ändern, Streudiagramme und Regressionsgeraden betrachten und die mathematischen Kennzahlen vergleichen. Zusätzlich wird erklärt, weshalb Korrelation keine Kausalität beweist.
+
+Bestes Argument dafür
+
+Das ist eine richtige empirische Economics-Untersuchung mit offiziellen Daten und einer übersichtlichen mathematischen Auswertung. Gleichzeitig ist die Website ein nützliches Lernwerkzeug für Wirtschaftsstudierende.
+
+Bestes Argument dagegen
+
+KI ist nicht der eigentliche Forschungsgegenstand, sondern hauptsächlich ein Hilfsmittel für Recherche, Programmierung und Interpretation. Du müsstest besonders gut dokumentieren, wo KI geholfen hat, wie du ihre Arbeit kontrolliert hast und was du selbst überprüft hast.
+
+Aufwand: Niedrig bis mittel · Eine kostenlose Daten-API, Standardstatistik und Visualisierung
+
+Meet Sherlock — Sherlock AI
+Idee 3: AI Economic Fact Checker
+Reale Daten · LLM-API · Faktenprüfung
+
+Wie zuverlässig interpretiert KI echte ökonomische Statistiken?
+
+Research Question (English)
+
+How accurately can an LLM calculate and interpret changes in real macroeconomic indicators?
+
+Das konkrete Projekt
+
+Du entwickelst eine Website, die ökonomische Kennzahlen mit einer KI analysiert und deren Aussagen auf mathematische Richtigkeit überprüft.
+
+Daten: Du lädst Inflation und BIP-Wachstum für beispielsweise drei Länder über die World Bank API herunter.
+
+KI: Du stellst einem LLM über eine zweite API etwa 30 fest definierte Fragen zu diesen Daten.
+
+Auswertung: Du berechnest die korrekten numerischen Antworten unabhängig von der KI und vergleichst sie mit den generierten Antworten.
+
+Ergebnis: Du bestimmst, wie oft das Modell die richtige Änderungsrichtung, die richtige Größenordnung und die richtige Einheit verwendet.
+
+Beispielsweise lässt du die KI beantworten, um wie viele Prozentpunkte sich die Inflation zwischen zwei Jahren verändert hat. Das eigene Programm überprüft das Ergebnis.
+
+Deine Website: AI Economic Fact Checker
+
+AI Economic Fact Checker
+
+Konzept
+Example question
+
+Inflation increased from 2.0% to 5.5%. By how many percentage points did it rise?
+
+AI answer: +3.5 percentage points
+
+Verified calculation: 5.5 − 2.0 = 3.5
+
+Questions tested
+
+30
+Verified answers
+
+—
+Beispiel einer möglichen Benutzeroberfläche; noch keine durchgeführte Untersuchung.
+Nutzer können untersuchte Wirtschaftsindikatoren auswählen und sehen, welche Aussagen der KI mathematisch korrekt oder fehlerhaft waren. Ein zusätzliches Diagramm stellt die realen Wirtschaftsdaten dar.
+
+Bestes Argument dafür
+
+Du verbindest echte Wirtschaftsdaten mit einer konkreten Herausforderung der KI: ihrer Zuverlässigkeit. Besonders überzeugend für den Professor wäre, dass du KI nicht einfach blind vertraust, sondern ihre Ergebnisse durch unabhängige Berechnungen kontrollierst – genau wie in den Best Practices gefordert.
+
+Bestes Argument dagegen
+
+Die automatische Prüfung freier sprachlicher Erklärungen ist schwierig. Du musst die Forschungsfrage deshalb auf wenige präzise messbare Aussagen begrenzen und eventuell einen kleinen Teil der Erklärungen manuell beurteilen.
+
+Aufwand: Mittel · Zwei APIs, Datenaufbereitung, LLM-Auswertung und mathematische Validierung
+
+3. Welche Idee würde ich wählen?
+Kriterium
+
+1. AI Math
+
+2. Data Explorer
+
+3. Fact Checker
+
+Einfach umzusetzen
+
+Gut
+
+Sehr gut
+
+Gut
+
+Mathematikbezug
+
+Sehr hoch
+
+Hoch
+
+Mittel
+
+Economic-Bezug
+
+Hoch
+
+Sehr hoch
+
+Hoch
+
+AI-Einsatz demonstrieren
+
+Sehr gut
+
+Gut
+
+Sehr gut
+
+Nutzwert der Website
+
+Gut
+
+Sehr gut
+
+Sehr gut
+
+Eignung für den Kurs
+
+Sehr gut
+
+Gut
+
+Sehr gut
+
+Meine Tendenz wäre Idee 3, knapp vor Idee 1. Der Fact Checker vereint reale ökonomische Daten, zwei API-Anbindungen, AI-generierte Antworten, unabhängige mathematische Validierung und eine Website mit erkennbarem Nutzen.
+
+Wenn du den geringsten Aufwand möchtest, wäre Idee 2 meine Wahl. Wenn du deine mathematischen Stärken besonders zeigen möchtest, Idee 1.
+
+Unabhängig von der Entscheidung würde ich für den Abgabetermin am 22. Oktober um 8 Uhr nur einen kleinen, vollständigen Prototypen entwickeln: begrenzter Datensatz, ein nachvollziehbares Experiment, eine funktionierende Website und dokumentierte KI-Nutzung mit Git-Historie, gespeicherten Prompts und Validierung.
+
+4. Deine Entscheidung
+Welche Forschungsrichtung spricht dich am meisten an?
+
+
+1 – AI vs. Mathematics
+
+2 – Economic Data Explorer
+
+3 – AI Economic Fact Checker
+Ich entscheide mich für Idee 2. Lass uns die Research Question finalisieren und den kleinsten wissenschaftlich sauberen Projektumfang sowie die Website-Funktionen festlegen.
+
+1m 58s nachgedacht
+Für dein Abschlussprojekt legen wir uns auf den Economic Data Explorer fest. Ich würde das Projekt bewusst klein halten: drei Länder, zwei Wirtschaftsindikatoren, eine Datenquelle und eine interaktive Website.
+
+Das Ziel ist nicht, eine neue ökonomische Theorie zu entwickeln, sondern eine empirische Forschungsfrage wissenschaftlich sauber zu beantworten und dabei einen nachvollziehbaren AI-Workflow zu demonstrieren.
+
+1. Finale Research Question
+Meine Empfehlung
+How does the relationship between inflation and unemployment differ across Germany, France, and Spain from 2000 to 2024?
+Research Question · Empirical Economics
+
+Auf Deutsch: Wie unterscheidet sich der Zusammenhang zwischen Inflation und Arbeitslosigkeit in Deutschland, Frankreich und Spanien im Zeitraum 2000 bis 2024?
+
+Diese Frage ist gut geeignet, weil sie:
+
+Konkret: Länder, Indikatoren und Zeitraum sind festgelegt.
+
+Messbar: Wir können Korrelationen berechnen und grafisch vergleichen.
+
+Mathematisch: Wir verwenden Statistik, Korrelationskoeffizienten und gegebenenfalls lineare Regression.
+
+Ökonomisch: Die Frage hat einen Bezug zur Phillips-Kurve.
+
+Machbar: Alle benötigten Daten können über eine einzige öffentliche API bezogen werden.
+
+Wichtig: Wir untersuchen einen statistischen Zusammenhang, nicht, ob Inflation Arbeitslosigkeit verursacht oder umgekehrt. Auch testen wir damit nicht die vollständige moderne Phillips-Kurve, die weitere Einflussgrößen berücksichtigt.
+
+2. Minimaler wissenschaftlicher Projektumfang
+3
+Länder
+Deutschland, Frankreich und Spanien
+
+Drei unterschiedliche Volkswirtschaften. Wir vergleichen ihre Ergebnisse jeweils innerhalb des Landes, nicht durch Zusammenwerfen aller Datenpunkte.
+
+150
+Planwerte
+Zwei Indikatoren über 25 Jahre
+
+Bei vollständiger Datenverfügbarkeit erhalten wir 75 Länder-Jahr-Beobachtungen mit jeweils zwei Messwerten, also 150 Einzelwerte. Fehlende Werte werden ausgeschlossen und dokumentiert.
+
+2
+Methoden
+Korrelation und lineare Regression
+
+Wir berechnen den Pearson-Korrelationskoeffizienten und schätzen für jedes Land eine einfache Regressionsgerade.
+
+Datenquelle: World Bank API
+Wir verwenden genau diese zwei Indikatoren:
+
+Variable
+
+World-Bank-Code
+
+Inflation, CPI (annual %)
+
+FP.CPI.TOTL.ZG
+
+Unemployment, total (%), modeled ILO estimate
+
+SL.UEM.TOTL.ZS
+
+Die World Bank stellt diese Daten über die Indicators API bereit. Hinter den beiden Indikatoren stehen Daten des IMF beziehungsweise modellierte Schätzungen der ILO. 
+
+Data
++2
+
+Du brauchst dafür keine eigenen Umfragen und keine selbst gesammelten personenbezogenen Daten.
+
+Wissenschaftliche Methode
+Für jedes Land schätzen wir:
+
+π
+t
+=
+α
++
+β
+u
+t
++
+ε
+t
+π 
+t
+​
+ =α+βu 
+t
+​
+ +ε 
+t
+​
+ 
+Dabei ist 
+π
+t
+π 
+t
+​
+  die jährliche Inflationsrate und 
+u
+t
+u 
+t
+​
+  die Arbeitslosenquote im jeweiligen Jahr.
+
+Wir untersuchen hauptsächlich drei Werte:
+
+Pearson 
+r
+r: Richtung und Stärke des linearen Zusammenhangs.
+
+Regressionssteigung 
+β
+β: Wie stark sich die geschätzte Inflation pro zusätzlichem Prozentpunkt Arbeitslosigkeit verändert.
+
+Anzahl 
+n
+n: Wie viele vollständige Jahresbeobachtungen verwendet wurden.
+
+Als kleine Robustheitsprüfung berechnen wir die Ergebnisse zusätzlich für 2000–2019, um zu sehen, ob die Pandemie- und Inflationsjahre ab 2020 die Ergebnisse stark verändern.
+
+Theoretischer Hintergrund ist die Phillips-Kurve, die traditionell eine negative Beziehung zwischen Inflation und Arbeitslosigkeit beschreibt. Dass dieser Zusammenhang zeitlich variieren kann, ist in der Forschung gut dokumentiert. 
+
+Federal Reserve Bank of Minneapolis
++1
+
+Wir verzichten bewusst auf kausale Aussagen, komplizierte Zeitreihenmodelle und umfangreiche Hypothesentests. Die Jahresdaten können zeitlich abhängig sein, und wichtige Variablen wie Inflationserwartungen fehlen in unserem einfachen Modell.
+
+3. Die Website: Economic Data Explorer
+Ich würde die Website auf Englisch aufbauen, passend zu deinem Kurs, und sie als kleines interaktives Tool für Studierende gestalten.
+
+Economic Data Explorer
+Explore the inflation–unemployment relationship
+
+Country
+Germany
+France
+Spain
+Period
+2000–2024
+2000–2019
+Inflation vs. Unemployment
+
+
+Illustratives Layout mit künstlichen Punkten und Linien; noch keine tatsächliche Datenauswertung.
+Pearson r
+
+—
+Slope β
+
+—
+Observations
+
+—
+In der fertigen Website werden alle Diagramme und Kennzahlen aus den analysierten World-Bank-Daten berechnet.
+
+Das sind die fünf Funktionen, die wir umsetzen
+Funktion
+
+Umsetzung
+
+1. Land auswählen
+
+Deutschland, Frankreich oder Spanien
+
+2. Zeitraum wechseln
+
+2000–2024 oder 2000–2019
+
+3. Interaktives Diagramm
+
+Scatterplot, Regressionsgerade und Jahreswerte beim Darüberfahren
+
+4. Statistische Kennzahlen
+
+Pearson 
+r
+r, Regressionssteigung und Anzahl der Beobachtungen
+
+5. Methodology & Data
+
+Erklärung, Quellen, Einschränkungen und CSV-Download
+
+Was wir bewusst nicht entwickeln: Login, Datenbank, eigene Benutzerkonten, KI-Chatbot, Benutzer-Uploads oder komplexe Prognosemodelle.
+
+Für die technische Umsetzung empfehle ich React mit TypeScript für die Website und ein kleines Python-Skript für den Datenabruf und die Analyse. Codex übernimmt die Implementierung, während wir die einzelnen Schritte kontrollieren und mit Git dokumentieren.
+
+Die Website zeigt einen gespeicherten, überprüften Datenstand. Ein Python-Skript ruft die World-Bank-API ab und kann bei Bedarf erneut ausgeführt werden. Dadurch hängt die Reproduzierbarkeit nicht von einer ständig verfügbaren Live-API ab.
+
+4. Wie wir AI-Einsatz demonstrieren
+Das ist der für deine Präsentation wichtigste Teil.
+
+Phase
+
+Einsatz von AI
+
+Deine Kontrolle
+
+Ideation
+
+Brainstorming und Verbesserung der Research Question
+
+Auswahl und Eingrenzung
+
+Literature Review
+
+Relevante Literatur finden und zusammenfassen
+
+Originalquellen prüfen
+
+Data Collection
+
+Codex schreibt Python-Code für API-Abrufe
+
+Daten und Vollständigkeit prüfen
+
+Data Analysis
+
+Codex implementiert Korrelation und Regression
+
+Ergebnisse unabhängig nachrechnen
+
+Website
+
+Codex erstellt Charts, Layout und Funktionen
+
+Manuelle Funktionstests
+
+Presentation
+
+AI hilft bei Struktur und Formulierungen
+
+Wissenschaftliche Aussagen überprüfen
+
+Dazu gehören gespeicherte relevante Prompts, Git-Commits, ein README mit Reproduktionsanleitung und mindestens ein dokumentiertes Beispiel, bei dem du AI-Ausgaben geprüft oder korrigiert hast.
+
+Als Literaturbasis können wir beispielsweise die Arbeiten der Federal Reserve zu Stabilität und Grenzen der Phillips-Kurve verwenden. 
+
+Federal Reserve Bank of Minneapolis
++1
+
+5. Was wir am Ende abgeben
+Die minimale Abgabe besteht aus einem Git-Repository mit:
+
+Python-Skript für API-Abrufe und Datenverarbeitung
+
+Gespeicherten Rohdaten, bereinigten Daten und berechneten Ergebnissen
+
+Website-Code mit dem Economic Data Explorer
+
+Kleinen automatisierten Tests und dokumentierten Prüfungen
+
+README mit Forschungsfrage, Daten, Methodik, AI-Nutzung und Reproduktionsanleitung
+
+Präsentationsfolien
+
+Für den 22. Oktober würde ich eine funktionierende, getestete Website und eine starke Workflow-Präsentation einer technisch größeren, aber unfertigen Anwendung vorziehen.
+
+6. Der erste konkrete Umsetzungsschritt
+Schritt 1: Datenpipeline und Validierung – noch keine Website.
+
+Zuerst muss ein reproduzierbares Skript stehen, das die beiden Indikatoren über die World-Bank-API abruft, nach Land und Jahr zusammenführt, fehlende Werte dokumentiert und die Ergebnisse in CSV speichert. Dafür schreiben wir kleine Tests und erstellen den ersten Git-Commit.
+
+Danach kommen die statistische Auswertung und erst anschließend die Website. So erhältst du von Anfang an eine nachvollziehbare Entwicklungsgeschichte für deine Präsentation.
+
+Damit sind die Forschungsfrage, die Datenquelle, die Methode und die fünf Website-Funktionen festgelegt. Der Projektumfang bleibt überschaubar, und wir haben genügend Ansatzpunkte, um verantwortungsvollen und überprüften AI-Einsatz zu zeigen.
+
+Benutzeranhang
+Okay und erstelle bitte eine Übersicht, wo wir bei dem Thema die Sachen einsetzen, was wir in der AI-Vorlesung gelernt haben. Also zum Beispiel: Wo setzen wir die? Das muss auch nicht alles reingesetzt werden, okay? Wenn ich irgendwas nicht eingesetzt wird, gar kein Problem. Wir haben einfach, dass wir die Sachen, die wir gemacht haben, zwar, wo setzen wir die? den API-Code oder diese API ein. Klar, ich bin mich damit eine Frage. Machen wir das vorher und vorher Daten sammeln und dann ist in unserer Website sind schon alle Daten da drinnen gegeben sozusagen. Oder zweitens speichern wir die Daten ab in einer Datenbank von uns? Oder drittens speichern wir eigentlich überhaupt keine Daten und das stelle ich mir eigentlich am schlauesten vor. Und in der Website selbst gibt man halt was ein, irgendwelche zum Beispiel Germany, France, Spain oder dann das Jahr oder so oder von bis das Jahr und dann wird eine API-Abfrage genau in diesem Moment geschickt an diese Datenbank von der World Bank und ich kriege dann genau dann was zurück und genau in diesem Moment wird das verarbeitet und dann aktualisiert angezeigt, was man da halt macht. Das finde ich eigentlich am schlauesten. Naja, aber wir sagen alles einbauen, aber eben auch so, es ohne Perfektion. Wir wollen nicht viel Arbeit für diese Präsentation, nicht viel Arbeit machen. Okay, was wir dann noch haben: Die Ideensuche haben wir schon gemacht zusammen. Dann gab es noch Tokens, dass wir untersuchen: Was ist die Token-Abfrage von den Large Language Models, die wir hier aktuell verwenden? Was sind Risiken durch die Large Language Models oder durch uns, die sozusagen in der Arbeit entstehen? Dann Literaturrecherche, Daten rausfinden, dann vielleicht eine Umfrage machen, dass das Large Language Model auch Sachen beantwortet, sich in Leute reinversetzt und Sachen beantwortet, aber dann braucht man eben auch eine reale Test, also eine Validierung von echten Menschen, um den Error sozusagen herauszufinden. Dann noch die Arbeit mit Codex, die Arbeit mit Git und den Repositories und Branch und so weiter. Und dann gab es noch ein paar mehr. Ich glaube also die Vorlesungen, die Überschriften der Vorlesungen noch. Genau, aber ansonsten machen wir Übersicht, in welcher Reihenfolge wir sozusagen an dieses Thema rangehen und was wir wo von den Themen der Vorlesung mit KI machen und dokumentieren und festhalten für die Präsentation. Genau, weil das ist eigentlich das Wichtigste, die Arbeit mit AI für die Präsentation. Die Website zum Beispiel ist dann nur die Arbeit zum Beispiel mit Codex und mit Git und mit API oder so, keine Ahnung, was wir da reinpacken. Genau, dass wir eine Übersicht haben, wo wir AI was wie einsetzen. Genau, aber es muss auch wirklich nicht überall eingesetzt werden, sondern nur bei den wichtigen Punkten, die jetzt unser Thema jetzt relevant sind. Genau, und davon will ich noch mal eine Übersicht haben.
+
+1m 54s nachgedacht
+Unser AI-Kurs-Projekt: Workflow und Einsatz der Vorlesungsinhalte
+Projekt: Economic Data Explorer
+
+Research Question:
+
+How does the relationship between inflation and unemployment differ across Germany, France, and Spain from 2000 to 2024?
+
+Ich würde das Projekt von Anfang an so strukturieren, dass wir nicht primär eine Website entwickeln, sondern einen gut dokumentierten AI-gestützten Forschungsprozess durchführen. Die Website ist unser praktisches Ergebnis, an dem wir die Arbeit mit APIs, Codex, Git und Validierung demonstrieren.
+
+Dabei berücksichtigen wir die Vorlesungsmodule M1–M10, setzen aber nur die Inhalte ein, die einen echten Mehrwert bieten.
+
+1. Die wichtigste Architekturentscheidung: Wie kommen die Daten auf die Website?
+Deine dritte Idee finde ich für unser Projekt am sinnvollsten: Die Website ruft die World-Bank-Daten bei Bedarf direkt über die API ab.
+
+Live-API ohne eigene Datenbank
+
+Empfohlen
+Website
+
+Land und Zeitraum auswählen
+
+World Bank API
+
+Liefert Inflation und Arbeitslosigkeit als JSON
+
+Berechnung im Browser
+
+Daten kombinieren, Korrelation und Regression berechnen
+
+Interaktive Ergebnisse
+
+Diagramme, Kennzahlen und Ländervergleich
+
+Die World Bank API kann ohne API-Key genutzt werden. Browserübergreifende Anfragen werden grundsätzlich unterstützt; das testen wir bei der Implementierung trotzdem direkt. 
+
+World Bank Data Help Desk
++2
+
+So würde es konkret funktionieren
+Du wählst beispielsweise Germany und den Zeitraum 2000–2024. Die Website sendet zwei Anfragen:
+
+Inflation:
+
+https://api.worldbank.org/v2/country/DEU/indicator/FP.CPI.TOTL.ZG?format=json&date=2000:2024&per_page=100
+Arbeitslosigkeit:
+
+https://api.worldbank.org/v2/country/DEU/indicator/SL.UEM.TOTL.ZS?format=json&date=2000:2024&per_page=100
+Die API gibt die Daten zurück, und unsere Website verarbeitet sie unmittelbar. Das JSON-Format, Jahresintervalle und die Parameter für die Ergebnisanzahl sind offiziell dokumentiert. 
+
+World Bank Data Help Desk
+
+Eine eigene Datenbank brauchen wir nicht. Bei einem Wechsel des Zeitraums können wir bereits geladene Daten direkt im Browser filtern, anstatt immer wieder dieselben API-Anfragen zu stellen.
+
+Eine wichtige Ergänzung für die Wissenschaftlichkeit: Wir speichern einmalig einen kleinen Referenzdatensatz im Git-Repository zusammen mit dem Abrufdatum und den API-URLs. Damit können wir die Ergebnisse der Präsentation später exakt reproduzieren, selbst wenn die World Bank ihre Daten aktualisiert. Die Website selbst arbeitet weiterhin mit Live-Daten.
+
+Das ist für uns die beste Kombination aus Einfachheit, echtem API-Einsatz und Reproduzierbarkeit.
+
+2. Welche Vorlesungsinhalte setzen wir ein?
+Ich würde zwischen Kernbestandteilen, kleineren Ergänzungen und bewusst ausgelassenen Themen unterscheiden.
+
+Vorlesung
+
+Unser Einsatz
+
+Priorität
+
+M1 – Foundations of LLMs
+
+Verstehen, wie wir LLMs benutzen und warum ihre Antworten überprüft werden müssen
+
+Ergänzend
+
+M2 – How LLMs Are Built
+
+Kleiner Token-Vergleich unserer Prompts
+
+Optional
+
+M3 – How LLMs Fail
+
+Halluzinationen, Fehler und Risiken dokumentieren
+
+Wichtig
+
+M4 – Literature, Theory, Writing
+
+Ideation, Literaturrecherche, AI-Feedback, Texte
+
+Wichtig
+
+M5 – APIs
+
+Live-Daten über World Bank API abfragen
+
+Wichtig
+
+M6 – LLM as Instrument
+
+Keine künstlichen Umfrageteilnehmer oder LLM-Messungen
+
+Nicht benötigt
+
+M7 – Git
+
+Repository, Branches, Commits, Versionskontrolle
+
+Wichtig
+
+M8 – Agentic Harnesses
+
+Codex mit klaren Aufgaben, Tests und menschlicher Kontrolle einsetzen
+
+Wichtig
+
+M9 – Workflow Schematic
+
+Den vollständigen Forschungsworkflow darstellen und reproduzierbar machen
+
+Wichtig
+
+M10 – UzK Codex
+
+Website und Auswertung mit Codex programmieren
+
+Wichtig
+
+Die Einordnung orientiert sich an den Modulüberschriften aus deinem Screenshot und den bereits gezeigten Prüfungsanforderungen. Nicht am vollständigen Inhalt der einzelnen PDFs.
+
+3. Unser konkreter Workflow in der richtigen Reihenfolge
+Das ist gleichzeitig die Reihenfolge, in der wir arbeiten, und die Grundlage für die spätere Präsentation.
+
+1. Ideation & Research Question
+
+Bereits begonnen
+M4 · AI Brainstorming & Feedback
+
+Wir zeigen, wie KI bei der Ideensuche geholfen hat, warum wir den Economic Data Explorer gewählt haben und wie wir die Forschungsfrage eingegrenzt haben.
+
+Dokumentation: Ideation-Prompt, drei Alternativen, Entscheidungskriterien und AI-Kritik an der gewählten Frage.
+
+Noch sinnvoll: einmal gezielt die stärksten Gegenargumente zur finalen Forschungsfrage abfragen.
+
+2. Literaturrecherche & Theorie
+
+M4 · AI Literature Review
+
+Wir verwenden KI, um 2–3 wissenschaftliche Arbeiten zur Phillips-Kurve zu finden und die wichtigsten Aussagen zusammenzufassen.
+
+Anschließend überprüfen wir die Literaturangaben, lesen relevante Stellen selbst und formulieren unseren theoretischen Hintergrund.
+
+Dokumentation: Suchprompt, Literaturquellen, überprüfte AI-Aussagen und Quellenangaben.
+
+3. Git-Repository und Entwicklungsprozess
+
+M7 · Git & Version Control
+
+Wir erstellen ein GitHub-Repository mit einem main-Branch. Für die Entwicklung können wir einen Feature-Branch benutzen und die geprüften Änderungen anschließend integrieren.
+
+Wir arbeiten mit kleinen, nachvollziehbaren Commits, beispielsweise getrennt nach API-Anbindung, Berechnungen, Diagrammen und Tests.
+
+Dokumentation: Git-Historie, Branch-Verlauf und beispielhafte Änderungen.
+
+4. Datenbeschaffung über API
+
+M5 · APIs
+
+Wir lassen Codex den Abruf der World-Bank-Daten implementieren. Anschließend prüfen wir das Format der Antworten, die Jahre, die Länder und den Umgang mit fehlenden Werten.
+
+Die Website soll Daten live laden. Für unsere Auswertung und Tests sichern wir einen Referenzdatensatz.
+
+Dokumentation: API-Endpoints, beispielhafte JSON-Antwort, Codex-Prompt, Abrufdatum und Datenvalidierung.
+
+5. Mathematische Analyse & Validierung
+
+M3, M8 · Fehlerkontrolle und AI-assisted Coding
+
+Codex implementiert die Berechnung von Korrelation und linearer Regression. Danach kontrollieren wir die Ergebnisse unabhängig, beispielsweise mit einem kleinen Python- oder R-Skript und einfachen Testdaten.
+
+Wir untersuchen außerdem, ob die Ergebnisse durch den Zeitraum ab 2020 stark beeinflusst werden.
+
+Dokumentation: AI-generierter Code, Tests, geprüfte Ergebnisse und gegebenenfalls korrigierte Fehler.
+
+6. Website-Entwicklung mit Codex
+
+M7, M8, M10 · Codex & Git
+
+Wir geben Codex nacheinander kleine Entwicklungsaufgaben. Codex programmiert die Auswahlfelder, API-Anbindung, Diagramme, Kennzahlen und den Ländervergleich.
+
+Nach jedem Schritt prüfen wir die Funktion. So demonstrieren wir kontrollierte AI-Unterstützung statt ungeprüfter Codegenerierung.
+
+Dokumentation: Codex-Aufgaben, Git-Commits, Tests und ein Beispiel einer selbst überprüften oder korrigierten AI-Implementierung.
+
+7. Risks, Failures & Limitations
+
+M1, M3, M8 · Reliability & Human Oversight
+
+Wir überprüfen, welche Fehler durch KI entstehen können und welche Risiken unsere eigene wissenschaftliche Vorgehensweise enthält.
+
+Dokumentation: Eine kurze Tabelle mit möglichen Risiken, tatsächlich beobachteten Fehlern und unseren Gegenmaßnahmen.
+
+8. Reproduzierbarkeit & Präsentation
+
+M4, M9 · Workflow & Communication
+
+Wir dokumentieren alle notwendigen Schritte im README, erstellen ein einfaches Workflow-Diagramm und bauen die Präsentation auf.
+
+Der Schwerpunkt liegt auf den verwendeten AI-Werkzeugen, unseren Kontrollen und den Grenzen des Projekts.
+
+Dokumentation: README, Workflow-Schematic, Präsentationsfolien und Git-Historie.
+
+4. Welche AI-Risiken untersuchen wir konkret?
+Das ist ein Bereich, der sich sehr gut für die Präsentation eignet, weil wir damit zeigen können, dass wir KI nicht blind verwenden.
+
+Risiko
+
+Unsere Gegenmaßnahme
+
+AI erfindet Literaturquellen
+
+Originalpublikationen überprüfen
+
+AI interpretiert Korrelation als Kausalität
+
+Aussagen mathematisch und ökonomisch prüfen
+
+Codex berechnet Regression falsch
+
+Unabhängige Berechnung mit Python oder R
+
+Falsche bzw. fehlende API-Daten
+
+API-Antworten validieren und fehlende Werte dokumentieren
+
+World Bank aktualisiert historische Daten
+
+Referenzdatensatz mit Abrufdatum speichern
+
+AI ändert ungewollt funktionierenden Code
+
+Git-Diff überprüfen, Tests ausführen
+
+Wir müssen nicht für jedes Risiko ein eigenes Experiment entwickeln. Viel interessanter ist ein tatsächlich aufgetretener Fehler, den wir mit unserem Workflow gefunden und korrigiert haben.
+
+Das wäre ein besonders starkes Beispiel für die Folie What went wrong?
+
+5. Was ist mit Tokens und der LLM-API?
+Hier würde ich einen kleinen ergänzenden Versuch machen – aber daraus kein zweites Forschungsprojekt entwickeln.
+
+Wir könnten einen kurzen und einen ausführlichen Codex- oder ChatGPT-Prompt hinsichtlich ihrer geschätzten Tokenanzahl vergleichen und untersuchen, ob der zusätzliche Kontext die Aufgabe präzisiert.
+
+Zum Beispiel:
+
+Prompt
+
+Fragestellung
+
+Kurz
+
+„Write code to calculate a correlation.“
+
+Strukturiert
+
+Mit Datentypen, Fehlerbehandlung, mathematischen Anforderungen und Tests
+
+So können wir die Bedeutung guter Prompts demonstrieren.
+
+Wichtig ist die Trennung: Die World Bank API verbraucht keine LLM-Tokens. Tokenmessungen betreffen unsere LLM-Nutzung. Tatsächliche Tokenverbräuche können wir nur genau dokumentieren, wenn das verwendete Werkzeug entsprechende Nutzungsdaten liefert; andernfalls kennzeichnen wir die Tokenanzahl als Schätzung.
+
+Das wäre ein kleiner Zusatz zu M1/M2, aber nicht Teil unserer eigentlichen statistischen Untersuchung.
+
+6. Welche Website-Funktionen bleiben übrig?
+Ich würde mich auf genau diese beschränken:
+
+Economic Data Explorer
+
+Finaler Funktionsumfang
+
+Auswahl von Deutschland, Frankreich und Spanien
+Zeitraum einstellen, standardmäßig 2000–2024
+Inflation und Arbeitslosigkeit live laden
+Scatterplot mit Regressionsgerade darstellen
+Korrelation und Regressionssteigung anzeigen
+Ergebnisse aller drei Länder vergleichen
+Kurze Methodik- und Quelleninformationen anzeigen
+Kein Login, keine Datenbank, keine laufenden LLM-Anfragen innerhalb der Website. Der eigentliche AI-Einsatz findet im Forschungs- und Entwicklungsprozess statt.
+
+7. So würde ich die Präsentation aufbauen
+Die Vorgaben deines Professors sehen maximal drei Folien für das Projekt selbst vor. Der Hauptteil soll den AI-Workflow demonstrieren.
+
+Folie
+
+Inhalt
+
+1
+
+Research Question, Motivation und Datensatz
+
+2
+
+Economic Data Explorer und ein beispielhaftes Forschungsergebnis
+
+3
+
+Gesamtübersicht des AI-Workflows
+
+4
+
+Ideation: Prompting, AI-Feedback und Literatur
+
+5
+
+World Bank API: Abruf, Verarbeitung und Kontrolle
+
+6
+
+Codex & Git: Entwicklung, Branches und Commits
+
+7
+
+Validierung: Tests, Risiken und tatsächlich gefundene Fehler
+
+8
+
+Lessons Learned: Was funktioniert hat und was nicht
+
+Optional könnten wir auf Folie 4 den Token-Vergleich kurz zeigen. Er soll aber nicht von unserem eigentlichen Projekt ablenken.
+
+8. Welche Nachweise sammeln wir während der Arbeit?
+Damit wir am Ende nicht mühsam rekonstruieren müssen, was wir eigentlich gemacht haben, dokumentieren wir ab jetzt bei jedem größeren Arbeitsschritt dieselben vier Dinge:
+
+AI Workflow Log
+
+Ein einfacher wiederverwendbarer Eintrag für jeden relevanten Schritt.
+
+Task: Was wollten wir erreichen?
+
+AI usage: Welches Modell/Werkzeug und welchen Prompt haben wir verwendet?
+
+Validation: Wie haben wir die Antwort oder den Code überprüft?
+
+Outcome: Was haben wir übernommen, verändert oder verworfen?
+
+Dazu speichern wir bei Bedarf den zugehörigen Git-Commit, einen Screenshot oder die betreffende Codeänderung. Wir dokumentieren nur relevante Vorgänge, nicht jede einzelne Chatnachricht.
+
+Meine abschließende Empfehlung
+Ich würde den Schwerpunkt klar auf fünf besonders gut präsentierbare AI-Anwendungen legen: Ideation und Literaturrecherche, API-Integration, Codex-Entwicklung, Git-basierte Versionskontrolle und unabhängige Validierung.
+
+Diese fünf Bereiche liefern uns bereits einen starken, überprüfbaren Workflow. Tokens, Agentic Harnesses und weitere LLM-Experimente können wir ergänzen, wenn sie sich natürlich ergeben. Die künstliche Umfrage aus M6 lassen wir weg.
+
+Unser nächster Schritt ist die Literaturrecherche (M4). Wir suchen zwei bis drei geeignete Quellen zur Phillips-Kurve, überprüfen sie und dokumentieren dabei gleich unseren ersten vollständigen AI-gestützten Arbeitsschritt. Danach richten wir das Repository ein und beginnen mit der World Bank API.

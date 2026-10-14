@@ -1,0 +1,36 @@
+# Betriebssystem und Editoren
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Secrets und lokale Konfiguration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node / Website
+node_modules/
+website/dist/
+website/.vite/
+website/coverage/
+
+# Temporäre Präsentations- und Office-Dateien
+~$*.pptx
+~$*.docx
+presentation/exports/_drafts/
+
+# Logs und temporäre Dateien
+*.log
+tmp/
+temp/
