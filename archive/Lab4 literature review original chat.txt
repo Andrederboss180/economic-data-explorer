@@ -1,0 +1,672 @@
+Ich habe mir Vorlesung 4 (M4) und Lab 4 angeschaut. Wir orientieren uns jetzt möglichst genau an den Übungen deines Professors. Das ist besonders sinnvoll, weil wir später in der Präsentation zeigen können, dass wir die Methoden aus der Vorlesung tatsächlich angewendet und kritisch überprüft haben.
+Eine wichtige Erkenntnis aus M4: Literaturrecherche mit KI hat einen hohen Verifikationsaufwand. Ein LLM kann Referenzen erfinden, Aussagen falsch zuordnen oder Forschungsergebnisse übergeneralisieren. Genau diese Fehler sollen wir systematisch prüfen. Lab4_slides.pdf
+
+Unser Plan für M4: Literature Review
+Die Übung gibt uns bereits den gesamten Ablauf vor:
+
+Exercise 2.1 – Literature scan from memory
+Jetzt
+
+Ein LLM schlägt uns zunächst drei relevante wissenschaftliche Arbeiten und anschließend drei Arbeiten ab 2022 vor – ohne Websuche.
+Ziel: Ungeprüfte Literaturvorschläge sammeln.
+
+
+
+
+Exercise 2.2 – Verify every reference
+Wir kontrollieren jede vorgeschlagene Referenz anhand der vier Kriterien aus dem M4-Protokoll: Existenz, tatsächliche Aussage, Relevanz und Zuordnung der Erkenntnisse. Eine eigene Google-Scholar-Suche prüft zusätzlich, was die KI übersehen hat.
+Ziel: 3–5 verifizierte wissenschaftliche Arbeiten.
+
+
+
+
+Exercise 2.3 – Source matrix
+Wir geben der KI die tatsächlichen wissenschaftlichen Arbeiten und lassen sie eine Tabelle mit Forschungsfragen, Daten, Methoden und Ergebnissen erstellen.
+Anschließend überprüfen wir die einzelnen Tabellenzellen und dokumentieren Fehler.
+Ziel: Eine überprüfte Literaturübersicht, die wir für unser Research Proposal verwenden können.
+
+
+
+Diese drei Schritte entsprechen den Übungen auf den Folien 11–16 aus Lab 4. Lab4_slides.pdf
+
+Jetzt konkret: Exercise 2.1
+Ich würde diesen Schritt genauso wie dein Professor durchführen: zunächst ohne Websuche, damit wir herausfinden, welche Literatur ein LLM allein aus seinem Modellwissen vorschlägt.
+Prompt 1 – Literature scan from memory
+Öffne dafür einen neuen Chat, verwende keine Websuche und sende diesen Prompt. Ich habe die Formulierung aus der Übung übernommen und nur unsere Research Question eingesetzt.
+I am planning an empirical economics paper on the following question:
+"How does the relationship between inflation and unemployment differ across Germany, France, and Spain from 2000 to 2024?"
+List the three published papers closest to this question. For each: authors, year, title, journal, main finding in one sentence, and the data used. If you are not sure a paper exists, say so.
+
+
+
+
+Prompt 2 – Neuere Literatur
+Im selben Chat stellst du anschließend diese Folgefrage aus der Übung:
+Now list three papers from 2022 or later on this question, with the same details.
+
+
+
+
+Damit haben wir sechs Literaturvorschläge, die wir im nächsten Schritt überprüfen können. Noch sind das keine bestätigten Quellen.
+Was dokumentieren wir für die Präsentation?
+Ich würde bereits für Exercise 2.1 diese Informationen sammeln:
+Nachweis	Wozu?
+Beide Originalprompts	Zeigt das Vorlesungs-Framing
+Verwendetes Modell und Datum	Macht den AI-Einsatz nachvollziehbar
+Unveränderte AI-Antworten	Ermöglichen die spätere Fehleranalyse
+Vorgeschlagene sechs Referenzen	Ausgangspunkt der Verifikation
+Für die Präsentation wird daraus später eine besonders anschauliche Gegenüberstellung:
+Literature Review: Can we trust AI-generated references?
+6
+AI-suggested references (geplant)
+
+?
+References passing verification
+
+
+Die Anzahl tatsächlich verifizierter Quellen tragen wir nach Exercise 2.2 ein.
+
+Das illustriert direkt eine zentrale Aussage aus M4: Die KI kann uns die Suche erleichtern, aber wir müssen die wissenschaftliche Qualität selbst absichern.
+Dokumentation im Repository
+Wir behalten unbedingt deine bestehende Ordnerstruktur bei. Die Ergebnisse gehören thematisch in den Forschungs- und AI-Workflow-Bereich; die spätere Visualisierung in den Präsentationsbereich.
+Da ich deinen lokalen Windows-Projektordner hier nicht direkt einsehen oder verändern kann, sollten wir Codex nach dem Experiment die Rohantworten in den bereits passenden Dateien ablegen lassen. Dabei dürfen die Originalantworten nicht nachträglich korrigiert werden – sonst verlieren wir den Nachweis möglicher AI-Fehler.
+Deine nächste Aufgabe: Führe die beiden Prompts aus und schicke mir die vollständigen Antworten zusammen mit dem verwendeten Modell.
+Danach machen wir direkt Exercise 2.2: Verification. Ich werde die sechs Vorschläge systematisch mit dir überprüfen, die Ergebnisse tabellarisch dokumentieren und einen passenden kleinen Codex-Auftrag formulieren, damit alles im Repository landet.
+So arbeiten wir wirklich Schritt für Schritt, skriptnah und mit dem Fokus auf die spätere Präsentation.
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+I am planning an empirical economics paper on the following question:
+"How does the relationship between inflation and unemployment differ across Germany, France, and Spain from 2000 to 2024?"
+List the three published papers closest to this question. For each: authors, year, title, journal, main finding in one sentence, and the data used. If you are not sure a paper exists, say so.
+
+33s nachgedacht
+The three closest verified, peer-reviewed journal articles I found are listed below, ranked by relevance to your research question:
+
+“How does the relationship between inflation and unemployment differ across Germany, France, and Spain from 2000 to 2024?” | Now list three papers from 2022 or later on this question, with the same details.
+
+29s nachgedacht
+I identified three verified, peer-reviewed journal articles published between 2024 and 2026 that are particularly relevant to your research question.
+
+All three examine the Phillips curve in the euro area, including cross-country differences. However, none focuses exclusively on Germany, France, and Spain over 2000–2024.
+
+1. Faber & Züllig (2026)
+Authors: Marius Faber, Gabriel Züllig
+
+Title: Kinky Europe: Evidence from the regional Phillips curve in the euro area
+
+Journal: European Economic Review, Volume 189, Article 105439.
+
+Main finding: The Phillips curve in the euro area is generally flat but becomes at least three times steeper when labour markets are particularly tight, although this explains only a minority of the post-pandemic inflation surge.
+
+Data used:
+
+Period: 2001–2024, quarterly.
+
+Countries: Euro-area countries, including Germany, France, and Spain.
+
+Variables: Services price inflation, unemployment gaps, and measures of labour-market tightness.
+
+Method: Cross-country panel regressions with country and time fixed effects and instrumental-variable estimation.
+
+Relevance: Extremely high. The observation period almost exactly matches yours, and the paper directly examines whether the inflation–unemployment relationship differs depending on labour-market conditions.
+
+Published article. 
+
+ScienceDirect
++1
+
+2. Schuffels, Kool, Lieb & van Veen (2024)
+Authors: Johannes Schuffels, Clemens Kool, Lenard Lieb, Tom van Veen
+
+Title: Is the slope of the euro area Phillips curve steeper than it seems? Heterogeneity and identification
+
+Journal: Journal of International Money and Finance, Volume 148, Article 103158.
+
+Main finding: Differences in Phillips curve slopes between euro-area countries create a downward bias in conventional euro-area estimates, meaning the inflation–unemployment relationship is stronger than standard pooled regressions suggest.
+
+Data used:
+
+Countries: European Monetary Union member countries.
+
+Variables: Inflation and labour-market slack, alongside monetary-policy-related variables in the modelling framework.
+
+Method: New Keynesian monetary-union model combined with empirical estimation using EMU data and simulations.
+
+Period: I could not reliably verify the exact empirical sample years from the accessible publication information, so I will not invent them.
+
+Relevance: Extremely high for your comparative approach. This paper explains why estimating a single Phillips curve for Germany, France, and Spain together could hide economically important country differences.
+
+Published article (open access). 
+
+ScienceDirect
++1
+
+3. Florio, Siena & Zago (2025)
+Authors: Anna Florio, Daniele Siena, Riccardo Zago
+
+Title: Global value chains and the Phillips curve: A challenge for monetary policy
+
+Journal: European Economic Review, Volume 174, Article 104966.
+
+Main finding: Greater participation in global value chains significantly weakens the sensitivity of inflation to domestic labour-market slack, while reduced global value chain participation following COVID-19 contributed to a steeper Phillips curve.
+
+Data used:
+
+Period: 1999 Q1–2023 Q4 for quarterly macroeconomic series; global value chain indicators have their own annual coverage.
+
+Countries: Eleven original euro-area members, explicitly including Germany, France, and Spain.
+
+Variables: Non-tradable sector inflation, unemployment-related labour-market slack, global value chain participation and position, trade openness, and inflation expectations.
+
+Sources: ECB Data Warehouse, ECB Survey of Professional Forecasters, and global value chain measures developed by Mancini et al. (2024).
+
+Method: Regional Phillips curve panel estimation, exploiting cross-country variation and changes in global value chain participation.
+
+Relevance: Very high. The paper covers all three countries over nearly your entire sample period and provides a potential explanation for differences in their Phillips curves.
+
+Published article (open access). 
+
+ScienceDirect
++1
+
+Comparison for your research project
+Paper
+
+Publication
+
+Covers DE, FR, ES
+
+Sample overlaps 2000–2024
+
+Main contribution
+
+Faber & Züllig
+
+2026
+
+Yes
+
+2001–2024
+
+Nonlinear Phillips curve
+
+Schuffels et al.
+
+2024
+
+Yes, within EMU
+
+Exact years unverified
+
+Cross-country heterogeneity
+
+Florio et al.
+
+2025
+
+Yes
+
+1999–2023
+
+Globalisation and Phillips curve slopes
+
+My recommendation: Use Schuffels et al. (2024) to motivate why country-specific estimation matters, Faber and Züllig (2026) to discuss nonlinearities and the recent inflation surge, and Florio et al. (2025) to explain possible structural differences between countries.
+
+Together, they provide a strong foundation for your research question while leaving room for your own contribution: a transparent, country-by-country empirical comparison of Germany, France, and Spain from 2000 to 2024, using consistent inflation and unemployment measures.
+
+The relevant literature is primarily concerned with the Phillips curve, which describes the relationship between inflation and labour-market conditions.
+
+1. Hindrayanto, Samarina & Stanga (2019)
+Title: Is the Phillips curve still alive? Evidence from the euro area
+
+Journal: Economics Letters, Vol. 174, pp. 149–152.
+
+Main finding: The inflation–unemployment relationship is significantly negative in Germany and France but not statistically significant in Spain, and its strength differs across countries without changing significantly after the global financial crisis. 
+
+the University of Groningen research portal
++1
+
+Data used:
+
+Period: 1985Q1–2017Q4.
+
+Countries: Germany, France, Spain, Italy, the Netherlands and the euro area aggregate.
+
+Variables: Consumer price inflation (including HICP), unemployment, GDP and import prices.
+
+Frequency: Quarterly.
+
+Method: Unobserved-components Phillips curve model, separating trends and cyclical components.
+
+The authors have published their underlying dataset, including raw series and cyclical components. 
+
+the University of Groningen research portal
+
+Relevance: Very high — directly compares price inflation and unemployment in all three countries, although it does not cover 2018–2024.
+
+2. Bulligan & Viviano (2017)
+Authors: Guido Bulligan and Eliana Viviano.
+
+Title: Has the wage Phillips curve changed in the euro area?
+
+Journal: IZA Journal of Labor Policy, Vol. 6, Article 9.
+
+Main finding: After the 2008 financial crisis, the negative relationship between wage inflation and unemployment strengthened in Spain and, depending on the specification, France, while Germany's previously stronger relationship became flatter. 
+
+Springer Nature Link
+
+Data used:
+
+Period: 1999Q1–2015Q4 for the main macroeconomic analysis.
+
+Countries: Germany, France, Spain and Italy.
+
+Variables: Nominal hourly wage growth in the private sector, unemployment rates, lagged wage or price inflation and inflation expectations.
+
+Frequency: Quarterly.
+
+Additional data: Italian administrative employer–employee microdata.
+
+Method: Country-specific Phillips curves, structural-instability tests and time-varying coefficient regressions.
+
+
+Springer Nature Link
+Relevance: High — particularly useful for understanding differences between countries and changes after 2008, but it measures wage inflation rather than consumer price inflation.
+
+3. Faber & Züllig (2026)
+Authors: Marius Faber and Gabriel Züllig.
+
+Title: Kinky Europe: Evidence from the regional Phillips curve in the euro area
+
+Journal: European Economic Review, Vol. 189, Article 105439 (September 2026).
+
+Main finding: The euro-area Phillips curve is generally flat but becomes at least three times steeper when labour markets are particularly tight, suggesting that the inflation–unemployment relationship depends on economic conditions. 
+
+IDEAS/RePEc
+
+Data used:
+
+Period: 2001–2024.
+
+Geography: Regional panel data from euro-area economies, rather than separate national time-series models for the three countries.
+
+Variables: Regional inflation, unemployment gaps and measures of labour-market tightness.
+
+Method: Panel regressions with time fixed effects and instrumental-variable estimation using lagged unemployment gaps.
+
+Additional analysis: Cross-country differences in employment protection and labour-market rigidity.
+
+The publicly available paper information confirms the period and principal variables, but I have not independently verified the complete list of underlying statistical data providers. 
+
+ScienceDirect
++1
+
+Relevance: High — it covers almost exactly your intended period, including the post-COVID inflation episode, but does not focus specifically on comparing Germany, France and Spain.
+
+Comparison for your literature review
+Paper
+
+All three countries
+
+Covers 2024
+
+Price inflation
+
+Hindrayanto et al. (2019)
+
+Yes
+
+No
+
+Yes
+
+Bulligan & Viviano (2017)
+
+Yes
+
+No
+
+No — wages
+
+Faber & Züllig (2026)
+
+Within broader euro-area analysis
+
+Yes
+
+Yes
+
+My recommendation: Use Hindrayanto et al. (2019) as your primary empirical reference because its research design is closest to your question. Bulligan and Viviano provide evidence of how national relationships changed after 2008, while Faber and Züllig offer a more recent methodological perspective.
+
+An identifiable research gap remains in estimating and directly comparing country-specific price Phillips curves for Germany, France and Spain over the common 2000–2024 period, including both the financial crisis and the inflation surge of 2021–2023.
+
+All three articles are verified journal publications. I did not find a verified paper among these three that answers your exact research question over the entire specified period.  | Modell war GPT-6 mittel. (Oder soll ich ein anderes Modell verwenden?)
+
+
+
+
+
+ 
+
+
+
+
+
+
+1m 29s nachgedacht
+Plan für den nächsten Schritt erstellt
+
+
+Vertiefte die Prüfung
+
+
+Ergebnisse eingeordnet und Dokumentation vorbereitet
+
+
+18 Websites durchsucht
+
+
+
+
+
+
+
+
+
+
+
+
+
+GPT-6 mit mittlerem Denkaufwand ist für unsere Literaturrecherche völlig ausreichend. Du musst das Modell nicht wechseln. Für die Präsentation ist sogar interessant, dass wir dasselbe Modell verwenden und anschließend systematisch überprüfen, wie zuverlässig seine Literaturvorschläge sind.
+Exercise 2.1 – Ergebnis
+Du hast beide Prompts ausgeführt. Aus den Antworten ergibt sich:
+Nennungen
+6
+
+
+Unterschiedliche Papers
+5
+
+
+Doppelnennungen
+1
+
+
+
+Eine erste Beobachtung für die Präsentation: Faber & Züllig (2026) wurde von der KI in beiden Antworten vorgeschlagen. Das zeigt, dass sechs Literaturvorschläge nicht unbedingt sechs unterschiedliche Quellen ergeben.
+Noch wichtiger: Deine Antworten enthalten Verweise auf ScienceDirect, Springer und RePEc und behaupten, die Quellen seien bereits „verified“. Das spricht dafür, dass bei deiner Abfrage eine Websuche verwendet wurde.
+Das ist grundsätzlich erlaubt: Lab 4 gestattet ausdrücklich einen suchfähigen Chatbot. Wir sollten den Versuch dann aber als search-assisted literature discovery dokumentieren und nicht als reinen literature scan from memory. Die automatische Behauptung „verified“ ersetzt nämlich nicht unser eigenes M4-Verifikationsprotokoll.
+Exercise 2.2 – Erste Verifikation
+Ich habe die fünf unterschiedlichen Arbeiten inzwischen bei Fachzeitschriften beziehungsweise wissenschaftlichen Publikationsdatenbanken nachgeschlagen.
+Positives Ergebnis: Alle fünf existieren tatsächlich. Ich konnte auch die jeweiligen Hauptaussagen in den veröffentlichten Abstracts wiederfinden. 
+
+ScienceDirect
++4
+
+
+
+Das bedeutet allerdings noch nicht, dass sämtliche Angaben des Modells korrekt sind. Besonders bei den Datensätzen, Untersuchungszeiträumen und methodischen Details müssen wir weiter prüfen.
+Eine interessante fachliche Unterscheidung haben wir bereits gefunden: Bulligan & Viviano (2017) untersuchen vor allem Lohninflation, während unsere Research Question die Verbraucherpreisinflation betrifft. Das Paper ist deshalb relevant, beantwortet aber nicht dieselbe Frage. 
+
+Springer Nature Link
+
+
+
+Die fünf Arbeiten im M4-Verifikationsprotokoll
+Paper	Existiert?	Hauptaussage bestätigt?	Relevanz
+Hindrayanto et al. (2019)			Sehr hoch
+Bulligan & Viviano (2017)			Mittel, Lohninflation
+Faber & Züllig (2026)			Hoch
+Schuffels et al. (2024)			Sehr hoch
+Florio et al. (2025)			Hoch
+Die Hauptaussagen lassen sich jeweils den Autoren als eigene Forschungsergebnisse zuordnen. Die Prüfung beruht bislang überwiegend auf den veröffentlichten Abstracts; die vollständigen Angaben zu Methoden und Datensätzen sowie einzelne weitergehende Aussagen sind noch nicht abschließend kontrolliert. 
+
+the University of Groningen research portal
++4
+
+
+
+Ein interessanter Fund: Die KI hat eine relevante Arbeit übersehen
+Bei meiner ergänzenden Websuche habe ich eine weitere Arbeit gefunden, die in deinen KI-Vorschlägen nicht vorkam:
+Susanne Wellmann (2023) – The Phillips Curve in the Euro Area: New Evidence Using Country-Level Data.
+Dieses Working Paper untersucht ausdrücklich den Zusammenhang zwischen Inflation und Arbeitslosigkeit anhand von Länderdaten des Euroraums. Es ist damit thematisch sehr nah an unserer Frage, allerdings kein von mir bestätigter peer-reviewter Journalartikel. 
+
+IDEAS/RePEc
+
+
+
+Das ist ein schönes Beispiel für das Thema False Negatives aus Exercise 2.2: Selbst wenn die vorgeschlagenen Referenzen existieren, kann ein LLM relevante Arbeiten übersehen.
+Was noch fehlt, um Exercise 2.2 abzuschließen?
+Laut Lab 4 sollen wir zusätzlich zwei bis drei eigene Google-Scholar-Suchanfragen durchführen. Lab4_slides.pdf
+
+Dafür empfehle ich diese Suchbegriffe:
+Phillips curve Germany France Spain unemployment inflation
+
+ Scholar
+euro area Phillips curve country heterogeneity
+
+ Scholar
+Phillips curve country-level data euro area 2023
+
+ Scholar
+
+Diese Scholar-Suche musst du selbst einmal durchführen, damit wir sie tatsächlich als deine unabhängige Kontrollsuche dokumentieren können. Meine bisherige Recherche war eine allgemeine Websuche.
+Anschließend folgt Exercise 2.3: Wir wählen drei bis fünf verifizierte Arbeiten aus, stellen ihre Originaltexte zusammen und erstellen daraus die Source Matrix. Gerade der Vergleich zwischen KI-generierter Tabelle und Originaltext eignet sich hervorragend als Präsentationsnachweis.
+Für die Dokumentation halten wir jetzt bereits fest: GPT-6, Medium, sechs Nennungen, fünf unterschiedliche Artikel, alle fünf bibliografisch bestätigt, eine zusätzliche relevante Arbeit bei der unabhängigen Webrecherche entdeckt. Als Suchmodus dokumentieren wir die offenbar suchgestützte Abfrage, bis du die tatsächliche Einstellung bestätigt hast.
+Mein Vorschlag: Führe die drei Scholar-Suchen durch und schicke mir gegebenenfalls auffällige zusätzliche Treffer. Dann schließen wir die Verifikation ab und wechseln direkt zur Source Matrix.
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+Eingefügter Text.txtDokument
+Eigentlich war das das und ich habe geprüft, es gibt alle 3 Quellen. Ob jetzt alle Daten korrekt sind habe ich nicht gecheckt.
+
+
+
+
+
+ 
+
+
+
+
+
+
+59s nachgedacht
+Klärte die Einordnung
+
+
+Prüfung abgeschlossen und Verifizierung eingeordnet
+
+
+9 Websites durchsucht
+
+
+
+
+
+
+
+
+
+
+
+
+
+Perfekt, dann halten wir für Exercise 2.2 – Verify every reference Folgendes fest:
+Check 1: Do the papers exist? – Erledigt für deine drei überprüften Quellen.
+
+Du hast die drei Veröffentlichungen bei Google Scholar gefunden. Dein Screenshot zeigt beispielsweise Faber & Züllig (2026) mit Titel, Autoren, Zeitschrift und Abstract.
+Damit ist aber erst der erste von vier Checks des M4-Protokolls erledigt. Wir müssen nicht alles perfekt untersuchen, sollten aber die Aussagen prüfen, die wir später tatsächlich zitieren.
+Das ist sogar ein guter Punkt für die Präsentation:
+AI suggested scientific papers. I independently checked their existence using Google Scholar. However, bibliographic verification alone does not establish whether the AI correctly described their findings.
+Checks 2–4: Ich habe die drei Abstracts gegengeprüft
+Damit du nicht jeden Satz der KI selbst überprüfen musst, habe ich die drei ursprünglichen Arbeiten anhand der veröffentlichten Originalquellen überprüft.
+Paper	Hauptaussage der KI	Ergebnis
+Hindrayanto et al. (2019)	Negativer Zusammenhang in Deutschland und Frankreich; Unterschiede zwischen Ländern	Durch Abstract bestätigt 
+
+ScienceDirect
+Bulligan & Viviano (2017)	Nach 2008 stärkere Lohn-Phillips-Kurve in Spanien und Frankreich, schwächere in Deutschland	Durch Abstract bestätigt 
+
+Springer Nature Link
+Faber & Züllig (2026)	Bei angespannten Arbeitsmärkten mindestens dreimal steilere Phillips-Kurve	Durch Abstract bestätigt 
+
+ScienceDirect
+Die Aussagen sind jeweils eigene Forschungsergebnisse der Autoren und nicht bloß Zitate aus anderen Arbeiten. Auch die wesentlichen Länder- und Zeitraumangaben sind mit den verfügbaren Quellen vereinbar.
+Noch nicht vollständig verifiziert: Sämtliche detaillierten Variablen, Datenlieferanten und einzelnen Methodenangaben aus der ursprünglichen KI-Antwort. Dafür müssten wir die jeweiligen Methodikabschnitte prüfen.
+Das reicht als erste Abstract-basierte Kontrolle. Für unsere endgültige Source Matrix machen wir den letzten Abgleich mit den Originaltexten.
+Nächster Schritt: Exercise 2.3 – Source Matrix
+Jetzt würde ich die drei Papers tatsächlich als PDFs herunterladen und gemeinsam in einen neuen Chat geben. Hier sind die Quellen:
+- Hindrayanto et al. (2019) – PDF
+- Bulligan & Viviano (2017) – Open-Access-Artikel mit PDF
+- Faber & Züllig – PDF der Working-Paper-Version von 2025
+Beim dritten Paper müssen wir beachten, dass die verfügbare PDF-Version von 2025 stammt, während wir den veröffentlichten Artikel von 2026 zitiert haben.
+Dann verwenden wir genau den Exercise-2.3-Prompt aus Lab 4:
+Build a table with one row per attached paper and the columns: research question, data, method, headline result, and relation to the other papers.
+If a cell cannot be filled from the text, write "not in text".
+
+
+
+
+Danach kontrollieren wir jede Tabellenzelle und kennzeichnen sie als verified, corrected oder fabricated. Genau das verlangt die Übung. Lab4_slides.pdf
+
+Für die Präsentation haben wir damit einen klaren Vergleich zwischen KI-Vorschlag, Originalquelle und menschlicher Kontrolle.
+Schick mir als Nächstes die drei PDFs. Dann erstellen wir die Source Matrix, dokumentieren die tatsächlichen Fehler und bereiten den passenden Codex-Auftrag vor, um alles in deinem bestehenden Repository festzuhalten.
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+1_s2.0_S0165176518304804_main.pdfPDFs40173-017-0087-z (3).pdfPDFworking_paper_2025_12.pdfPDF
+ok
+
+
+
+
+
+
+
+
+
+
+
+
+2m 22s nachgedacht
+Quellen geprüft und abgeglichen
+
+
+Dokumentierte Ergebnisse und schloss die Prüfung ab
+
+
+
+
+
+Erstellte und prüfte die Quellenmatrix
+
+
+
+
+
+
+
+
+
+
+
+
+
+Die drei PDFs sind angekommen. Damit können wir jetzt Exercise 2.3 – Source Matrix aus Lab 4 durchführen, genau wie in der Übung deines Professors.
+Wir haben drei Originalarbeiten:
+1. Hindrayanto et al. (2019): Verbraucherpreisinflation und Arbeitslosigkeit in europäischen Ländern.
+2. Bulligan & Viviano (2017): Lohninflation und Arbeitslosigkeit, insbesondere Veränderungen nach der Finanzkrise.
+3. Faber & Züllig (2025/2026): Nichtlineare Phillips-Kurve und Unterschiede bei angespannten Arbeitsmärkten.
+Bei der dritten Quelle haben wir die Working-Paper-Version von 2025. Wir dürfen ihre Ergebnisse also zunächst dieser Version zuordnen, nicht ungeprüft einer möglicherweise überarbeiteten Journalversion von 2026.
+Unser Ziel sind jetzt zwei Ergebnisse: eine quellenbasierte Literaturtabelle und eine dokumentierte Fehlerprüfung der KI-Ausgabe.
+1. Source Matrix – Ergebnis aus den drei Originaltexten
+Die Tabelle entspricht den fünf Spalten aus Exercise 2.3.
+Paper	Research Question	Data	Method	Headline Result	Relation to other papers
+Hindrayanto et al. (2019)	Ist die Phillips-Kurve im Euroraum noch nachweisbar und unterscheidet sie sich zwischen Ländern?	Quartalsdaten 1985–2017; HICP-Inflation und Arbeitslosigkeit; Euroraum und fünf Länder	Unobserved-Components-Modell, Zerlegung in Trend und Zyklus, Test auf Veränderungen nach der Finanzkrise	Negativer, statistisch signifikanter Zusammenhang in Deutschland und Frankreich, nicht aber in Spanien; keine signifikante Veränderung der Steigung nach der Finanzkrise	Unserer Forschungsfrage am nächsten; untersucht Preisinflation statt Lohninflation
+Bulligan & Viviano (2017)	Hat sich der Zusammenhang zwischen Lohninflation und Arbeitslosigkeit nach 2008 verändert?	Quartalsdaten 1999–2015; vier Länder; zusätzlich italienische Unternehmens- und Beschäftigtendaten	Länderspezifische Regressionen, zeitvariable Koeffizienten, Strukturbruchtests und Mikroanalysen	Stärkerer negativer Zusammenhang nach 2008 in Italien, Frankreich und Spanien; Abschwächung in Deutschland	Untersucht Lohninflation statt Verbraucherpreisinflation und betrachtet zeitliche Veränderungen
+Faber & Züllig (2025)	Wird die Phillips-Kurve bei besonders angespannten Arbeitsmärkten steiler?	Quartalsdaten 2001–2024; 18 Euroraumländer; Dienstleistungspreise, Arbeitslosenlücken	Panelregressionen mit Länder- und Zeit-Fixed-Effects, Instrumentvariablen (2SLS) und Nichtlinearitäten	Bei angespannten Arbeitsmärkten wird die Phillips-Kurve mindestens dreimal steiler; der Großteil des Inflationsanstiegs nach der Pandemie wird durch andere Faktoren erklärt	Erweitert die Fragestellung um Nichtlinearitäten und umfasst fast genau unseren Untersuchungszeitraum
+Belege aus den PDFs:
+- Hindrayanto et al.: Abstract auf PDF-Seite 2 sowie Methoden und Tabelle 1 auf Seiten 3–4. 1_s2.0_S0165176518304804_main.pdf
+   1_s2.0_S0165176518304804_main.pdf
+- Bulligan & Viviano: Abstract auf Seite 1 und die Schlussfolgerungen auf Seite 20. s40173-017-0087-z (3).pdf
+   s40173-017-0087-z (3).pdf
+- Faber & Züllig: Abstract auf Seite 3, Methode und Daten auf Seiten 10–11. working_paper_2025_12.pdf
+   working_paper_2025_12.pdf
+   working_paper_2025_12.pdf
+Die Spalte „Relation to other papers“ ist meine vergleichende Einordnung der drei Arbeiten, keine Behauptung, dass die Autoren sich gegenseitig ausdrücklich miteinander vergleichen.
+2. Prüfung der KI-Tabelle
+Die Übung verlangt die Kategorien verified, corrected und fabricated.
+Mein vorläufiger Quellenabgleich ergibt:
+Direkt belegte Zellen
+12
+
+
+Vergleichende Einordnungen
+3
+
+
+Erkannte Erfindungen
+0
+
+
+
+Die 12 faktischen Zellen sind durch die Texte gestützt; drei Zellen enthalten eine nachvollziehbare Synthese über mehrere Arbeiten. Bei dieser Prüfung musste ich keine faktische Zelle korrigieren.
+Wichtig: Das ist bisher eine KI-gestützte Eigenprüfung, noch keine unabhängige menschliche Validierung. Wir sollten die Zellen daher nicht als abschließend vom Studierenden verifiziert protokollieren. Auch brauchen wir keine künstlichen Fehler zu erzeugen, nur um in der Präsentation einen Fehler zeigen zu können.
+3. Was bedeutet die Literatur für unsere Forschungsfrage?
+Hindrayanto et al. liefern uns die wichtigste Grundlage. Die Autoren finden bereits Unterschiede zwischen Deutschland, Frankreich und Spanien. Sie verwenden aber ein wesentlich aufwendigeres Modell als unsere geplante Website.
+Bulligan & Viviano zeigen, dass sich Zusammenhänge auch über die Zeit verändern können, untersuchen allerdings Löhne statt Verbraucherpreise.
+Faber & Züllig weisen darauf hin, dass eine einfache lineare Regression wirtschaftlich wichtige Nichtlinearitäten übersehen kann.
+Daraus folgt für unser Projekt: Wir sollten unsere Website ausdrücklich als descriptive exploratory analysis präsentieren, nicht als vollständige Schätzung einer strukturellen Phillips-Kurve.
+Unsere Forschungsfrage kann bleiben. Unser eigener Beitrag ist die leicht nachvollziehbare, interaktive Gegenüberstellung ausgewählter Länder mit World-Bank-Daten über 2000–2024. Einen Anspruch auf wissenschaftliche Neuheit sollten wir daraus nicht ableiten.
+4. Was wir jetzt im Repository festhalten
+Für die Präsentation reichen zwei Dinge aus: die Source Matrix und eine Tabelle, in der wir die KI-Aussagen mit konkreten Seiten und Textstellen abgleichen.
+Dafür kannst du Codex diesen Auftrag geben:
+Codex – Dokumentation Exercise 2.3
+ Kopieren
+Der Auftrag berücksichtigt deine vorhandene Ordnerstruktur und vermeidet unnötige Änderungen.
+
+Zum Abschluss von Exercise 2.3 solltest du die drei Hauptaussagen einmal selbst in den PDFs kontrollieren: Hindrayanto auf Seite 4, Bulligan auf Seite 20 und Faber & Züllig auf Seite 3. Anschließend können wir die menschliche Validierung ehrlich dokumentieren.
+Danach folgt Lab 4, Round 3 – Writing: Wir verfassen zunächst einen kurzen eigenen Research Proposal mit Question, Motivation, Positioning, Data und Empirical Approach. Dann lassen wir die KI gezielt Kritik daran üben, prüfen diese und dokumentieren, welche Änderungen wir übernehmen.
+So ist die gesamte M4-Phase eng an deiner Vorlesung orientiert und liefert direkt Material für die Abschlusspräsentation.

@@ -36,6 +36,17 @@
 - [ ] Datenchecks ausgeführt
 - [ ] Abrufdatum vorhanden
 
+## Source-grounded literature review
+
+- [x] Exercise-2.3-Prompt unverändert dokumentiert
+- [x] drei Papers mit offiziellen Links zitiert
+- [x] jede faktische Matrixzelle mit PDF-Seiten versehen
+- [x] AI-gestützte Bilanz 12 direkte Belege, 3 Synthesen, 0 erkannte Erfindungen dokumentiert
+- [x] Status als AI-gestützter Audit gekennzeichnet
+- [x] drei Hauptaussagen vom Studierenden selbst auf PDF-Seiten 4, 20 und 3 geprüft
+- [x] drei Cross-paper comparisons als angemessene analytische Interpretationen freigegeben
+- [x] klar vermerkt, dass keine vollständige menschliche Prüfung aller 15 Zellen erfolgte
+
 ## Folie 6: Codex und Git
 
 - [ ] klarer Codex-Prompt

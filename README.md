@@ -27,7 +27,7 @@ Das fachliche Produkt ist eine kleine interaktive Website. Der Schwerpunkt der P
 - [x] Minimaler Umfang und Website-Funktionen festgelegt
 - [x] Projektstruktur und Dokumentationssystem angelegt
 - [x] Lokales Git-Repository auf `main` vorbereitet
-- [ ] Literaturrecherche durchführen und Quellen prüfen
+- [x] Literaturreview im vereinbarten Minimalumfang abgeschlossen
 - [ ] Datenpipeline und Referenzdatensatz erstellen
 - [ ] Analyse implementieren und unabhängig validieren
 - [ ] Website implementieren und testen
@@ -62,7 +62,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Nächster Arbeitsschritt
 
-Als Nächstes folgt die Literaturrecherche zur Phillips-Kurve. Dabei sammeln wir zwei bis drei geeignete Originalquellen, prüfen die Fundstellen selbst und dokumentieren Prompt, Prüfung und Ergebnis im AI-Workflow-Log.
+Schritt 2 ist für den vereinbarten Minimalumfang abgeschlossen. Es wird jetzt kein weiterer Arbeitsschritt begonnen. Die Daten- und API-Phase bleibt als nächster geplanter Meilenstein dokumentiert und startet erst nach ausdrücklicher Freigabe; zusätzliche Literaturrecherche und Writing Exercises gehören nicht zum vereinbarten Minimalumfang.
 
 ## Git-Schnellstart
 

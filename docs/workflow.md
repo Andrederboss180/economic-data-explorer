@@ -5,7 +5,7 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | Nr. | Phase | AI-Einsatz | Menschliche Kontrolle | Ergebnis | Status |
 |---:|---|---|---|---|---|
 | 1 | Ideation und Forschungsfrage | Ideen erzeugen, Frage schärfen, Gegenargumente formulieren | Optionen nach Machbarkeit, Kursbezug und Prüfbarkeit auswählen | Finale Forschungsfrage und Scope | Abgeschlossen |
-| 2 | Literatur und Theorie | Suchbegriffe, Kandidaten und Zusammenfassungen vorschlagen | Originalquellen öffnen, Zitate und Aussagen prüfen | Zwei bis drei geprüfte Quellen und kurzer Theorieabschnitt | Als Nächstes |
+| 2 | Literatur und Theorie | Suchbegriffe, Source Matrix und Zusammenfassungen unterstützen | Drei zentrale Aussagen auf Originalseiten prüfen und Synthesen als Interpretationen freigeben | Drei Quellen; 12 faktische Zellen AI-geprüft; 3 Hauptaussagen menschlich bestätigt; kein vollständiger Human Audit | Abgeschlossen (Minimalumfang) |
 | 3 | Git und Projektaufbau | Struktur und Dokumentation vorbereiten | Dateien, Scope und Git-Status prüfen | Versioniertes Repository | Abgeschlossen |
 | 4 | Datenbeschaffung | API-Code und Datenschema implementieren | Länder, Jahre, Einheiten, fehlende Werte und Abrufdatum prüfen | Live-Abruf und eingefrorener Referenzdatensatz | Offen |
 | 5 | Analyse | Korrelation und Regression implementieren | Mit Testdaten und unabhängiger Rechnung prüfen | Kennzahlen und Ergebnisdateien | Offen |

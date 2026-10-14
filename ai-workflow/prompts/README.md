@@ -13,7 +13,7 @@ Für jeden präsentationsrelevanten Prompt speichern wir:
 Dateinamen folgen der Arbeitsreihenfolge, zum Beispiel:
 
 - `01-ideation.md`
-- `02-literature-search.md`
+- `02-literature-source-matrix.md`
 - `03-api-implementation.md`
 - `04-statistics-tests.md`
 - `05-website-chart.md`

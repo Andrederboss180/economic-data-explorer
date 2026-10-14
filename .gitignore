@@ -30,6 +30,10 @@ website/coverage/
 ~$*.docx
 presentation/exports/_drafts/
 
+# Lokal bereitgestellte, urheberrechtlich geschützte Quellen
+/Literatur/**/*.pdf
+/Vorlesungsfolien/**/*.pdf
+
 # Logs und temporäre Dateien
 *.log
 tmp/

@@ -15,12 +15,16 @@ Fertig, wenn:
 
 ## Meilenstein 1: Literaturbasis
 
+**Status:** abgeschlossen für den vereinbarten Minimalumfang
+
 Fertig, wenn:
 
 - zwei bis drei relevante Originalquellen verifiziert sind
 - jede Quelle eine stabile URL oder DOI und vollständige bibliografische Angaben besitzt
 - die für das Projekt verwendete Aussage mit Fundstelle dokumentiert ist
 - AI-Zusammenfassungen mit dem Original abgeglichen wurden
+
+Erfüllt am 14.10.2026: Der AI-gestützte Audit deckte 12 faktische Zellen und 3 Cross-paper comparisons ab. Die drei zentralen Ergebnisse wurden unabhängig auf den Original-PDF-Seiten 4, 20 und 3 bestätigt; die drei Vergleiche wurden als angemessene eigene Interpretationen freigegeben. Dies ist kein vollständiger menschlicher Zell-für-Zell-Audit.
 
 ## Meilenstein 2: API und Referenzdaten
 

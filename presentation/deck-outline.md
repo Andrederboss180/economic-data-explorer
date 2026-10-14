@@ -55,6 +55,10 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 
 **Vollständiger Entwurf:** [slides/04-ideation.md](slides/04-ideation.md)
 
+### Möglicher Evidenz-Einschub nach Folie 4
+
+**Source-grounded literature review:** Zeigt den Weg von drei PDFs zur 15-zelligen Source Matrix, die AI-gestützte Audit-Bilanz, den menschlichen Minimalcheck und die Abgrenzung der eigenen Forschungsfrage. Die Notizen stehen in [slides/04b-source-grounded-literature-review.md](slides/04b-source-grounded-literature-review.md). Je nach Vortragszeit wird dieser Inhalt eine eigene Folie oder ein kurzer Teil der Workflow-Folie.
+
 ## Folie 5: World Bank API and data checks
 
 **Zweck:** API-Nutzung anschaulich und technisch einfach erklären.
