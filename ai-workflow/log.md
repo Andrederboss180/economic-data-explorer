@@ -117,6 +117,44 @@ Schritt 3 ist abgeschlossen. Die Dokumentation erklärt Diff-Prüfung, Staging, 
 - `presentation/slides/06-codex-git.md`
 - lokale Ausgaben von `git status`, `git remote -v`, `git branch -vv` und `git log`
 
+## AW-005: Minimaler World-Bank-API-Abruf
+
+- **Datum:** 2026-10-16
+- **Phase:** World Bank API (M5)
+- **Status:** abgeschlossen; Codex-Review und technische Gegenprüfung durchgeführt
+
+**Task**
+
+Für Deutschland, Frankreich und Spanien die Inflations- und Arbeitslosenreihen 2000 bis 2024 ohne API-Key abrufen, validieren und als kleinen reproduzierbaren Snapshot speichern. Statistik und Website bleiben außerhalb dieses Schritts.
+
+**AI usage**
+
+Codex implementierte ein Python-Skript mit der Standardbibliothek sowie kleine Tests für Struktur-, Identitäts-, Jahres-, Nullwert- und Duplikatprüfungen. Die Rohantworten bleiben bytegetreu erhalten; Dezimalwerte werden ohne zusätzliche Float-Rundung in die CSV übertragen.
+
+**Validation**
+
+Der echte Abruf am `2026-10-16T12:35:25Z` lieferte sechs HTTP-200-Antworten. Jede Antwort enthielt Seite 1 von 1, 25 Jahresdatensätze und `lastupdated: 2026-10-08`. Alle sechs Reihen bestanden die Prüfungen. Insgesamt wurden 150 Quellbeobachtungen zu 75 Länder-Jahr-Zeilen verbunden. Es gab 0 `null`-Werte, 0 fehlende Jahresdatensätze und 0 Duplikate. Sechs Standardbibliothek-Tests bestanden.
+
+Das erste manuelle PowerShell-Experiment für deutsche Inflation wurde separat dokumentiert. Seine Werte für 2020 bis 2024 stimmen exakt mit dem gespeicherten Rohsnapshot überein.
+
+Zum Abschluss prüfte Codex den tatsächlichen Diff, `.gitignore` und die aufzunehmenden Dateien. Ein zusätzlicher Live-Abruf über PowerShell am `2026-10-16T13:01:16Z` bestätigte Frankreichs Arbeitslosenquote 2024 (`SL.UEM.TOTL.ZS`): API `7.4`, CSV `7.4`, exakter Textvergleich `True`. Der erste Vergleich hatte falsche CSV-Spaltennamen verwendet und wurde nach Header-Prüfung korrigiert. Befehl und Prüfgrenzen stehen in `data/API.md`. Das ist ein separater technischer Check durch Codex, kein unabhängiger menschlicher Vollaudit.
+
+Abschlussauftrag: bestehende Step-4-Änderungen prüfen, Tracking der Daten und Nachweise sicherstellen, einen Frankreich-/Spanien-Wert direkt über PowerShell vergleichen, Tests und beide Diff-Prüfungen ausführen, Schritt 4 abschließen sowie auf `main` committen und pushen. Frühere archivierte Prompts und Antworten bleiben unverändert.
+
+**Outcome**
+
+Das Repository enthält das Abrufskript, sechs originale JSON-Antworten, eine Provenienzdatei, eine kombinierte CSV, Tests und M5-Präsentationsnotizen einschließlich echter Python-Installationshürde. Schritt 4 ist für den vereinbarten Minimalumfang abgeschlossen. Schritt 5 – Mathematical Analysis & Validation ist als Nächstes vorgesehen und wurde noch nicht begonnen. Der Abschluss wird im Commit `data: finalize validated World Bank API reference snapshot` festgehalten.
+
+**Nachweise**
+
+- Skript: `analysis/scripts/fetch_world_bank_data.py`
+- Tests: `analysis/tests/test_fetch_world_bank_data.py`
+- API-Dokumentation: `data/API.md`
+- Provenienz: `data/raw/world_bank_2000_2024_metadata.json`
+- Referenzdaten: `data/reference/reference_2000_2024.csv`
+- Präsentationsnotizen: `presentation/slides/05-world-bank-api.md`
+- Manueller Terminalnachweis: `presentation/assets/screenshots/Screenshot 2026-10-16 142607.png`
+
 ---
 
 ## Vorlage für neue Einträge

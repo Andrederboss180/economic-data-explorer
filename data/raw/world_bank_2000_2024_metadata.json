@@ -1,0 +1,158 @@
+{
+  "retrieved_at_utc": "2026-10-16T12:35:25Z",
+  "script": "analysis/scripts/fetch_world_bank_data.py",
+  "script_sha256": "cc91b01452f854b2f55a6b5d5ddd8cee366dee901b20bc3d39dd33969d78ea19",
+  "api": "World Bank Indicators API",
+  "authentication": "No API key required",
+  "period": {
+    "start_year": 2000,
+    "end_year": 2024
+  },
+  "countries": {
+    "DEU": "Germany",
+    "FRA": "France",
+    "ESP": "Spain"
+  },
+  "indicators": {
+    "inflation": {
+      "code": "FP.CPI.TOTL.ZG",
+      "name": "Inflation, consumer prices (annual %)",
+      "definition": "Annual percentage change in consumer prices for a basket of goods and services.",
+      "source_url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG"
+    },
+    "unemployment": {
+      "code": "SL.UEM.TOTL.ZS",
+      "name": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "definition": "Share of the labor force without work but available for and seeking employment; modeled ILO estimate.",
+      "source_url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+    }
+  },
+  "responses": [
+    {
+      "country_code": "DEU",
+      "country_name": "Germany",
+      "indicator_code": "FP.CPI.TOTL.ZG",
+      "indicator_name_from_api": "Inflation, consumer prices (annual %)",
+      "url": "https://api.worldbank.org/v2/country/DEU/indicator/FP.CPI.TOTL.ZG?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_DEU_FP.CPI.TOTL.ZG_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    },
+    {
+      "country_code": "DEU",
+      "country_name": "Germany",
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name_from_api": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "url": "https://api.worldbank.org/v2/country/DEU/indicator/SL.UEM.TOTL.ZS?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_DEU_SL.UEM.TOTL.ZS_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    },
+    {
+      "country_code": "FRA",
+      "country_name": "France",
+      "indicator_code": "FP.CPI.TOTL.ZG",
+      "indicator_name_from_api": "Inflation, consumer prices (annual %)",
+      "url": "https://api.worldbank.org/v2/country/FRA/indicator/FP.CPI.TOTL.ZG?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_FRA_FP.CPI.TOTL.ZG_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    },
+    {
+      "country_code": "FRA",
+      "country_name": "France",
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name_from_api": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "url": "https://api.worldbank.org/v2/country/FRA/indicator/SL.UEM.TOTL.ZS?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_FRA_SL.UEM.TOTL.ZS_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    },
+    {
+      "country_code": "ESP",
+      "country_name": "Spain",
+      "indicator_code": "FP.CPI.TOTL.ZG",
+      "indicator_name_from_api": "Inflation, consumer prices (annual %)",
+      "url": "https://api.worldbank.org/v2/country/ESP/indicator/FP.CPI.TOTL.ZG?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_ESP_FP.CPI.TOTL.ZG_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    },
+    {
+      "country_code": "ESP",
+      "country_name": "Spain",
+      "indicator_code": "SL.UEM.TOTL.ZS",
+      "indicator_name_from_api": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+      "url": "https://api.worldbank.org/v2/country/ESP/indicator/SL.UEM.TOTL.ZS?format=json&date=2000:2024&per_page=100",
+      "raw_file": "data/raw/world_bank_ESP_SL.UEM.TOTL.ZS_2000_2024_raw.json",
+      "http_status": 200,
+      "page": 1,
+      "pages": 1,
+      "total": 25,
+      "lastupdated": "2026-10-08",
+      "observation_records": 25,
+      "null_years": [],
+      "missing_year_records": [],
+      "duplicate_year_records": [],
+      "validation_passed": true
+    }
+  ],
+  "output": {
+    "combined_csv": "data/reference/reference_2000_2024.csv",
+    "country_year_rows": 75,
+    "source_observation_records": 150,
+    "null_observations": 0
+  },
+  "validation": {
+    "requests_expected": 6,
+    "requests_validated": 6,
+    "http_status_checked": true,
+    "json_structure_checked": true,
+    "country_indicator_year_checked": true,
+    "null_values_documented": true,
+    "duplicates_checked": true,
+    "year_coverage_checked": true,
+    "all_checks_passed": true
+  },
+  "precision_note": "Raw response bytes are unchanged. JSON decimals were parsed with Decimal and written to CSV as text without binary-float rounding."
+}

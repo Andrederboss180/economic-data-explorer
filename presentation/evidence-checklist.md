@@ -30,11 +30,13 @@
 
 ## Folie 5: API
 
-- [ ] echter Endpoint
-- [ ] echte, gekürzte JSON-Antwort
-- [ ] API-Dokumentation geprüft
-- [ ] Datenchecks ausgeführt
-- [ ] Abrufdatum vorhanden
+- [x] echter Endpoint
+- [x] echte, gekürzte JSON-Antwort
+- [x] tatsächliche Antwortstruktur und Parameter dokumentiert
+- [x] Datenchecks ausgeführt
+- [x] Abrufdatum und World-Bank-`lastupdated` vorhanden
+- [x] Unterschied zwischen Daten-API und LLM-API erklärt
+- [x] echter PowerShell-Screenshot mit Endpoint, Metadaten und fünf Werten vorhanden
 
 ## Source-grounded literature review
 

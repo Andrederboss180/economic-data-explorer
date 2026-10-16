@@ -1,17 +1,19 @@
 # Datenwörterbuch
 
-## Geplanter Referenzdatensatz
+## Referenzdatensatz
 
 | Spalte | Typ | Beispiel | Bedeutung |
 |---|---|---|---|
 | `country_code` | String | `DEU` | ISO-ähnlicher World-Bank-Ländercode |
 | `country_name` | String | `Germany` | englischer Ländername |
 | `year` | Integer | `2020` | Kalenderjahr |
-| `inflation_pct` | Number oder leer | noch offen | jährliche CPI-Inflation in Prozent |
-| `unemployment_pct` | Number oder leer | noch offen | Arbeitslosenquote in Prozent |
+| `inflation_pct` | Dezimalzahl oder leer | `2.2564981433876` | jährliche CPI-Inflation in Prozent |
+| `unemployment_pct` | Dezimalzahl oder leer | `3.4` | Arbeitslosenquote in Prozent, modellierte ILO-Schätzung |
 | `inflation_indicator` | String | `FP.CPI.TOTL.ZG` | Quellindikator |
 | `unemployment_indicator` | String | `SL.UEM.TOTL.ZS` | Quellindikator |
-| `retrieved_at` | ISO-Datum/Zeit | noch offen | Zeitpunkt des API-Abrufs |
+| `retrieved_at` | ISO-Datum/Zeit | `2026-10-16T12:35:25Z` | Zeitpunkt des API-Abrufs in UTC |
+
+Der aktuelle Snapshot enthält 75 Zeilen und keine leeren Messwerte. Das Schema erlaubt trotzdem leere Felder, weil ein künftiger API-Abruf `null` liefern kann. Das Abrufskript ersetzt solche Werte nicht.
 
 ## Geplante Ergebnisdatei
 
@@ -26,4 +28,4 @@
 | `slope_beta` | geschätzte Steigung |
 | `r_squared` | optionales Bestimmtheitsmaß |
 
-Die Spalten werden beim Implementieren gegen die tatsächlichen API-Metadaten geprüft und bei Bedarf angepasst.
+Die Ergebnisdatei gehört zur späteren Analysephase und wurde noch nicht erstellt.

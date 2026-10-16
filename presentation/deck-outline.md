@@ -66,13 +66,13 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 **Auf die Folie:**
 
 - ein gekürzter Endpoint mit markierten Parametern
-- kleine echte JSON-Probe
-- Verarbeitung: fetch, match by year, validate, calculate
-- konkrete Checks für Länder, Jahre, fehlende Werte und Einheiten
+- kleine echte JSON-Probe aus dem Deutschland-Abruf
+- Verarbeitung: request, JSON, validate, save
+- Ergebnis: sechs gültige Antworten, 150 Quellbeobachtungen, 75 CSV-Zeilen
 
 **Visual:** API-Antwort und daraus entstandene zwei oder drei Datenzeilen. Kein großer Codeblock.
 
-**Benötigte Nachweise:** echter Abruf, dokumentiertes Datum und Validierungsergebnis.
+**Vollständiger Entwurf:** [slides/05-world-bank-api.md](slides/05-world-bank-api.md)
 
 ## Folie 6: Codex and Git development
 

@@ -42,7 +42,7 @@ Feature-Branches und Pull Requests bleiben optionale spätere Erweiterungen. Sie
 
 ## Schritt 4 / Meilenstein 2: API und Referenzdaten (M5)
 
-**Status:** als Nächstes; noch nicht begonnen
+**Status:** abgeschlossen am 16.10.2026
 
 Fertig, wenn:
 
@@ -52,7 +52,11 @@ Fertig, wenn:
 - ein Referenzdatensatz mit Abrufdatum und API-URLs gespeichert ist
 - Tests den Abruf und die Transformation abdecken
 
-## Meilenstein 3: Analyse und unabhängige Prüfung
+Erfüllt am 16.10.2026: Sechs API-Antworten wurden erfolgreich validiert. Der Snapshot enthält 150 Quellbeobachtungen, die kombinierte CSV 75 vollständige Länder-Jahr-Zeilen. Es wurden keine `null`-Werte, fehlenden Jahre oder Duplikate gefunden. Codex-Review und sechs Unit-Tests bestanden; ein separater Live-Abruf über PowerShell bestätigte Frankreichs Arbeitslosenquote 2024 (`7.4`) exakt gegen die CSV. Dies ist eine technische Gegenprüfung, kein vollständiger unabhängiger menschlicher Audit.
+
+## Schritt 5 / Meilenstein 3: Mathematical Analysis & Validation
+
+**Status:** nächster Schritt; noch nicht begonnen
 
 Fertig, wenn:
 

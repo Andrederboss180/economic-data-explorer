@@ -28,7 +28,7 @@ Das fachliche Produkt ist eine kleine interaktive Website. Der Schwerpunkt der P
 - [x] Projektstruktur und Dokumentationssystem angelegt
 - [x] Lokales Git-Repository auf `main` vorbereitet
 - [x] Literaturreview im vereinbarten Minimalumfang abgeschlossen
-- [ ] Datenpipeline und Referenzdatensatz erstellen
+- [x] Minimalen API-Abruf und Referenzdatensatz prüfen und abschließen
 - [ ] Analyse implementieren und unabhängig validieren
 - [ ] Website implementieren und testen
 - [ ] Präsentation erstellen, rendern und prüfen
@@ -60,9 +60,9 @@ Eine geführte Navigation steht in [docs/README.md](docs/README.md).
 
 Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
-## Nächster Arbeitsschritt
+## Aktueller Arbeitsschritt
 
-Schritt 2 ist für den vereinbarten Minimalumfang abgeschlossen. Es wird jetzt kein weiterer Arbeitsschritt begonnen. Die Daten- und API-Phase bleibt als nächster geplanter Meilenstein dokumentiert und startet erst nach ausdrücklicher Freigabe; zusätzliche Literaturrecherche und Writing Exercises gehören nicht zum vereinbarten Minimalumfang.
+Schritt 4 – World Bank API (M5) ist abgeschlossen. Sechs API-Antworten, der Referenzdatensatz, sechs Unit-Tests und ein separater PowerShell-Spotcheck wurden technisch geprüft. Als Nächstes folgt Schritt 5 – Mathematical Analysis & Validation; dieser Schritt wurde noch nicht begonnen.
 
 ## Git-Schnellstart
 

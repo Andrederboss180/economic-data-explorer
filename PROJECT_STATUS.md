@@ -1,7 +1,7 @@
 # Projektstatus
 
 - **Letzte Aktualisierung:** 16.10.2026
-- **Phase:** Schritt 3 – Git & Version Control (M7) abgeschlossen; Schritt 4 – World Bank API (M5) als Nächstes
+- **Phase:** Schritt 4 – World Bank API (M5) abgeschlossen; als Nächstes Schritt 5 – Mathematical Analysis & Validation
 - **Abgabe laut bisherigem Chat:** 22. Oktober, 08:00 Uhr. Jahr und Zeitzone bitte noch bestätigen.
 
 ## Statusübersicht
@@ -13,7 +13,7 @@
 | Kursbezug | Vorbereitet | M1 bis M10 priorisiert und konkreten Nachweisen zugeordnet |
 | Git | Abgeschlossen | Lokales Repository außerhalb von OneDrive, `main` verfolgt `origin/main`, erster Push zu GitHub erfolgreich |
 | Literatur | Abgeschlossen (Minimalumfang) | 12 faktische Zellen AI-gestützt geprüft; 3 Hauptergebnisse unabhängig menschlich bestätigt; 3 Vergleiche als analytische Interpretationen freigegeben |
-| Daten | Geplant | Live-API plus eingefrorener Referenzdatensatz |
+| Daten | Abgeschlossen | Sechs API-Antworten validiert; 150 Quellbeobachtungen und 75 vollständige Länder-Jahr-Zeilen; PowerShell-Spotcheck bestanden |
 | Analyse | Geplant | Pearson-Korrelation, OLS-Steigung, Beobachtungszahl, Robustheitszeitraum |
 | Website | Geplant | React und TypeScript als vorläufiger Stack |
 | AI-Nachweise | Aktiv | Log, Promptablage, Validierungslog und Risikoregister angelegt |
@@ -30,9 +30,9 @@
 - Datenquelle: World Bank Indicators API
 - Website: Live-Daten, keine Datenbank, keine Benutzerkonten, kein KI-Chatbot
 
-## Nächster geplanter Meilenstein – noch nicht begonnen
+## Nächster Schritt
 
-Schritt 4 ist die Datenbeschaffung über die World-Bank-API im Kursmodul M5. Er beginnt erst nach ausdrücklicher Freigabe. In diesem Abschluss-Commit werden weder API-Code noch statistische Analyse oder Website-Code ergänzt.
+Schritt 4 ist nach Codex-Review, sechs bestandenen Unit-Tests und einem separaten Live-PowerShell-Abgleich abgeschlossen. Frankreichs Arbeitslosenquote 2024 beträgt sowohl in der API als auch in der CSV exakt `7.4`. Das ist eine technische Gegenprüfung, kein vollständiger unabhängiger menschlicher Audit. Als Nächstes folgt Schritt 5 – Mathematical Analysis & Validation. Statistische Analyse und Website-Code wurden noch nicht begonnen.
 
 ## Noch zu bestätigen
 

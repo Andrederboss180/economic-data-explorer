@@ -18,6 +18,7 @@ Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im 
 - [deck-outline.md](deck-outline.md): Funktion jeder Folie und notwendige Nachweise
 - [slides/04-ideation.md](slides/04-ideation.md): vollständig vorbereitete Ideation-Folie
 - [slides/04b-source-grounded-literature-review.md](slides/04b-source-grounded-literature-review.md): Präsentationsnotizen zu Lab 4, Exercise 2.3
+- [slides/05-world-bank-api.md](slides/05-world-bank-api.md): M5-Notizen zu Endpoint, JSON-Antwort und Datenvalidierung
 - [slides/06-codex-git.md](slides/06-codex-git.md): belegbares Git- und Codex-Beispiel aus dem echten Commit-Verlauf
 - [evidence-checklist.md](evidence-checklist.md): zu sammelnde Screenshots, Diffs, Daten und Quellen
 - [sources.md](sources.md): Quellen pro Folie

@@ -10,12 +10,28 @@ Dieser Ordner enthält die unabhängige, reproduzierbare Berechnung außerhalb d
 
 ## Geplante Schritte
 
-1. Rohdaten über dokumentierte URLs abrufen.
-2. Indikatorreihen nach Land und Jahr verbinden.
-3. Fehlende Werte protokollieren.
-4. Referenz-CSV und Metadaten schreiben.
+1. Rohdaten über dokumentierte URLs abrufen. **Umgesetzt**
+2. Indikatorreihen nach Land und Jahr verbinden. **Umgesetzt für den Referenzdatensatz**
+3. Fehlende Werte protokollieren. **Umgesetzt**
+4. Referenz-CSV und Metadaten schreiben. **Umgesetzt**
 5. Statistik für beide Zeiträume berechnen.
 6. Ergebnisse gegen bekannte Testfälle und Website-Berechnung vergleichen.
+
+## Abruf ausführen
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe" analysis/scripts/fetch_world_bank_data.py
+```
+
+Das Skript verwendet ausschließlich die Standardbibliothek. Es speichert die sechs Originalantworten, die Provenienzdatei und die kombinierte CSV.
+
+## Leichte Tests ausführen
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\Python\Python313\python.exe" -B -m unittest discover -s analysis/tests -v
+```
+
+Die Tests decken gültige Antworten, `null`-Werte, Duplikate, fehlende Jahre, falsche Indikatoren, ungültiges JSON und die URL-Parameter ab. Statistiktests bleiben Teil der späteren Analysephase.
 
 ## Abnahmekriterien
 

@@ -10,7 +10,7 @@ Diese Datei wird parallel zum Deck gepflegt. Eine Quelle kommt erst hinein, wenn
 | 3 | Projektworkflow | Repository-Artefakte | fortlaufend | In Arbeit |
 | 4 | Ideation-Prompt und Auswahl | eigener dokumentierter Chat | übernommen | Vorhanden |
 | 4b | Source Matrix und Audit | Hindrayanto et al. (2019); Bulligan & Viviano (2017); Faber & Züllig (2025, SNB WP 12/2025) | Matrixseiten; zentrale Ergebnisse unabhängig auf PDF pp. 4, 20 und 3 geprüft | Minimalumfang abgeschlossen; kein vollständiger Human Audit |
-| 5 | API-Verhalten | offizielle World-Bank-API-Dokumentation | – | Zu prüfen |
+| 5 | Endpoint, JSON-Struktur und Validierung | World Bank Indicators API und eigener Referenzabruf | sechs URLs, Metadaten und echter PowerShell-Screenshot; Abruf 2026-10-16 | Technisch validiert; Screenshot vorhanden |
 | 6 | Codex/Git-Beispiel | lokales Repository und Git-Historie | `git status`, `git remote -v`, `git branch -vv`, Commits `5afcb89`, `dc9fe71`, `fa62b33` | Inhalt verifiziert; finaler Screenshot offen |
 | 7 | Fehler/Korrektur | eigenes Validierungslog | – | Noch zu sammeln |
 | 8 | Lessons learned | eigener Projektverlauf | – | Noch offen |
