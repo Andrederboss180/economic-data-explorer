@@ -106,3 +106,15 @@ Unter den Stationen stehen kurz `Task and changes`, `Reviewed code, data, status
 **Git review:** Feature branch `web/step-6-1-foundation`, base `4a28809`, full diff including new files and staged diff reviewed before the authorized checkpoint `web: finalize validated website foundation`. Safe fast-forward integration and normal push; actual hash/status from Git history and finalization report. Next task: 6.2 – Interactive Data Visualization, not started.
 
 **Evidence links:** [Website validation](../../website/tests/step-6-1-validation.md), [AI workflow AW-009/AW-010](../../ai-workflow/log.md), [actual corrections V-005/V-006](../../ai-workflow/validation-log.md). This extends the existing AI-workflow notes; no new slide deck or website screenshot is asserted.
+
+## Step 6.2: Validate AI-generated browser calculations against a frozen baseline
+
+**Slide copy (English):** Plot, line and statistics share locally filtered observations. Six country-period results are checked against the independently validated Python baseline before human browser review.
+
+**Evidence:** Native SVG and TypeScript implementation, no new packages; known test solutions plus six frozen r/β/α/n cross-checks. Maximum absolute coefficient difference in the actual run: `8.88e-16`, within tolerance `1e-12 * max(1, |reference|)`. Direct constant checks preserve the fix for the earlier `0.1` bug. Existing Python/reference data stay unchanged. Period changes update the UI without extra API requests, checked automatically.
+
+**Human oversight:** The user opened and interacted with 6.2 in a real browser and reported that appearance and functionality look good. This is a successful informal user-reported visual/browser check, not confirmation of every checklist item, keyboard accessibility, Network-tab request counts or physical-device tests. No screenshot claimed. [Report and limits](../../website/tests/step-6-2-validation.md). Live revisions can differ from the frozen snapshot; distinguish data changes from calculation errors.
+
+**Automated control and Git:** 65 website tests and 19 Python tests, lint/type-check/build passed again; all six reference groups match Python. Feature branch `web/step-6-2-visualization`, base `29b974f`; reviewed working/staged diff before the authorized checkpoint `web: finalize validated interactive visualization`, safe integration and normal push. Actual hash/status from Git history and final report. AW-011/AW-012 and V-007/V-008 retain the evidence. Step 6.2 completed; next 6.3 – Country Comparison & Website Finalization, not started.
+
+**Working arrangement (English):** I define the requirements, decide what to accept and validate the website personally. ChatGPT Chat supports planning and task formulation. Codex implements and tests the agreed changes, documents limitations and records reviewed checkpoints in Git. Explicit tasks and repository files carry context between conversations; no automatic shared context or full human code audit is claimed. [Project workflow](../../docs/workflow.md).

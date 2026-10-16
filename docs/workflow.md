@@ -9,7 +9,7 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | 3 | Git und Projektaufbau (M7) | Struktur und Dokumentation vorbereiten | Diffs vor dem Staging und den gestagten Stand vor dem Commit prüfen | Lokales Repository außerhalb von OneDrive; `main` verfolgt `origin/main`; erster GitHub-Push erfolgreich | Abgeschlossen |
 | 4 | Datenbeschaffung (M5) | Minimalen Standardbibliothek-Abruf und Validierung implementieren | Echten Terminalnachweis nachvollziehen; Codex führte Datenchecks, sechs Unit-Tests und einen separaten PowerShell-Spotcheck aus; kein vollständiger Human Audit | 150 Quellbeobachtungen; 75 vollständige Länder-Jahr-Zeilen; Frankreich-Spotcheck bestanden | Abgeschlossen |
 | 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Bekannte Testlösungen, `statistics`-Abgleich und erneuter Codex-Review; Abschluss vom Nutzer beauftragt | Sechs Ergebniszeilen; 19 Tests insgesamt bestanden | Abgeschlossen |
-| 6 | Website | Grundlage, Live-Client und Tests für 6.1 implementiert | Nutzer bestätigt sechs persönliche Browserchecks; technische Prüfungen erneut bestanden | Live-Jahrestabelle mit Quellen, Fehlerbehandlung und Cache | 6.1 abgeschlossen; als Nächstes 6.2, noch nicht begonnen |
+| 6 | Website | Grundlage und interaktive Visualisierung/Statistik implementiert | 6.1: sechs Nutzerchecks; 6.2: positiver informeller Browser-/Visualcheck, technische Prüfung wiederholt | Plot, OLS, r/β/n und lokale Zeitraumwahl | 6.2 abgeschlossen; als Nächstes 6.3 |
 | 7 | Fehler und Grenzen | Risiken identifizieren und Erklärungen entwerfen | Nur tatsächlich beobachtete Fehler als Fälle verwenden | Risikoregister und Validierungsbeispiel | Laufend |
 | 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Vorbereitet |
 
@@ -26,6 +26,18 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 Der ursprüngliche Chat-2-Auftrag endete vor dem Commit. Der Folgeauftrag autorisiert nach erneuter Prüfung Commit, sichere Integration in `main` und Push (AW-008). Die geplante Aufteilung auf vier Codex-Chats und die Übergabe über Git/Dokumentation stehen in [ai-workflow/README.md](../ai-workflow/README.md).
 
 Chat 3 beginnt bei `4a28809`. Der ursprüngliche 6.1-Auftrag stoppte vor Commit/Push (AW-009). Der Folgeauftrag „Finalize Step 6.1 – Website Foundation“ meldet sechs persönliche Browserchecks und autorisiert nach erneutem technischem/staged Review den Abschlusscommit, sichere Integration in `main` und normalen Push (AW-010). Historische Prompts bleiben unverändert; spätere Website-Teilschritte und Schritte 7/8 sind nicht Teil dieses Finalisierungsauftrags.
+
+6.2 beginnt sauber/synchronisiert bei `29b974f` auf `web/step-6-2-visualization`. Der Implementierungsauftrag stoppte vor Commit/Merge/Push (AW-011). Der Folgeauftrag bestätigt einen positiven informellen Nutzercheck und autorisiert nach erneuter technischer/staged Prüfung Commit, sichere Integration und normalen Push (AW-012). Die detaillierte Checkliste ist nicht vollständig menschlich bestätigt. Als Nächstes 6.3 – Country Comparison & Website Finalization; noch nicht begonnen, ebenso Schritte 7/8.
+
+## Zusammenarbeit: Nutzer, ChatGPT Chat und Codex
+
+| Rolle | Aufgabe im Arbeitsmodell |
+|---|---|
+| Nutzer / Projektverantwortlicher | Sagt, welches Ergebnis gewünscht ist, begrenzt den Umfang, entscheidet über Vorschläge, prüft die Website persönlich und gibt den Git-Abschluss ausdrücklich frei. |
+| ChatGPT Chat | Unterstützt Ideen, Planung, Verständnis und Formulierung kleiner Aufgaben; relevante Entscheidungen und Prompts werden als explizite Aufträge bzw. Dokumentation an die Umsetzung übergeben. |
+| Codex | Rekonstruiert den Stand aus Repository/Git, implementiert den beauftragten Teilschritt, führt technische Prüfungen aus, dokumentiert Evidenz und Grenzen und versioniert nach Freigabe. |
+
+Diese Arbeitsteilung ersetzt keine Quellen- oder Ergebnisprüfung. Ein Chatvorschlag ist kein getesteter Code; ein automatisierter Test ist kein menschlicher Browsercheck. Git-Diffs und getrennte Logs machen Übernahme und Kontrolle nachvollziehbar. Zwischen Chats wird kein automatisch gemeinsamer Kontext vorausgesetzt: versionierte Dateien und konkrete Nutzeraufträge bilden die Übergabe. Konkrete 6.2-Evidenz: unabhängiger Zahlenvergleich, 65 Website-Tests, informeller Nutzercheck und autorisierter Git-Checkpoint (AW-011/AW-012).
 
 ## Workflow für die spätere Übersichtsgrafik
 

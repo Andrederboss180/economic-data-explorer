@@ -1,6 +1,6 @@
 # Website-Tests
 
-Schritt 6.1 abgeschlossen: **32 Offline-Tests und 1 separater Live-Test erneut bestanden**; zusätzlich **sechs persönliche Browserchecks vom Nutzer als bestanden berichtet**. Befehle, Live-Werte, Fehlerkorrekturen, manuelle Ergebnisse und Prüfgrenzen stehen im [Validierungsbericht](step-6-1-validation.md). Die folgende Liste beschreibt den Zielausbau; Statistik, Filter und Diagramme sind noch nicht implementiert. Nächster Auftrag: 6.2 – Interactive Data Visualization.
+6.2 abgeschlossen: **65 Offline-Tests und 19 Python-Tests erneut bestanden**, einschließlich aller sechs Referenzgruppen und Zeitraumwechsel ohne neue Requests. Lint/Typecheck/Build bestanden. Zusätzlich erfolgreicher **nutzerberichteter informeller Browser-/Visualcheck**, keine vollständige Checklistenbestätigung. [6.2-Prüfbericht und Grenzen](step-6-2-validation.md). Als Nächstes 6.3 – Country Comparison & Website Finalization; noch nicht begonnen. Historische 6.1-Evidenz bleibt im [6.1-Bericht](step-6-1-validation.md).
 
 ## Automatisierte Tests
 
@@ -14,7 +14,7 @@ Schritt 6.1 abgeschlossen: **32 Offline-Tests und 1 separater Live-Test erneut b
 
 ## Manueller Testlauf
 
-Später dokumentieren wir pro Browser:
+Ein informeller Browser-/Visualcheck wurde vom Nutzer bestätigt. Die konkreten Einzelpunkte der [6.2-Checkliste](step-6-2-validation.md) wurden nicht separat bestätigt; die folgende Tabelle ist kein Beleg einer vollständigen manuellen Abnahme:
 
 | Test | Erwartung | Ergebnis | Datum |
 |---|---|---|---|

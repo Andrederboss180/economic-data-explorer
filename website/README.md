@@ -1,6 +1,14 @@
 # Website: Economic Data Explorer
 
-Schritt 6.1 ist abgeschlossen: technische Prüfungen erneut bestanden und sechs persönliche Browserchecks vom Nutzer bestätigt. Die englische Website zeigt Länderauswahl, Live-Abruf 2000–2024, eine scrollbare Jahrestabelle und Quellenmetadaten. Nächster Auftrag: **6.2 – Interactive Data Visualization**, noch nicht begonnen. Statistik, Zeitraumfilter und Ländervergleich bleiben spätere Teilschritte.
+**6.2 – Interactive Data Visualization ist abgeschlossen:** technische Prüfungen erneut bestanden, informeller Browser-/Visualcheck vom Nutzer positiv bestätigt. Scatterplot, OLS-Gerade, r/β/n und Zeitraumwahl ergänzen Live-Abruf, Tabelle, Quellen und Fehlerzustände ohne neue Abhängigkeit. Als Nächstes **6.3 – Country Comparison & Website Finalization**, noch nicht begonnen. Die 6.1-Checks und der informelle 6.2-Check bleiben getrennt dokumentiert.
+
+## Bedienung und Prüfung von 6.2
+
+Land und Zeitraum auswählen. Punkte per Hover, Tab/Fokus, Enter/Leertaste oder Klick/Touch inspizieren; der Detailtext nennt Jahr und beide Werte, Escape setzt die Auswahl zurück. Die gestrichelte OLS-Gerade endet an der beobachteten Arbeitslosen-Spanne. r und β erscheinen auf drei Dezimalstellen, n ganzzahlig; undefinierte Werte mit Begründung. Deskriptive Interpretation und β-Einheit bleiben sichtbar.
+
+Diagramm, Statistik und Tabelle verwenden dieselben lokal ausgewählten Jahre und vollständigen Paare; die Tabelle bewahrt zusätzlich fehlende Werte. 2000–2019 filtert bereits geladene Daten, ohne neue Requests. Ein Länderwechsel behält den Zeitraum. Schmale Fenster können den Chartbereich horizontal scrollen, damit Achsen lesbar bleiben.
+
+Code: [`src/statistics/analysis.ts`](src/statistics/analysis.ts), [`src/components/Scatterplot.tsx`](src/components/Scatterplot.tsx). [Numerischer Vergleich, Testbefehle und Prüfgrenzen](tests/step-6-2-validation.md). 65 Website- und 19 Python-Tests erneut bestanden; Lint/Typecheck/Build erfolgreich. Der Nutzer hat die Website im echten Browser bedient und Aussehen/Funktionalität informell bestätigt. Detaillierte Keyboard-/Netzwerk-/Geräteprüfungen sind dadurch nicht belegt. Live-Revisionen können von der eingefrorenen Referenz abweichen; das allein ist kein Rechenfehler.
 
 ## Lokal starten
 
@@ -30,7 +38,7 @@ Implementierung: [`src/api/worldBank.ts`](src/api/worldBank.ts) enthält Definit
 - Zwei parallele native `fetch`-Aufrufe pro erstmals ausgewähltem Land. Exakte URLs und Definitionen wie [data/API.md](../data/API.md); kein Proxy.
 - HTTP-Fehler, ungültiges JSON, falsche Identität, Duplikate, ungültige Jahre/Zahlen und unerwartete Pagination führen zu einer sichtbaren Fehlermeldung. Timeout: 30 Sekunden je Anfrage, Retry per Schaltfläche.
 - Jede angeforderte Jahreszeile bleibt sichtbar. `null` und fehlende Jahresdatensätze erscheinen als „Missing“, ohne Imputation; vollständige Paare und unvollständige Jahre werden gezählt. Im Unterschied zum streng vollständigen Snapshot-Abruf werden fehlende Jahre hier zur Anzeige erhalten. In späterer Statistik dürfen nur vollständige Paare verwendet werden.
-- Zahlen bleiben intern als JavaScript-`number` erhalten, entsprechend den Python-`float`-Eingaben für die Analyse. Nur die Tabellenanzeige rundet auf zwei Stellen. Noch keine Statistik im Browser.
+- Zahlen bleiben intern als JavaScript-`number` erhalten, entsprechend den Python-`float`-Eingaben für die Analyse. Nur die Anzeige rundet; die Statistik aus 6.2 verwendet ungerundete vollständige Paare.
 - `lastupdated` wird pro Indikator ausgewiesen; fehlende Metadaten heißen „Not available“. Der Abrufzeitpunkt steht separat in UTC.
 - Erfolgreiche Daten und laufende Promises werden je Land im Arbeitsspeicher gecacht, auch unter React StrictMode. Kein erneuter Abruf bei Rerender oder Rückkehr zu einem geladenen Land. Ein Seitenreload leert den Cache. Fehlgeschlagene Abrufe werden entfernt, damit Retry erneut abruft. Veraltete Länderantworten werden nicht angezeigt.
 - Keine automatische Snapshot-Ausweichlösung: Ein API-Fehler bleibt sichtbar. Der versionierte Referenzdatensatz wird ausschließlich zum Testen gelesen und unverändert gelassen.
@@ -65,11 +73,11 @@ Studierende können untersuchen, wie Inflation und Arbeitslosigkeit in Deutschla
 - React
 - TypeScript
 - Vite und npm; exakte Paketversionen mit Lockfile
-- Noch auszuwählende Chart-Bibliothek
+- Native SVG-Visualisierung ohne zusätzliche Chart-Bibliothek (6.2)
 - Berechnung im Browser
 - Python-Skript als unabhängige Referenz
 
-ESLint, TypeScript und Vitest mit jsdom/React Testing Library prüfen die Grundlage. Keine UI-, Chart-, Routing- oder Datenverwaltungsbibliothek. Die Chart-Bibliothek und Hosting bleiben offen.
+ESLint, TypeScript und Vitest mit jsdom/React Testing Library prüfen die Website. Keine zusätzliche UI-, Chart-, Routing- oder Datenverwaltungsbibliothek. Hosting bleibt offen.
 
 ## Ordnerstruktur (Zielausbau)
 

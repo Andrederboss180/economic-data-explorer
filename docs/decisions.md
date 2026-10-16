@@ -75,3 +75,15 @@
 **Fehlende Daten:** Für die Tabelle alle 25 Jahre erhalten, `null` und fehlende Jahresdatensätze sichtbar markieren, vollständige Paare zählen. Keine Imputation oder Änderung der validierten Statistikdefinitionen; spätere Berechnung verwendet ausschließlich vollständige Paare. Der strengere Python-Snapshot-Abruf bleibt unverändert. Zahlen nur zur Anzeige runden, Source-Update und Abrufzeitpunkt getrennt zeigen.
 
 **Nachweis/Grenze:** Sechs Live-Reihen unter Node geladen, 18 Werte gegen Referenz geprüft, CORS-Header eines Endpoints bestätigt. jsdom-Tests prüfen Cache und Zustandswechsel. Ergänzend berichtet der Nutzer sechs bestandene persönliche Browserchecks einschließlich Länderwechsel, zweier Werte und schmalem Fenster. Kein physischer Mobilgerätetest oder vollständiger Audit berichtet; siehe [Validierung](../website/tests/step-6-1-validation.md).
+
+## D-009: SVG-Scatterplot und gemeinsame lokale Datenbasis für 6.2
+
+**Status:** 6.2 abgeschlossen; technische Prüfung und nutzerberichteter informeller Browser-/Visualcheck dokumentiert
+
+**Entscheidung:** Native SVG-Komponente mit beschrifteten/fokussierbaren Punkten, persistenter Detailanzeige, Hover/Klick/Touch/Keyboard und gestrichelter OLS-Linie; keine neue Chart-Abhängigkeit. Auf schmalen Fenstern horizontaler Chart-Scroll statt unlesbar verkleinerter Achsentexte. Nutzer bewertet Bedienung und Aussehen im echten Browser informell positiv; spezifischer Keyboard-/Accessibility-/Gerätecheck nicht bestätigt.
+
+**Datenfluss:** Die bestehende API lädt weiterhin 2000–2024. Zeitraumwahl 2024/2019 filtert lokal nach Land und inklusiven Jahren; ein gemeinsames Ergebnis versorgt Punkte, Linie, r, β, n und Tabelle. Fehlende Werte bleiben in Tabellenzeilen, nur vollständige Paare gehen in Statistik/Chart. Landwechsel behält den Zeitraum. API-/Cache-Code unverändert.
+
+**Rechnung:** Gleiche Pearson-/OLS-Definition wie Python, kompensierte zentrierte Summen und direkte Konstantenerkennung vor Mittelwertbildung (inklusive historischem `0.1`-Fall). Keine künstliche Epsilon-Schwelle für Konstanten. Undefinierte Fälle erklärt, horizontale Regression bei konstantem y erhalten, numerischer Überlauf sicher behandelt. Linienvorhersage zentriert und nur zwischen beobachteten min/max x; keine Extrapolation. Drei Dezimalstellen für r/β nur zur Anzeige.
+
+**Kontrolle/Grenze:** Alle sechs eingefrorenen Gruppen einschließlich α/r/β/n und Ausschlüssen gegen gespeicherte Python-Ergebnisse geprüft, Toleranz `1e-12 * max(1, |Python|)`. Kein neuer statistischer Schätzer, keine Änderung der Referenzen. Live-Revisionen können reale Websitewerte ändern; der Offlinevergleich isoliert Rechenfehler von späteren Datenständen. [Prüfbericht](../website/tests/step-6-2-validation.md). Keine 6.3-Vergleichsansicht oder Schritte 7/8.

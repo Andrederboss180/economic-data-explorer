@@ -73,6 +73,22 @@ Hier sammeln wir tatsächliche Prüfungen und Fehler. Einträge werden erst als 
 - **Ergebnis / Nachweis:** 6.1 abgeschlossen; Git-Finalisierung ausdrücklich autorisiert (AW-010), [vollständiger Prüfbericht](../website/tests/step-6-1-validation.md). 6.2 bleibt nächster, nicht begonnener Auftrag.
 - **Korrektur der Abschluss-Prüfschleife:** Ein pauschaler Bytevergleich aller bestehenden Dateien meldete die bereits ausgecheckte JSON-Provenienz wegen Windows-Zeilenenden als abweichend. Vergleich mit `git hash-object` gegen den Baseline-Blob bestätigte unveränderte versionierte Inhalte für alle Daten-/Analyse-/Forschungsdateien; Referenz- und Ergebnis-CSV sind zusätzlich byte-identisch. Keine Datei wurde dafür verändert.
 
+## V-007: Website 6.2 – Gegenprüfung und unverfälschte Testevidenz
+
+- **Datum:** 2026-10-16
+- **Prüfung:** Pearson/OLS-Definition gegen bestehendes Python geprüft, vier bekannte synthetische Lösungen und alle sechs eingefrorenen Länder-Zeitraum-Ergebnisse getestet. Koeffizienten innerhalb Toleranz `1e-12 * max(1, |Python|)`; n/Ausschlüsse exakt. Direkte Konstantenerkennung für Integer und `0.1`, zu wenige/fehlende Werte, Floating-Point-Offsets, numerischer Überlauf und ungültige Inputs abgedeckt.
+- **Tatsächlicher Verlauf:** Erster neuer Testlauf: 64 Tests bestanden. Kein neuer fehlgeschlagener Testlauf beobachtet oder behauptet. Review vor diesem Lauf korrigierte den gespeicherten x-Mittelwert im Sonderfall konstanter Inflation (anfangs erster x-Wert); die horizontale Regression war davon unverändert. Der historische `0.1`-Fehler wird durch direkte Gleichheitsprüfung vermieden, nicht nachträglich neu inszeniert. Ein weiterer Länderwechseltest wurde zur gezielten Absicherung ergänzt.
+- **Ergebnis/Grenzen:** Abschließend 65 Website-Tests, Lint/Typecheck/Build und 19 Python-Tests bestanden. SVG-/UI-Ereignisse, Liniengrenzen, Zählungen, Filter- und Cacheverhalten automatisiert geprüft. Browserinventar leer, kein echter 6.2-Browser-/Layoutlauf oder Screenshot. Kein menschlicher Review für 6.2 behauptet; die 6.1-Nutzerprüfungen bleiben getrennt.
+- **Nachweis:** [6.2-Bericht mit Zahlen, Befehlen und offener Checkliste](../website/tests/step-6-2-validation.md), AW-011/D-009. Basis `29b974f`, `web/step-6-2-visualization`; uncommitted zur Prüfung. Keine Referenz-/Pythonänderung, keine neuen Pakete, kein Ländervergleich oder spätere Phasen.
+
+## V-008: Abschlussprüfung 6.2 und informeller Nutzercheck
+
+- **Datum:** 2026-10-16
+- **Tatsächliches Ergebnis:** 65 Website-Tests und 19 Python-Tests erneut bestanden, ebenso Lint/TypeScript/Build. Alle sechs eingefrorenen Gruppen stimmen mit der Python-Referenz innerhalb Toleranz überein. Code-/Diff-Review ohne blockierendes Problem; keine Funktionsänderung oder neuer Fehlerfall nötig. Whitespace, neue Dateien, unveränderte Daten/Analyse/API und ausgeschlossene Build-/Dependency-/Env-Dateien kontrolliert.
+- **Menschliche Evidenz:** Nutzer berichtet persönlichen echten Browserbesuch mit Interaktion; Erscheinungsbild und Funktionalität sehen gut aus. Erfolgreicher informeller Check, keine unabhängige Bestätigung der gesamten Checkliste, Keyboard-Barrierefreiheit, Network-Tab-Requestzählung oder physischer Geräte. Kein Screenshot erfunden. Das ergänzt die historische fehlende menschliche Prüfung aus AW-011/V-007; kein eigener Codex-Browserlauf behauptet.
+- **Nachweis / Freigabe:** [6.2-Bericht](../website/tests/step-6-2-validation.md), AW-012; Commit, sichere Integration und normaler Push ausdrücklich beauftragt. 6.2 abgeschlossen; 6.3 bleibt nächster, nicht begonnener Schritt.
+- **Prüfskript-Korrektur:** Der Ignore-Check prüfte den nicht vorhandenen Ordner `website/coverage` zunächst wie einen Dateipfad. Prüfung eines Pfades darunter bestätigte die bestehende Directory-Ignore-Regel; keine `.gitignore`- oder Produktänderung nötig.
+
 ## Vorlage
 
 ### V-XXX: Titel

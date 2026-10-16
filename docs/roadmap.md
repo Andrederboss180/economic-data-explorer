@@ -70,9 +70,11 @@ Technischer Nachweis: [Analyse und Validierung](../analysis/validation.md), sech
 
 ## Schritt 6 / Meilenstein 4: Website Development
 
-**Status:** aktiv; 6.1 abgeschlossen, als Nächstes 6.2 – Interactive Data Visualization (noch nicht begonnen)
+**Status:** aktiv; 6.1 und 6.2 abgeschlossen; als Nächstes 6.3 – Country Comparison & Website Finalization (noch nicht begonnen)
 
-6.1: Grundlage mit React/TypeScript/Vite, Land, Live-Abruf 2000–2024, Fehler-/Nullwertbehandlung, Tabelle, Quellen und Request-Cache abgeschlossen. 32 Offline-Tests, 1 Live-Test, Lint/Typecheck/Build und 19 Python-Tests erneut bestanden. Sechs persönliche Browserchecks vom Nutzer bestätigt, darunter zwei echte Werte und Nutzbarkeit bei schmalem Fenster; separat von automatisierter Prüfung dokumentiert. [Nachweise und Grenzen](../website/tests/step-6-1-validation.md). Keine erfundenen Screenshots, kein vollständiger Code-/Accessibility-Audit behauptet. Finalisierung und sichere Git-Integration ausdrücklich beauftragt (AW-010). Noch keine Zeitraumfilter, Charts, Kennzahlen oder Vergleichsansicht. Schritt 6 insgesamt nicht abgeschlossen; Schritte 7/8 bleiben außerhalb dieses Auftrags.
+6.1: React/TypeScript/Vite-Grundlage, Live-Tabelle, Quellen und Cache abgeschlossen; sechs nutzerberichtete Browserchecks separat von Automatisierung dokumentiert. [Historische Nachweise](../website/tests/step-6-1-validation.md), AW-010.
+
+6.2: SVG-Visualisierung, OLS über beobachtete X-Spanne, r/β/n und lokale Zeitraumfilter abgeschlossen. Erneut 65 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build bestanden; sechs eingefrorene Gruppen gegen Python geprüft. Nutzer berichtet positiven informellen Browser-/Visualcheck, ohne vollständige Detailcheckliste zu bestätigen. [Nachweise und Grenzen](../website/tests/step-6-2-validation.md), AW-012. Keine neue Abhängigkeit oder API-Anfrage beim Zeitraumwechsel; Daten/Analyse/API unverändert. Sichere Git-Finalisierung ausdrücklich autorisiert. 6.3 und Schritte 7/8 nicht begonnen; Schritt 6 insgesamt nicht abgeschlossen.
 
 Fertig, wenn:
 

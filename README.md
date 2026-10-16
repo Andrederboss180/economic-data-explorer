@@ -62,7 +62,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 6.1 ist abgeschlossen: React/TypeScript/Vite, Länderauswahl, Live-Daten 2000–2024 und Tabelle mit Quellen- und Fehlerzuständen. 32 Website-Tests, 1 Live-Test und 19 Python-Tests bestanden; sechs persönliche Browserchecks vom Nutzer bestätigt. [Lokal starten](website/README.md) · [Validierung und Prüfgrenzen](website/tests/step-6-1-validation.md). Als Nächstes folgt 6.2 – Interactive Data Visualization; noch nicht begonnen.
+Schritt 6.2 ist abgeschlossen: Scatterplot, OLS, r/β/n und lokale Zeitraumwahl. 65 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build erneut bestanden; alle sechs Referenzgruppen gegen Python geprüft. Der Nutzer bestätigt einen erfolgreichen informellen Browser-/Visualcheck. [Lokal starten](website/README.md) · [Validierung und Prüfgrenzen](website/tests/step-6-2-validation.md). Als Nächstes 6.3 – Country Comparison & Website Finalization, noch nicht begonnen.
 
 ## Git-Schnellstart
 

@@ -232,6 +232,40 @@ Das Repository enthält das Abrufskript, sechs originale JSON-Antworten, eine Pr
 
 **Git-Nachweis:** Ausgangspunkt `4a28809`, Feature-Branch `web/step-6-1-foundation`. Abschlusscommit `web: finalize validated website foundation`; Hash und tatsächlicher Merge-/Push-Erfolg über Git-Historie und Abschlussbericht. Staged Diff vor Commit prüfen, ausschließlich Fast-forward/normaler Push; keine fremden Änderungen verwerfen und kein Force-Push.
 
+## AW-011: Schritt 6.2 – interaktive Visualisierung mit Python-Gegenprüfung
+
+- **Datum:** 2026-10-16
+- **Phase:** Chat 3 / Website 6.2
+- **Werkzeug / Modell:** Codex, TypeScript/React/SVG, Vitest/jsdom/React Testing Library, ESLint/Vite, Python und Git; keine zusätzlich verifizierte Modell-/Effort-Angabe
+- **Status:** implementiert und technisch geprüft; manuelle Browserprüfung und menschlicher Review offen, uncommitted
+
+**Task / Prompt:** [Originalauftrag in relevanter Fassung](prompts/06-website-visualization.md). Sauberes/synchronisiertes `main` bei `29b974f` nach Fetch verifizieren, Feature-Branch `web/step-6-2-visualization` anlegen. Scatterplot (x=Arbeitslosigkeit, y=Inflation), Jahres-/Wertinteraktion, beobachtungsbegrenzte OLS-Gerade, r/β/n und lokale Zeitraumwahl ergänzen. Bestehende Tabelle/API-/Retry-/Cache-Funktionen erhalten, keine neuen Requests bei Zeitraumwechsel. Alle sechs Python-Referenzgruppen und bekannte/fehlende/konstante/numerische Randfälle prüfen, Code/Docs/Diff kontrollieren und vor Commit/Merge/Push stoppen. Keine 6.3-Vergleichsansicht oder Schritte 7/8.
+
+**AI usage / Entscheidungen:** Codex generierte `src/statistics/analysis.ts`, `src/components/Scatterplot.tsx`, Integration/Styles und Verhaltenstests. Native SVG vermeidet neue Abhängigkeiten; gemeinsame lokale Filterung versorgt alle Ansichten. Kompensierte zentrierte Summen mit direkter Gleichheitsprüfung vor Mittelwertbildung übernehmen die gültigen Python-Definitionen einschließlich des realen `0.1`-Lernpunkts. Nur vollständige Paare, keine Imputation. Linie innerhalb min/max beobachteter Arbeitslosigkeit; horizontale Regression bei konstantem y erhalten. Entscheidungen und Grenzen: D-009. Produkt-API und alle Referenzdateien unverändert.
+
+**Validation:** Bekannte analytische Lösungen und alle sechs eingefrorenen Python-Gruppen bestanden; Koeffizienten-Toleranz `1e-12 * max(1, |Python|)`, n und Ausschlüsse exakt. Max. absolute Differenzen: r `1.1102230246251565e-16`, β `2.7755575615628914e-17`, α `8.881784197001252e-16`. Der erste Lauf mit 64 Tests bestand; ein zusätzlicher Länderwechseltest ergänzt die Prüfung verschiedener Kennzahlen bei erhaltenem Zeitraum. Lint/Typecheck/Produktionsbuild sowie 19 vorhandene Python-Tests bestanden. Endgültige Testanzahl und Befehle: [6.2-Bericht](../website/tests/step-6-2-validation.md). Tests prüfen Interaktion, Line-Endpunkte, Zustände und Request-Zahl unter StrictMode/Rerender/Zeitraumwechsel; dies ist technische Prüfung, kein unabhängiger menschlicher Code-Audit.
+
+**Menschlicher Review:** Die sechs persönlichen Nutzerchecks aus 6.1 gelten nur für 6.1. Aktuelles Browserinventar leer; daher kein echter 6.2-Browserlauf und kein Screenshot behauptet. Kurze offene Checkliste mit Land-/Periodenwechsel, Hover/Tastatur/Touch, Liniengrenzen, Netzwerkanfragen und schmalem Layout im Bericht. Live-Revisionen können Websitewerte gegenüber dem Snapshot verändern und sind nicht automatisch Implementierungsfehler. Kein neuer Live-Lauf als numerischer Nachweis erforderlich; eingefrorene Daten isolieren die Statistikprüfung.
+
+**Outcome / Git:** Neue Visualisierung und geprüfte Rechnung zur Review übernommen, 6.2 noch nicht menschlich abgenommen. Abschließend 65 Website-Tests bestanden. Vor Beginn `main...origin/main = 0 0`, sauberer Baum, Basis `29b974f`; jetzt ausschließlich Feature-Branch, kein Staging/Commit/Merge/Push. Alle 15 geänderten und 6 neuen Dateien einschließlich Whitespace/Dokumentlinks geprüft; Daten-/Analyse-/API-/Paketdefinitionen unverändert bestätigt, CSVs byte-identisch. Vorhandene Präsentationsnotizen um echten Test-/Validierungsnachweis ergänzt, kein neues Deck/keine Schritte 7/8. V-007 dokumentiert Prüfgrenzen und tatsächliche Review-Korrektur ohne erfundene Fehler.
+
+## AW-012: 6.2 finalisieren – informeller Nutzercheck und Git-Abschluss
+
+- **Datum:** 2026-10-16
+- **Phase:** Chat 3 / Abschluss von 6.2
+- **Werkzeug / Modell:** Codex, Shell/Git, vorhandene Website-/Python-Prüfwerkzeuge; keine zusätzliche verifizierte Modell-/Effort-Angabe
+- **Status:** 6.2 abgeschlossen nach erneuter technischer Prüfung und positivem nutzerberichtetem informellem Browser-/Visualcheck; Git-Finalisierung ausdrücklich autorisiert
+
+**Task / Prompt:** Folgeauftrag „Finalize Step 6.2 – Interactive Data Visualization“: informelle persönliche Browserprüfung korrekt dokumentieren, nicht jede Detailprüfung erfinden; alle neuen/geänderten Dateien und Scope prüfen, 65 Website-Tests, Python-Tests, Lint/TypeScript/Build/Whitespace wiederholen, Referenzen/Analyse/API und Git-Ausschlüsse sichern; Status/Roadmap/Prüfbericht/Präsentationsnotizen sowie Zusammenarbeit Nutzer–ChatGPT Chat–Codex knapp aktualisieren. Nach erfolgreichem staged Review auf aktuellem Feature-Branch committen (`web: finalize validated interactive visualization`), bevorzugt Fast-forward nach `main`, normal pushen und saubere Synchronisierung prüfen. Keine 6.3-Implementierung oder Refaktorierung. Dieser Folgeauftrag ersetzt das ursprüngliche Commit-/Merge-/Push-Verbot für die geprüfte 6.2-Änderung.
+
+**Menschliche Prüfung:** Nutzer hat die Website im echten Browser geöffnet, bedient und Aussehen/Funktionalität positiv bewertet. Erfolgreicher **informeller nutzerberichteter Check**. Keine spezifische Keyboard-/Screenreaderprüfung, Network-Tab-Zählung oder physische Geräteprüfung bestätigt, keine Screenshots/Browserversion gemeldet. Keine vollständige Checklistenprüfung oder menschlicher Code-Audit behauptet.
+
+**Technische Prüfung:** Erneut 65 Website-Tests und 19 Python-Tests bestanden; ESLint/TypeScript/Produktionsbuild erfolgreich. Alle sechs eingefrorenen Gruppen r/β/α/n/Ausschlüsse gegen validierte Python-Ergebnisse innerhalb vereinbarter Toleranz; max. Koeffizientendifferenz `8.881784197001252e-16`. Tests prüfen Zeitraum-/Länderwechsel, gemeinsame Plot-/Linien-/Kennzahlen-/Tabellendaten, fehlende/konstante Werte, Interaktion, Request-Zahl, Laden/Fehler/Retry/Cache und Quellen. Vollständiger Review inklusive neuer Dateien, Diffs/Whitespace/Links; API-/Daten-/Analyse-/Paketdateien unverändert, generierte Dateien und `.env` ignoriert. Kein blockierendes Problem gefunden, keine funktionale Codeänderung für diesen Abschluss nötig.
+
+**Outcome / Nachweise:** Grundlage unverändert übernommen; informelle menschliche Evidenz und Prüfgrenzen im [6.2-Bericht](../website/tests/step-6-2-validation.md), V-008. [Projektworkflow](../docs/workflow.md) beschreibt Nutzeranforderung/-validierung, ChatGPT-Chat-Planung/Aufgabenformulierung und Codex-Implementierung/Tests/Git; explizite Aufträge und Repositorydateien bilden die Kontextübergabe. Vorhandene Präsentationsnotizen heben genau diese Rollen, AI-Code, unabhängigen Python-Vergleich, automatisierte Tests, menschlichen Check und Git-Review hervor. Als Nächstes **6.3 – Country Comparison & Website Finalization**, noch nicht begonnen.
+
+**Git-Nachweis:** Basis `29b974f`, Branch `web/step-6-2-visualization`; Fetch vor Integration erfolgreich, `main...origin/main = 0 0`. Staged Diff vor Commit prüfen. Abschlusscommit `web: finalize validated interactive visualization`; tatsächlicher Hash und Merge-/Push-Erfolg über Git-Historie und Abschlussbericht. Ausschließlich sichere Fast-forward-Integration und normaler Push, kein Force-Push oder Verwerfen fremder Änderungen.
+
 ## Vorlage für neue Einträge
 
 ### AW-XXX: Kurzer Titel

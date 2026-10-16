@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { COUNTRIES, INDICATORS, loadCountry, type CountryCode, type CountryData } from './api/worldBank'
+import Scatterplot from './components/Scatterplot'
+import { analyzeObservations, PERIODS, STATUS_TEXT, type EndYear } from './statistics/analysis'
 
 type LoadState =
   | { status: 'loading'; country: CountryCode }
@@ -14,6 +16,7 @@ function formatValue(value: number | null) {
 
 export default function App() {
   const [country, setCountry] = useState<CountryCode>('DEU')
+  const [endYear, setEndYear] = useState<EndYear>(2024)
   const [attempt, setAttempt] = useState(0)
   const [state, setState] = useState<LoadState>({ status: 'loading', country: 'DEU' })
 
@@ -31,7 +34,9 @@ export default function App() {
 
   const current = state.country === country ? state : { status: 'loading' as const }
   const data = current.status === 'ready' ? current.data : null
-  const complete = data?.observations.filter((row) => row.inflation !== null && row.unemployment !== null).length ?? 0
+  const analysis = data ? analyzeObservations(data.observations, country, endYear) : null
+  const complete = analysis?.statistics.n ?? 0
+  const expectedYears = endYear - 2000 + 1
 
   return (
     <div className="page">
@@ -55,13 +60,19 @@ export default function App() {
                 {Object.entries(COUNTRIES).map(([code, name]) => <option key={code} value={code}>{name}</option>)}
               </select>
             </div>
-            <div className="period"><span>Observation period</span><strong>2000–2024</strong><small>Annual data · 25 years</small></div>
+            <div className="period">
+              <label htmlFor="period">Observation period</label>
+              <select id="period" value={endYear} onChange={(event) => setEndYear(Number(event.target.value) as EndYear)}>
+                {PERIODS.map((end) => <option key={end} value={end}>2000–{end}</option>)}
+              </select>
+              <small>Annual data · {expectedYears} years</small>
+            </div>
             <div className="provider"><span className="source-dot" aria-hidden="true" /> World Bank Indicators API</div>
           </div>
 
           <div className="data-heading">
             <div><p className="eyebrow">COUNTRY DATA</p><h2 id="observations-title">{COUNTRIES[country]} <span>/ Annual observations</span></h2></div>
-            {data && <span className="count">{complete} / 25 complete pairs</span>}
+            {data && <span className="count">{complete} / {expectedYears} complete pairs</span>}
           </div>
 
           <div role="status" aria-live="polite" className={`status ${current.status}`}>
@@ -75,19 +86,30 @@ export default function App() {
             <button onClick={() => { setState({ status: 'loading', country }); setAttempt((value) => value + 1) }}>Retry World Bank request</button>
           </div>}
 
-          {data && <>
-            {complete < 25 && <p className="incomplete" role="note">
-              {25 - complete} years have at least one missing value. Missing values are shown explicitly and are never replaced with zero.
+          {analysis && <>
+            {complete < expectedYears && <p className="incomplete" role="note">
+              {expectedYears - complete} years have at least one missing value. Missing values are shown explicitly and are never replaced with zero.
               {complete === 0 && ' No complete annual pairs are available.'}
             </p>}
+            <div className="visualization">
+              <Scatterplot key={`${country}-${endYear}`} points={analysis.points} statistics={analysis.statistics} label={`${COUNTRIES[country]}, 2000–${endYear}`} />
+              <dl className="statistics" aria-label="Descriptive statistics">
+                <div><dt>Pearson correlation <span>r</span></dt><dd data-testid="pearson-r">{analysis.statistics.r?.toFixed(3) ?? 'Not available'}</dd>
+                  {analysis.statistics.r === null && <small>{STATUS_TEXT[analysis.statistics.correlationStatus]}</small>}</div>
+                <div><dt>OLS regression slope <span>β</span></dt><dd data-testid="regression-slope">{analysis.statistics.slope?.toFixed(3) ?? 'Not available'}</dd>
+                  {analysis.statistics.slope === null && <small>{STATUS_TEXT[analysis.statistics.regressionStatus]}</small>}</div>
+                <div><dt>Complete observations <span>n</span></dt><dd data-testid="observation-count">{complete}</dd></div>
+              </dl>
+              <p className="association-note">Descriptive associations, not evidence of causality. β is measured in percentage points of inflation per percentage point of unemployment. Only complete annual pairs are used.</p>
+            </div>
             <div className="table-scroll" tabIndex={0} role="region" aria-label={`${COUNTRIES[country]} annual data, scroll to see all years`}>
               <table>
-                <caption>{COUNTRIES[country]}, 2000–2024. Values displayed to two decimal places.</caption>
+                <caption>{COUNTRIES[country]}, 2000–{endYear}. Values displayed to two decimal places.</caption>
                 <thead><tr><th scope="col">Year</th><th scope="col">Inflation<small>Consumer prices · annual %</small></th><th scope="col">Unemployment<small>% of labor force · modeled ILO estimate</small></th></tr></thead>
-                <tbody>{data.observations.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{formatValue(row.inflation)}</td><td>{formatValue(row.unemployment)}</td></tr>)}</tbody>
+                <tbody>{analysis.rows.map((row) => <tr key={row.year}><th scope="row">{row.year}</th><td>{formatValue(row.inflation)}</td><td>{formatValue(row.unemployment)}</td></tr>)}</tbody>
               </table>
             </div>
-            <p className="table-note">25 requested years · {complete} complete pairs · {25 - complete} incomplete years. Display rounding does not change the retrieved values.</p>
+            <p className="table-note">{expectedYears} selected years · {complete} complete pairs · {expectedYears - complete} incomplete years. Display rounding does not change the retrieved values.</p>
           </>}
         </section>
 
