@@ -30,7 +30,7 @@ website/coverage/
 ~$*.docx
 presentation/exports/_drafts/
 
-# Lokal bereitgestellte, urheberrechtlich geschützte Quellen
+# Lokal bereitgestellte, urheberrechtlich geschützte Quellen; bzw große pdf Dateien muss man nicht speichern
 /Literatur/**/*.pdf
 /Vorlesungsfolien/**/*.pdf
 
