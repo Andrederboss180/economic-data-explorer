@@ -38,8 +38,8 @@ Später ergänzen wir Commit, Screenshot oder Datei als Nachweis.
 | Chat | Umfang | Stand am 16.10.2026 |
 |---|---|---|
 | 1 | Projektstruktur, Literaturreview, Git, World-Bank-API | Abgeschlossen bis `952b6d4` |
-| 2 | Mathematical Analysis & Validation | Abgeschlossen nach technischem Review und Nutzerauftrag zur Finalisierung |
-| 3 | Website Development | Geplant; noch nicht begonnen |
+| 2 | Mathematical Analysis & Validation | Abgeschlossen bei `4a28809` nach technischem Review und Nutzerauftrag zur Finalisierung |
+| 3 | Website Development | Aktiv: 6.1 abgeschlossen nach technischen Tests und sechs nutzerberichteten Browserchecks; als Nächstes 6.2 – Interactive Data Visualization |
 | 4 | Finalization & Presentation | Geplant |
 
 Die Trennung begrenzt mitgeführten Gesprächskontext und hält die Phasen übersichtlich. Jede neue Sitzung rekonstruiert Wissen aus versionierten Dateien, Daten und Git-Historie. Vor dem Wechsel müssen freigegebene Änderungen committed und offene Punkte dokumentiert sein. Ein Chatwechsel setzt Nutzungskontingente nicht zurück; eine geringere Gesamtzahl an Tokens wird nicht garantiert oder als gemessen behauptet. Aktuelle Produktinformation: [OpenAI Pricing](https://learn.chatgpt.com/docs/pricing), geöffnet am 16.10.2026; kein Tokenexperiment dieses Projekts.

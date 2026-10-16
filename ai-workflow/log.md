@@ -198,6 +198,40 @@ Das Repository enthält das Abrufskript, sechs originale JSON-Antworten, eine Pr
 
 **Nachweise / Git:** `analysis/validation.md`, V-004, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`; vollständiger gestagter Diff und `git diff --check` vor Commit. Abschlusscommit auf `analysis/step-5-validation`: `analysis: finalize validated reference statistics`, Basis `952b6d4`. Hash und tatsächliches Merge-/Push-Ergebnis sind über Git-Historie und den Abschlussbericht nachvollziehbar. Für die Integration ausschließlich Fast-forward und normaler Push, kein Force-Push oder Verwerfen fremder Änderungen.
 
+## AW-009: Chat 3 / Schritt 6.1 – Website-Grundlage und Live-Daten
+
+- **Datum:** 2026-10-16
+- **Phase:** Website Development, ausschließlich 6.1
+- **Werkzeug / Modell:** Codex; Sites-Skill für lokalen Workflow, Shell/npm, TypeScript/Vitest, Python-Regressionstests und World-Bank-API. Keine verifizierte spezifische Modell-/Effort-Angabe für Chat 3; Chat-2-Angabe nicht übernommen.
+- **Status:** implementiert und technisch geprüft; menschlicher Review und echte Browserprüfung ausstehend; kein Commit/Push
+
+**Task / Prompt:** Kontext aus den angeforderten Repository-Dateien, vorhandenen Skripten/Tests/Ergebnissen und Git rekonstruieren. Nur React/TypeScript/Vite-Grundlage, englische responsive Seite, Länderauswahl, Live-Abruf zweier Reihen 2000–2024, Jahresverknüpfung, Tabelle, Quellenmetadaten, Lade-/Fehler-/Nullzustände und Request-Cache implementieren. Live-Stichprobe gegen verifizierte CSV prüfen, Tests/Build/Diff kontrollieren, ohne Commit stoppen. Wörtliche relevante Promptabschnitte: [05-website-foundation.md](prompts/05-website-foundation.md).
+
+**AI usage / Entscheidungen:** Sauberes `main` bei `4a28809` bestätigt, Feature-Branch `web/step-6-1-foundation` angelegt. Codex erzeugte manuelles Minimalsetup, nativen `fetch`-Client mit Laufzeitvalidierung, React-Tabelle und Zustände, CSS und Tests. Keine Chart-/Statistikimplementierung. Indikatoren und Jahre aus dem geprüften Python-Abruf übernommen. Fehlende Datensätze werden für die Anzeige als fehlend erhalten statt wie beim Snapshot-Abruf abgelehnt; keine Änderung der vollständigen Paarbildung für spätere Statistik. D-006/D-008 erklären Stack, Browserabruf und Promise-Cache; kein Backend, Proxy oder zusätzlicher UI-/Datenlayer. Google-Font-Import aus dem ersten Entwurf vor Abschluss entfernt; System-Fallbacks vermeiden zusätzliche externe Font-Anfragen.
+
+**Validation:** ESLint, Typecheck und Vite-Build bestanden. 32 Offline-Tests bestanden: Parser/Verknüpfung/Fehler/Timeout/Cache und fünf UI-Tests einschließlich StrictMode, Race/Retry und fehlender Werte. Alle 75 eingefrorenen Paare aus Roh-JSON stimmen nach TypeScript-Zahlenkonvertierung mit der CSV überein. Separater Online-Test bestanden: sechs echte API-Reihen, je Land 25 vollständige Paare; je Indikator/Land Jahre 2000/2019/2024, insgesamt 18 Werte, stimmen mit CSV innerhalb `1e-12 * max(1, |Referenz|)` überein. Lauf `2026-10-16T13:45:02Z`, alle Source-Updates `2026-10-08`. Bestehende 19 Python-Tests bestanden, Daten/Analyse unverändert. Vite-Server HTTP 200; separater Origin-GET zum DEU-Inflationsendpoint HTTP 200 und CORS `*`. Browserinventar leer und Vorschau nicht verfügbar, daher keine echte Browser-/Mobilprüfung oder Screenshots behauptet. Tatsächliche Fehler und Korrekturen: V-005.
+
+**Outcome / Übernahme:** Technisch geprüfte lokale Grundlage übernommen und zur menschlichen Prüfung bereitgestellt. Spätere Features und Schritte 7/8 nicht begonnen. Vier-Chat-Strategie in vorhandener Dokumentation aktualisiert, keine neue Präsentation erstellt. Relevante Evidenz: tatsächliche Live-Wertetabelle, wiederholbare Prüfbefehle und offene Browser-Checkliste im [Validierungsbericht](../website/tests/step-6-1-validation.md). Keine unabhängige menschliche Validierung behauptet.
+
+**Git / Nachweise:** Basis `4a28809`; Änderungen ausschließlich neue Website-Dateien plus bestehende Status-/Entscheidungs-/Workflow-/Prompt-/Testdokumentation. `git diff --check`, vollständiger Review getrackter Änderungen und Inhalts-/Whitespace-Prüfung ungetrackter Dateien ohne Staging. Paketlock aufgelöst und gegen Paketdefinition geprüft. Menschlicher Review vor jedem Commit erforderlich; kein Commit und kein Push in diesem Auftrag.
+
+## AW-010: Schritt 6.1 abschließen – menschliche Browserkontrolle und Git-Integration
+
+- **Datum:** 2026-10-16
+- **Phase:** Chat 3 / Abschluss von 6.1
+- **Werkzeug / Modell:** Codex, Shell/Git/npm, Vitest/TypeScript/ESLint und Python; keine zusätzlich verifizierte Modell-/Effort-Angabe
+- **Status:** 6.1 abgeschlossen nach erneutem technischem Review und nutzerberichteter persönlicher Browserprüfung; Git-Integration ausdrücklich beauftragt
+
+**Task / Prompt:** Folgeauftrag „Finalize Step 6.1 – Website Foundation“: sechs persönlich ausgeführte Browserchecks dokumentieren, klar von Automatisierung trennen; kompletten Diff inklusive ungetrackter Dateien und Scope prüfen; Live-Daten, unveränderte Referenzen/Ergebnisse und Git-Ausschlüsse kontrollieren; Lint, TypeScript, Build, Website-/Python-Tests und Whitespace-Prüfungen wiederholen; Status, Roadmap und vorhandene Präsentationsnotizen aktualisieren; gestagten Diff vor Commit prüfen, auf `web/step-6-1-foundation` mit `web: finalize validated website foundation` committen, sicher bevorzugt per Fast-forward in `main` integrieren, normal zu `origin/main` pushen und saubere Synchronisierung prüfen. 6.2 nicht implementieren. Dieser Folgeauftrag ersetzt das frühere Commit-/Push-Verbot nur für die geprüfte Grundlage.
+
+**Menschliche Prüfung (vom Nutzer berichtet):** Alle sechs persönlich im echten Browser geprüft und bestanden: (1) Website lädt ohne sichtbare Fehler, (2) Germany/France/Spain auswählbar, (3) Tabelle wechselt mit Land, (4) Deutschland-Inflation 2024 ungefähr 2.26 %, (5) Frankreich-Arbeitslosigkeit 2024 gleich 7.4 %, (6) bei schmalem Browserfenster nutzbar. Keine Screenshots, Browserversion, Fensterbreite oder zusätzlichen Browserprüfungen berichtet. Kein vollständiger menschlicher Code-Audit behauptet.
+
+**Technische Prüfung:** Erneut 32 Website-Tests, 19 Python-Tests, ESLint, TypeScript und Produktionsbuild bestanden. Separater Online-Test bei `2026-10-16T14:11:44Z` bestanden: alle sechs echten Reihen vollständig, 18 Stichprobenwerte gegen unveränderte CSV innerhalb vereinbarter Toleranz; Source-Updates `2026-10-08`. Code bestätigt nativen Live-`fetch` ohne Snapshot-Fallback. Vollständiger Inhalts-/Diff-Review einschließlich neuer Dateien, Lockfile, relativer Markdown-Links und Whitespace. Referenz-CSV und Statistikresultate gegen `4a28809` byte-identisch; Daten-/Analyse-Code unverändert. `node_modules`, Buildausgaben und `.env`-Dateien ignoriert; keine erkannten Secrets in den aufzunehmenden Dateien. Keine Codeänderung oder neue Funktion für die Finalisierung nötig.
+
+**Outcome / Nachweise:** Grundlage unverändert übernommen, manuelle Evidenz und aktuelle Statusaussagen ergänzt. [Website-Validierung](../website/tests/step-6-1-validation.md) führt alle sechs Nutzerchecks separat auf; vorhandene Codex-/Git-Präsentationsnotizen und Checkliste ergänzt. AW-009/V-005 bleiben historische Nachweise des ursprünglichen technischen Durchlaufs. Als Nächstes **6.2 – Interactive Data Visualization**, noch nicht begonnen; Schritte 7/8 nicht gestartet.
+
+**Git-Nachweis:** Ausgangspunkt `4a28809`, Feature-Branch `web/step-6-1-foundation`. Abschlusscommit `web: finalize validated website foundation`; Hash und tatsächlicher Merge-/Push-Erfolg über Git-Historie und Abschlussbericht. Staged Diff vor Commit prüfen, ausschließlich Fast-forward/normaler Push; keine fremden Änderungen verwerfen und kein Force-Push.
+
 ## Vorlage für neue Einträge
 
 ### AW-XXX: Kurzer Titel

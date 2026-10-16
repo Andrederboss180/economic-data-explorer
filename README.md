@@ -62,7 +62,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 5 – Mathematical Analysis & Validation ist abgeschlossen: sechs Länder-Zeitraum-Ergebnisse, bekannte Testlösungen und Bibliotheksabgleich; insgesamt 19 Tests bestanden. [Ergebnisse und Validierung](analysis/validation.md) dokumentieren auch den tatsächlich gefundenen und korrigierten Rundungsfehler. Als Nächstes folgt Schritt 6 – Website Development in Codex Chat 3; noch nicht begonnen.
+Schritt 6.1 ist abgeschlossen: React/TypeScript/Vite, Länderauswahl, Live-Daten 2000–2024 und Tabelle mit Quellen- und Fehlerzuständen. 32 Website-Tests, 1 Live-Test und 19 Python-Tests bestanden; sechs persönliche Browserchecks vom Nutzer bestätigt. [Lokal starten](website/README.md) · [Validierung und Prüfgrenzen](website/tests/step-6-1-validation.md). Als Nächstes folgt 6.2 – Interactive Data Visualization; noch nicht begonnen.
 
 ## Git-Schnellstart
 

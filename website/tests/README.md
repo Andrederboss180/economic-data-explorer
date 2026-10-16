@@ -1,10 +1,12 @@
 # Website-Tests
 
+Schritt 6.1 abgeschlossen: **32 Offline-Tests und 1 separater Live-Test erneut bestanden**; zusätzlich **sechs persönliche Browserchecks vom Nutzer als bestanden berichtet**. Befehle, Live-Werte, Fehlerkorrekturen, manuelle Ergebnisse und Prüfgrenzen stehen im [Validierungsbericht](step-6-1-validation.md). Die folgende Liste beschreibt den Zielausbau; Statistik, Filter und Diagramme sind noch nicht implementiert. Nächster Auftrag: 6.2 – Interactive Data Visualization.
+
 ## Automatisierte Tests
 
 - API-Antwort wird korrekt in Jahreswerte übersetzt.
 - Reihen werden über das Jahr und nicht über Listenposition verbunden.
-- `null`-Werte werden ausgeschlossen und gezählt.
+- `null`-Werte bleiben in der Tabelle sichtbar und werden gezählt; spätere Statistik verwendet nur vollständige Paare.
 - Zeitraumfilter umfasst Start- und Endjahr.
 - Korrelation und Regression stimmen für bekannte Testdaten.
 - Länderauswahl verwendet den korrekten Code.

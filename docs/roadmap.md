@@ -70,7 +70,9 @@ Technischer Nachweis: [Analyse und Validierung](../analysis/validation.md), sech
 
 ## Schritt 6 / Meilenstein 4: Website Development
 
-**Status:** nächster Schritt; noch nicht begonnen
+**Status:** aktiv; 6.1 abgeschlossen, als Nächstes 6.2 – Interactive Data Visualization (noch nicht begonnen)
+
+6.1: Grundlage mit React/TypeScript/Vite, Land, Live-Abruf 2000–2024, Fehler-/Nullwertbehandlung, Tabelle, Quellen und Request-Cache abgeschlossen. 32 Offline-Tests, 1 Live-Test, Lint/Typecheck/Build und 19 Python-Tests erneut bestanden. Sechs persönliche Browserchecks vom Nutzer bestätigt, darunter zwei echte Werte und Nutzbarkeit bei schmalem Fenster; separat von automatisierter Prüfung dokumentiert. [Nachweise und Grenzen](../website/tests/step-6-1-validation.md). Keine erfundenen Screenshots, kein vollständiger Code-/Accessibility-Audit behauptet. Finalisierung und sichere Git-Integration ausdrücklich beauftragt (AW-010). Noch keine Zeitraumfilter, Charts, Kennzahlen oder Vergleichsansicht. Schritt 6 insgesamt nicht abgeschlossen; Schritte 7/8 bleiben außerhalb dieses Auftrags.
 
 Fertig, wenn:
 

@@ -69,7 +69,7 @@ Einfaches zukünftiges Folienkonzept, als kurzer Teil der Codex-/Git-Folie oder 
 
 Unter den Stationen stehen kurz `Task and changes`, `Reviewed code, data, status and decisions`, `Read files and continue`.
 
-**Sprechnotiz:** Vier geplante Chats trennen (1) Grundlagen/Literatur/Git/API, (2) Analyse/Validierung, (3) Website und (4) Finalisierung/Präsentation. Chats 1–2 sind abgeschlossen, Chats 3–4 geplant. Die neue Sitzung liest `PROJECT_STATUS.md`, README, Roadmap, AI-Log und Git-Historie. Der Übergang braucht dokumentierte offene Punkte und freigegebene Commits. Dadurch muss nicht die ganze frühere Unterhaltung mitgeführt werden. Chatwechsel setzt Nutzungslimits nicht zurück. Wir behaupten weder garantierte noch gemessene Tokenersparnis. Aktuelle Nutzungshinweise: [OpenAI Pricing](https://learn.chatgpt.com/docs/pricing), geöffnet am 16.10.2026.
+**Sprechnotiz:** Vier geplante Chats trennen (1) Grundlagen/Literatur/Git/API, (2) Analyse/Validierung, (3) Website und (4) Finalisierung/Präsentation. Chats 1–2 sind abgeschlossen, Chat 3 ist aktiv (6.1 abgeschlossen), Chat 4 bleibt geplant. Die neue Sitzung liest `PROJECT_STATUS.md`, README, Roadmap, AI-Log und Git-Historie. Der Übergang braucht dokumentierte offene Punkte und freigegebene Commits. Dadurch muss nicht die ganze frühere Unterhaltung mitgeführt werden. Chatwechsel setzt Nutzungslimits nicht zurück. Wir behaupten weder garantierte noch gemessene Tokenersparnis. Aktuelle Nutzungshinweise: [OpenAI Pricing](https://learn.chatgpt.com/docs/pricing), geöffnet am 16.10.2026.
 
 **Nachweis:** Chat 2 begann mit sauberem Arbeitsbaum auf `952b6d4`; die Dateien lieferten den Stand nach Schritt 4. Vier-Chat-Plan: `ai-workflow/README.md`. Modell für Chat 2: `GPT-6.1 Sol, Medium` laut berichteter Nutzerauswahl, nicht unabhängig als Runtime-Metadatum verifiziert.
 
@@ -89,4 +89,20 @@ Unter den Stationen stehen kurz `Task and changes`, `Reviewed code, data, status
 
 **Limit:** Deskriptive OLS mit 20/25 Jahresbeobachtungen, keine kausale oder vollständige strukturelle Phillips-Kurve. Zeitraumabhängigkeit bleibt sichtbar.
 
-**Nachweise:** `ai-workflow/prompts/04-statistics-tests.md`, `analysis/validation.md`, `analysis/scripts/analyze_reference_data.py`, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`, AW-006/AW-007/AW-008 und V-004. Der Analysebericht enthält die relevanten Diff-Befehle. Entwicklungsbranch: `analysis/step-5-validation`; Finalisierung und Git-Integration vom Nutzer beauftragt. Schritt 6 wurde nicht begonnen.
+**Nachweise:** `ai-workflow/prompts/04-statistics-tests.md`, `analysis/validation.md`, `analysis/scripts/analyze_reference_data.py`, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`, AW-006/AW-007/AW-008 und V-004. Der Analysebericht enthält die relevanten Diff-Befehle. Entwicklungsbranch: `analysis/step-5-validation`; Finalisierung und Git-Integration vom Nutzer beauftragt. Beim damaligen Abschluss von Chat 2 war Schritt 6 noch nicht begonnen.
+
+## Website foundation: AI implementation, automated checks, human oversight
+
+**Slide copy (English):**
+
+> Codex built the live-data foundation. Automated tests checked the data and interface behavior. I personally checked the website in a real browser before authorizing the Git checkpoint.
+
+**AI contribution:** React/TypeScript/Vite setup, native World-Bank-`fetch`, year-based joining, missing-value/error states, table and in-memory request cache. Small scope: no charts or statistics yet.
+
+**Automated evidence:** 32 website tests and 19 existing Python tests passed again; lint, type-check and production build passed. One separate live test checked 18 values against the frozen CSV. Historical TypeScript/parser incompatibility and test-path failure were corrected and documented; no invented failure story.
+
+**Human evidence (user-reported, six checks):** Loads without visible errors; Germany/France/Spain selectable; table updates on selection; Germany 2024 inflation about 2.26 %; France 2024 unemployment 7.4 %; usable in a narrow browser window. These are personal user reports, separate from Codex/jsdom tests. No screenshots, specific browser version, physical mobile test or complete code audit claimed.
+
+**Git review:** Feature branch `web/step-6-1-foundation`, base `4a28809`, full diff including new files and staged diff reviewed before the authorized checkpoint `web: finalize validated website foundation`. Safe fast-forward integration and normal push; actual hash/status from Git history and finalization report. Next task: 6.2 – Interactive Data Visualization, not started.
+
+**Evidence links:** [Website validation](../../website/tests/step-6-1-validation.md), [AI workflow AW-009/AW-010](../../ai-workflow/log.md), [actual corrections V-005/V-006](../../ai-workflow/validation-log.md). This extends the existing AI-workflow notes; no new slide deck or website screenshot is asserted.

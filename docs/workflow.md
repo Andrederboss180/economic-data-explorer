@@ -9,7 +9,7 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | 3 | Git und Projektaufbau (M7) | Struktur und Dokumentation vorbereiten | Diffs vor dem Staging und den gestagten Stand vor dem Commit prüfen | Lokales Repository außerhalb von OneDrive; `main` verfolgt `origin/main`; erster GitHub-Push erfolgreich | Abgeschlossen |
 | 4 | Datenbeschaffung (M5) | Minimalen Standardbibliothek-Abruf und Validierung implementieren | Echten Terminalnachweis nachvollziehen; Codex führte Datenchecks, sechs Unit-Tests und einen separaten PowerShell-Spotcheck aus; kein vollständiger Human Audit | 150 Quellbeobachtungen; 75 vollständige Länder-Jahr-Zeilen; Frankreich-Spotcheck bestanden | Abgeschlossen |
 | 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Bekannte Testlösungen, `statistics`-Abgleich und erneuter Codex-Review; Abschluss vom Nutzer beauftragt | Sechs Ergebniszeilen; 19 Tests insgesamt bestanden | Abgeschlossen |
-| 6 | Website | Komponenten, Visualisierung und Tests implementieren | Funktionen und Darstellung manuell testen | Economic Data Explorer | Als Nächstes; noch nicht begonnen |
+| 6 | Website | Grundlage, Live-Client und Tests für 6.1 implementiert | Nutzer bestätigt sechs persönliche Browserchecks; technische Prüfungen erneut bestanden | Live-Jahrestabelle mit Quellen, Fehlerbehandlung und Cache | 6.1 abgeschlossen; als Nächstes 6.2, noch nicht begonnen |
 | 7 | Fehler und Grenzen | Risiken identifizieren und Erklärungen entwerfen | Nur tatsächlich beobachtete Fehler als Fälle verwenden | Risikoregister und Validierungsbeispiel | Laufend |
 | 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Vorbereitet |
 
@@ -24,6 +24,8 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 7. Verständlichen Git-Commit erstellen.
 
 Der ursprüngliche Chat-2-Auftrag endete vor dem Commit. Der Folgeauftrag autorisiert nach erneuter Prüfung Commit, sichere Integration in `main` und Push (AW-008). Die geplante Aufteilung auf vier Codex-Chats und die Übergabe über Git/Dokumentation stehen in [ai-workflow/README.md](../ai-workflow/README.md).
+
+Chat 3 beginnt bei `4a28809`. Der ursprüngliche 6.1-Auftrag stoppte vor Commit/Push (AW-009). Der Folgeauftrag „Finalize Step 6.1 – Website Foundation“ meldet sechs persönliche Browserchecks und autorisiert nach erneutem technischem/staged Review den Abschlusscommit, sichere Integration in `main` und normalen Push (AW-010). Historische Prompts bleiben unverändert; spätere Website-Teilschritte und Schritte 7/8 sind nicht Teil dieses Finalisierungsauftrags.
 
 ## Workflow für die spätere Übersichtsgrafik
 

@@ -55,10 +55,21 @@
 - [x] begrenzter, verständlicher Diff-Ablauf erklärt
 - [x] echte Commit-IDs und Verlauf dokumentiert
 - [x] erfolgreicher erster Push belegt
-- [x] Feature-Branches und Pull Requests als optional und noch nicht verwendet markiert
+- [x] Feature-Branches tatsächlich für Schritte 5 und 6.1 verwendet; kein Pull Request behauptet
 - [ ] finalen Terminal-Screenshot für die Folie erstellen
 
 ## Folie 7: Validierung
+
+### Ergänzende Evidenz aus Website-Schritt 6.1
+
+- [x] 32 Website-Tests und 19 Python-Tests erneut bestanden; Lint/Typecheck/Build geprüft
+- [x] separater Live-Test: 18 echte Werte gegen eingefrorene CSV geprüft
+- [x] sechs persönliche Browserchecks vom Nutzer berichtet, getrennt von Automatisierung dokumentiert
+- [x] Deutschland-Inflation 2024 ungefähr 2.26 % und Frankreich-Arbeitslosigkeit 2024 gleich 7.4 % manuell bestätigt
+- [x] Nutzbarkeit bei schmalem Browserfenster nutzerberichtet bestätigt
+- [ ] echter Website-Screenshot (nicht bereitgestellt/erstellt)
+
+Nachweis: [Website-Validierung und Prüfgrenzen](../website/tests/step-6-1-validation.md), AW-010. Keine zusätzlichen Browser-/Geräteprüfungen oder vollständiger Code-Audit behauptet.
 
 - [ ] tatsächlicher Fehler oder echte Hochrisiko-Prüfung
 - [ ] reproduzierbarer Nachweis
