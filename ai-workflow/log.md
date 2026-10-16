@@ -88,6 +88,35 @@ Schritt 2 ist im vereinbarten Minimalumfang abgeschlossen. Die Literatur grenzt 
 - Präsentationsnotizen: `presentation/slides/04b-source-grounded-literature-review.md`
 - Originalunterhaltung: `archive/Lab4 literature review original chat.txt`
 
+## AW-004: GitHub-Verbindung und Git-Workflow
+
+- **Datum:** 2026-10-16
+- **Phase:** Git & Version Control (M7)
+- **Status:** abgeschlossen
+
+**Task**
+
+Den tatsächlich verwendeten Git-Ablauf, die GitHub-Verbindung und den Wert von Git bei der Zusammenarbeit mit Codex dokumentieren. Schritt 3 soll erst nach Prüfung von Status, Remote und Historie abgeschlossen werden.
+
+**AI usage**
+
+Codex las den lokalen Git-Status und die Konfiguration aus, verglich `HEAD` mit `origin/main`, prüfte die Commit-Historie und formulierte daraus die Projektdokumentation sowie einen kurzen Präsentationsentwurf.
+
+**Validation**
+
+Vor der Dokumentationsänderung war der Arbeitsbaum sauber. `main` und `origin/main` zeigten beide auf `fa62b33`. `origin` war mit `https://github.com/Andrederboss180/economic-data-explorer.git` für Fetch und Push konfiguriert. Die Historie enthielt `5afcb89`, `dc9fe71` und `fa62b33`. Das Repository lag unter `C:\Users\andre\Präsentation (alles)` und damit nicht mehr im früheren OneDrive-Pfad. Die lokale Konfiguration belegt keine öffentliche oder private Sichtbarkeit des Remotes.
+
+**Outcome**
+
+Schritt 3 ist abgeschlossen. Die Dokumentation erklärt Diff-Prüfung, Staging, Commits, `.gitignore`, den Umzug aus OneDrive, Remote-Tracking und den ersten erfolgreichen Push. Feature-Branches und Pull Requests bleiben optionale, bisher nicht verwendete Arbeitsweisen. Schritt 4 – World Bank API (M5) ist als nächster, noch nicht begonnener Schritt markiert.
+
+**Nachweise**
+
+- `docs/git-guide.md`
+- `docs/workflow.md`
+- `presentation/slides/06-codex-git.md`
+- lokale Ausgaben von `git status`, `git remote -v`, `git branch -vv` und `git log`
+
 ---
 
 ## Vorlage für neue Einträge

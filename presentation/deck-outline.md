@@ -80,12 +80,14 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 
 **Auf die Folie:**
 
-- eine klar formulierte Codex-Aufgabe
-- der relevante Git-Diff
-- ausgeführter Test
-- kleiner Commit-Verlauf
+- Review-Schleife `git diff`, Staging, Prüfung und Commit
+- echter Verlauf `5afcb89`, `dc9fe71`, `fa62b33`
+- `main` verfolgt `origin/main`; erster Push war erfolgreich
+- Feature-Branches und Pull Requests: optional, bisher nicht verwendet
 
 **Visual:** Ein zusammenhängendes Beispiel von Aufgabe zu Änderung zu Prüfung. Terminalbefehle müssen groß genug lesbar sein.
+
+**Vollständiger Entwurf:** [slides/06-codex-git.md](slides/06-codex-git.md)
 
 ## Folie 7: Validation, risks and one real correction
 

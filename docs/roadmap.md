@@ -26,7 +26,23 @@ Fertig, wenn:
 
 Erfüllt am 14.10.2026: Der AI-gestützte Audit deckte 12 faktische Zellen und 3 Cross-paper comparisons ab. Die drei zentralen Ergebnisse wurden unabhängig auf den Original-PDF-Seiten 4, 20 und 3 bestätigt; die drei Vergleiche wurden als angemessene eigene Interpretationen freigegeben. Dies ist kein vollständiger menschlicher Zell-für-Zell-Audit.
 
-## Meilenstein 2: API und Referenzdaten
+## Schritt 3: Git & Version Control (M7)
+
+**Status:** abgeschlossen am 16.10.2026
+
+Erfüllt, weil:
+
+- das lokale Repository aus dem OneDrive-Ordner in `C:\Users\andre\Präsentation (alles)` verschoben wurde
+- `.gitignore`, Staging, Commits und Diff-Prüfungen im echten Projekt verwendet wurden
+- `main` den Remote-Branch `origin/main` verfolgt
+- der erste Push zum GitHub-Remote erfolgreich war
+- der tatsächliche Verlauf mit `5afcb89`, `dc9fe71` und `fa62b33` dokumentiert ist
+
+Feature-Branches und Pull Requests bleiben optionale spätere Erweiterungen. Sie wurden bisher nicht verwendet.
+
+## Schritt 4 / Meilenstein 2: API und Referenzdaten (M5)
+
+**Status:** als Nächstes; noch nicht begonnen
 
 Fertig, wenn:
 

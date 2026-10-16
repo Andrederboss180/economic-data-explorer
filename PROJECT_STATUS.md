@@ -1,7 +1,7 @@
 # Projektstatus
 
-- **Letzte Aktualisierung:** 14.10.2026
-- **Phase:** Schritt 2 – Literaturreview im vereinbarten Minimalumfang abgeschlossen; Schritt 4 noch nicht begonnen
+- **Letzte Aktualisierung:** 16.10.2026
+- **Phase:** Schritt 3 – Git & Version Control (M7) abgeschlossen; Schritt 4 – World Bank API (M5) als Nächstes
 - **Abgabe laut bisherigem Chat:** 22. Oktober, 08:00 Uhr. Jahr und Zeitzone bitte noch bestätigen.
 
 ## Statusübersicht
@@ -11,13 +11,13 @@
 | Ideation | Abgeschlossen | Drei Optionen verglichen, Economic Data Explorer gewählt |
 | Forschungsfrage | Abgeschlossen | Länder, Indikatoren und Zeitraum festgelegt |
 | Kursbezug | Vorbereitet | M1 bis M10 priorisiert und konkreten Nachweisen zugeordnet |
-| Git | Eingerichtet | Repository auf `main`, Regeln und Commit-Konventionen dokumentiert |
+| Git | Abgeschlossen | Lokales Repository außerhalb von OneDrive, `main` verfolgt `origin/main`, erster Push zu GitHub erfolgreich |
 | Literatur | Abgeschlossen (Minimalumfang) | 12 faktische Zellen AI-gestützt geprüft; 3 Hauptergebnisse unabhängig menschlich bestätigt; 3 Vergleiche als analytische Interpretationen freigegeben |
 | Daten | Geplant | Live-API plus eingefrorener Referenzdatensatz |
 | Analyse | Geplant | Pearson-Korrelation, OLS-Steigung, Beobachtungszahl, Robustheitszeitraum |
 | Website | Geplant | React und TypeScript als vorläufiger Stack |
 | AI-Nachweise | Aktiv | Log, Promptablage, Validierungslog und Risikoregister angelegt |
-| Präsentation | Inhaltlich vorbereitet | Acht-Folien-Storyboard und Ideation-Folie ausgearbeitet |
+| Präsentation | Inhaltlich vorbereitet | Storyboard sowie Notizen zu Ideation, Literaturreview und Git/Codex ausgearbeitet |
 
 ## Festgelegter Projektumfang
 
@@ -32,7 +32,7 @@
 
 ## Nächster geplanter Meilenstein – noch nicht begonnen
 
-Schritt 4 ist die Datenbeschaffung über die World-Bank-API. Er beginnt erst nach ausdrücklicher Freigabe. In diesem Abschluss-Commit werden weder API-Code noch weitere Literaturrecherche oder Writing Exercises ergänzt.
+Schritt 4 ist die Datenbeschaffung über die World-Bank-API im Kursmodul M5. Er beginnt erst nach ausdrücklicher Freigabe. In diesem Abschluss-Commit werden weder API-Code noch statistische Analyse oder Website-Code ergänzt.
 
 ## Noch zu bestätigen
 
@@ -40,4 +40,4 @@ Schritt 4 ist die Datenbeschaffung über die World-Bank-API. Er beginnt erst nac
 - Präsentationssprache: derzeit Englisch für Folientext und Deutsch für Arbeitsnotizen angenommen
 - Tatsächliche Zeit- oder Folienvorgabe des Professors; bisher ist nur „höchstens drei Folien zum Projekt selbst“ dokumentiert
 - Ob es ein vorgegebenes Präsentationstemplate gibt
-- Ob das finale Repository später auf GitHub veröffentlicht werden soll
+- Sichtbarkeit und spätere Freigabeeinstellungen des GitHub-Repositories; aus der lokalen Konfiguration wird keine Aussage „privat“ oder „öffentlich“ abgeleitet

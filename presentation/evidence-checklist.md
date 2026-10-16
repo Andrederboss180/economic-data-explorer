@@ -49,10 +49,12 @@
 
 ## Folie 6: Codex und Git
 
-- [ ] klarer Codex-Prompt
-- [ ] begrenzter, verständlicher Diff
-- [ ] passender Test
-- [ ] Commit-ID und Verlauf
+- [x] tatsächlicher Branch- und Remote-Tracking-Status dokumentiert
+- [x] begrenzter, verständlicher Diff-Ablauf erklärt
+- [x] echte Commit-IDs und Verlauf dokumentiert
+- [x] erfolgreicher erster Push belegt
+- [x] Feature-Branches und Pull Requests als optional und noch nicht verwendet markiert
+- [ ] finalen Terminal-Screenshot für die Folie erstellen
 
 ## Folie 7: Validierung
 
