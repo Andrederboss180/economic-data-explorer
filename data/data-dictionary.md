@@ -15,17 +15,22 @@
 
 Der aktuelle Snapshot enthält 75 Zeilen und keine leeren Messwerte. Das Schema erlaubt trotzdem leere Felder, weil ein künftiger API-Abruf `null` liefern kann. Das Abrufskript ersetzt solche Werte nicht.
 
-## Geplante Ergebnisdatei
+## Ergebnisdatei `results/analysis_results.csv`
 
 | Spalte | Bedeutung |
 |---|---|
 | `country_code` | analysiertes Land |
+| `country_name` | englischer Ländername |
 | `start_year` | Beginn des Zeitraums |
 | `end_year` | Ende des Zeitraums |
 | `n` | Zahl vollständiger Beobachtungen |
 | `pearson_r` | lineare Korrelation |
 | `intercept_alpha` | geschätzter Achsenabschnitt |
 | `slope_beta` | geschätzte Steigung |
-| `r_squared` | optionales Bestimmtheitsmaß |
+| `n_excluded` | fehlende Jahreszeilen plus Jahre mit unvollständigem Wertepaar |
+| `missing_years` | fehlende Jahreszeilen, mit Semikolon getrennt; leer = keine |
+| `incomplete_years` | Jahre mit mindestens einem leeren Messwert, mit Semikolon getrennt; leer = keine |
+| `pearson_status` | `ok`, `insufficient_observations`, `constant_unemployment` oder `constant_inflation` |
+| `regression_status` | `ok`, `insufficient_observations` oder `constant_unemployment` |
 
-Die Ergebnisdatei gehört zur späteren Analysephase und wurde noch nicht erstellt.
+Die Datei enthält sechs Zeilen für drei Länder und zwei inklusive Zeiträume. x ist Arbeitslosigkeit, y ist Inflation; beta misst Prozentpunkte Inflation je Prozentpunkt Arbeitslosigkeit im deskriptiven Zusammenhang. Undefinierte Koeffizienten bleiben leer und werden über die Statusspalte erklärt. Spätere Website-Parser müssen leere Koeffizienten als fehlend behandeln, nicht als 0. Kein zusätzliches R² für diesen Minimalumfang. Provenienz und Transformation: [Analysevalidierung](../analysis/validation.md).

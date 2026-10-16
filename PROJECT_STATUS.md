@@ -1,7 +1,7 @@
 # Projektstatus
 
 - **Letzte Aktualisierung:** 16.10.2026
-- **Phase:** Schritt 4 – World Bank API (M5) abgeschlossen; als Nächstes Schritt 5 – Mathematical Analysis & Validation
+- **Phase:** Schritt 5 – Mathematical Analysis & Validation abgeschlossen; als Nächstes Schritt 6 – Website Development
 - **Abgabe laut bisherigem Chat:** 22. Oktober, 08:00 Uhr. Jahr und Zeitzone bitte noch bestätigen.
 
 ## Statusübersicht
@@ -14,7 +14,7 @@
 | Git | Abgeschlossen | Lokales Repository außerhalb von OneDrive, `main` verfolgt `origin/main`, erster Push zu GitHub erfolgreich |
 | Literatur | Abgeschlossen (Minimalumfang) | 12 faktische Zellen AI-gestützt geprüft; 3 Hauptergebnisse unabhängig menschlich bestätigt; 3 Vergleiche als analytische Interpretationen freigegeben |
 | Daten | Abgeschlossen | Sechs API-Antworten validiert; 150 Quellbeobachtungen und 75 vollständige Länder-Jahr-Zeilen; PowerShell-Spotcheck bestanden |
-| Analyse | Geplant | Pearson-Korrelation, OLS-Steigung, Beobachtungszahl, Robustheitszeitraum |
+| Analyse | Abgeschlossen | Sechs Länder-Zeitraum-Ergebnisse; 13 Analyse-Tests plus 6 API-Tests bestanden; Abgleich mit `statistics` |
 | Website | Geplant | React und TypeScript als vorläufiger Stack |
 | AI-Nachweise | Aktiv | Log, Promptablage, Validierungslog und Risikoregister angelegt |
 | Präsentation | Inhaltlich vorbereitet | Storyboard sowie Notizen zu Ideation, Literaturreview und Git/Codex ausgearbeitet |
@@ -32,7 +32,9 @@
 
 ## Nächster Schritt
 
-Schritt 4 ist nach Codex-Review, sechs bestandenen Unit-Tests und einem separaten Live-PowerShell-Abgleich abgeschlossen. Frankreichs Arbeitslosenquote 2024 beträgt sowohl in der API als auch in der CSV exakt `7.4`. Das ist eine technische Gegenprüfung, kein vollständiger unabhängiger menschlicher Audit. Als Nächstes folgt Schritt 5 – Mathematical Analysis & Validation. Statistische Analyse und Website-Code wurden noch nicht begonnen.
+Schritt 5 ist nach erneutem Codex-Review von Code, Tests, Ergebnisdatei und vollständigem Diff abgeschlossen. 19 Tests bestanden; alle sechs Gruppen stimmen mit `statistics` innerhalb rel./abs. 1e-12 überein. Keine Beobachtungen ausgeschlossen. Der Nutzer hat Abschluss, Commit auf `analysis/step-5-validation`, sichere Integration in `main` und Push ausdrücklich beauftragt. Dies ist kein unabhängiger menschlicher Code-Audit. Nachweise: [Analysebericht](analysis/validation.md) und AW-008. Als Nächstes folgt Chat 3 / Schritt 6 – Website Development; noch nicht begonnen.
+
+Die vier geplanten Codex-Chats und ihre Übergabe über versionierte Dateien stehen in [ai-workflow/README.md](ai-workflow/README.md). Chat 2 ist abgeschlossen. Modell: `GPT-6.1 Sol, Medium` laut berichteter Nutzerauswahl, nicht unabhängig als Runtime-Metadatum verifiziert.
 
 ## Noch zu bestätigen
 

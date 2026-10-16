@@ -38,7 +38,7 @@ Erfüllt, weil:
 - der erste Push zum GitHub-Remote erfolgreich war
 - der tatsächliche Verlauf mit `5afcb89`, `dc9fe71` und `fa62b33` dokumentiert ist
 
-Feature-Branches und Pull Requests bleiben optionale spätere Erweiterungen. Sie wurden bisher nicht verwendet.
+Stand nach Schritt 3: Feature-Branches und Pull Requests wurden noch nicht verwendet. Schritt 5 verwendet erstmals `analysis/step-5-validation`; ein Pull Request wurde nicht verwendet.
 
 ## Schritt 4 / Meilenstein 2: API und Referenzdaten (M5)
 
@@ -56,7 +56,7 @@ Erfüllt am 16.10.2026: Sechs API-Antworten wurden erfolgreich validiert. Der Sn
 
 ## Schritt 5 / Meilenstein 3: Mathematical Analysis & Validation
 
-**Status:** nächster Schritt; noch nicht begonnen
+**Status:** abgeschlossen am 16.10.2026 nach erneutem technischem Review und ausdrücklichem Abschlussauftrag des Nutzers
 
 Fertig, wenn:
 
@@ -66,7 +66,11 @@ Fertig, wenn:
 - eine zweite Implementierung oder Bibliothek die Resultate bestätigt
 - Grenzen der Methode formuliert sind
 
-## Meilenstein 4: Website
+Technischer Nachweis: [Analyse und Validierung](../analysis/validation.md), sechs Ergebniszeilen, 13 neue Analyse-Tests plus 6 bestehende API-Tests bestanden. Alle sechs realen Gruppen mit `statistics` gegengeprüft. Code, Ergebnisse und vollständiger Diff erneut geprüft; der tatsächliche `0.1`-Fehler samt Korrektur ist dokumentiert. Abschlussauftrag und Git-Nachweise: AW-008. Als Nächstes folgt Schritt 6 – Website Development in Chat 3.
+
+## Schritt 6 / Meilenstein 4: Website Development
+
+**Status:** nächster Schritt; noch nicht begonnen
 
 Fertig, wenn:
 

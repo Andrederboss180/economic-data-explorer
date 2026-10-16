@@ -55,3 +55,7 @@ Beide Zeiträume verwenden dieselbe Aufbereitungs- und Berechnungslogik.
 ## 7. Ergebnisdarstellung
 
 Pro Land zeigen wir Scatterplot, Regressionsgerade, `r`, `β` und `n`. Eine Tabelle fasst die Länder für beide Zeiträume zusammen. Aussagen beschreiben Richtung, Stärke und sichtbare Unterschiede, ohne Ursache-Wirkungs-Sprache.
+
+## 8. Umsetzungsstand Schritt 5
+
+Die Offline-Python-Analyse ist implementiert und mit bekannten Testlösungen sowie den separaten Standardbibliothek-Funktionen `statistics.correlation` und `statistics.linear_regression` geprüft. [Ergebnisbericht und Grenzen](../analysis/validation.md). Die Website und der Python-/TypeScript-Vergleich aus Abschnitt 6 stehen noch aus. Es werden keine Signifikanz, Kausalität oder vollständige strukturelle Phillips-Kurve beansprucht. Der Zeitraumvergleich ist eine einfache Sensitivitätsprüfung, kein umfassender Robustheitsnachweis.

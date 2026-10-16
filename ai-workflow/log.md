@@ -157,6 +157,47 @@ Das Repository enthält das Abrufskript, sechs originale JSON-Antworten, eine Pr
 
 ---
 
+## AW-006: Kontextrekonstruktion und vier Codex-Chats
+
+- **Datum:** 2026-10-16
+- **Phase:** Chat 2, Vorbereitung von Schritt 5
+- **Status:** dokumentiert; menschlicher Review ausstehend
+
+**Task / AI usage:** Nutzerauftrag: Repository-Kontext wiederherstellen und vier geplante Chats mit Folienkonzept dokumentieren. Codex las README, Status, Roadmap, Workflow, Logs, Analyse-/Datendokumentation, Methodik und Präsentationsnotizen sowie Git-Status/Historie. Die genaue Modell-/Effort-Angabe `GPT-6.1 Sol, Medium` ist durch verfügbare Sitzungsmetadaten nicht bestätigt und wird nicht als Tatsache ausgegeben.
+
+**Validation:** Sauberer Arbeitsbaum auf `main`, letzter Commit `952b6d4`; Schritte 1–4 laut Repository abgeschlossen. Keine frühere Chat-Historie als Beleg vorausgesetzt. Offizielle Pricing-Dokumentation für die Nutzungshinweise geöffnet; kein Tokenverbrauchsexperiment oder Effizienzgewinn behauptet.
+
+**Outcome / Nachweise:** Vier-Chat-Plan in `ai-workflow/README.md`, Folienkonzept in `presentation/slides/06-codex-git.md`. Kontextwissen wird aus Git und Dokumentation rekonstruiert. Chatwechsel setzt Nutzungslimits nicht zurück und garantiert keine Tokenersparnis. Noch uncommitted.
+
+## AW-007: Minimale Statistik und Validierung
+
+- **Datum:** 2026-10-16
+- **Phase:** Schritt 5 – Mathematical Analysis & Validation
+- **Status:** technisch geprüft; menschlicher Review, Commit und Push ausstehend
+
+**Task / AI usage:** Codex implementierte Pearson r und OLS von Inflation auf Arbeitslosigkeit für DEU/FRA/ESP, jeweils 2000–2024 und 2000–2019, ausschließlich aus der validierten CSV. Originalauftrag: `ai-workflow/prompts/04-statistics-tests.md`. Skript, 13 Analyse-Tests und begleitende Dokumentation wurden AI-generiert; die sechs Ergebniszeilen entstanden durch den tatsächlichen Skriptlauf.
+
+**Validation:** Python 3.13.15; 19 Tests bestanden (13 Analyse + 6 API). Bekannte analytische Mini-Beispiele, Nullwert-/Zeitraum-/Identitätsprüfungen und separater Abgleich aller sechs realen Gruppen mit `statistics.correlation` und `statistics.linear_regression` (rel./abs. Toleranz 1e-12). Gespeicherte Ergebnisdatei gegen Neuberechnung geprüft. Codex prüfte den Diff einschließlich neuer Dateien und `git diff --check`; kein menschlicher Audit behauptet.
+
+**Outcome:** Sechs reproduzierbare Ergebniszeilen, n=25 bzw. n=20, keine Ausschlüsse. Deutschlands r wechselt zwischen den Zeiträumen das Vorzeichen; Frankreich und Spanien bleiben negativ. Rein deskriptiv, keine kausale oder strukturelle Phillips-Kurven-Schätzung. Website und Schritt 6 nicht begonnen. Der Review fand einen tatsächlichen Rundungsfehler bei konstanten Dezimalreihen: zwei ergänzte `0.1`-Subtests schlugen vor der Korrektur fehl. Direkte Gleichheitsprüfung vor der Mittelwertbildung korrigierte die Konstantenerkennung; anschließend bestanden alle 19 Tests. Reale Ergebnisse unverändert. Fehler, Korrektur und Branch-Berechtigungshürde in V-004.
+
+**Nachweise:** `analysis/scripts/analyze_reference_data.py`, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`, `analysis/validation.md` (Ergebnisse, Herkunft, Testfälle und Diff-Befehle), `presentation/slides/06-codex-git.md`. Branch `analysis/step-5-validation` auf Basis `952b6d4`; alles uncommitted zur gemeinsamen Prüfung.
+
+## AW-008: Schritt 5 abschließen und versionieren
+
+- **Datum:** 2026-10-16
+- **Phase:** Abschluss von Chat 2 / Schritt 5
+- **Status:** abgeschlossen nach erneutem technischem Review; Git-Integration ausdrücklich beauftragt
+- **Werkzeug / Modell:** Codex, `GPT-6.1 Sol, Medium` laut berichteter Nutzerauswahl, nicht unabhängig als Runtime-Metadatum verifiziert. Dies ergänzt die anfänglich unbestätigte Angabe in AW-006.
+
+**Task / Prompt:** Nutzerfolgeauftrag „Finalize Step 5 – Mathematical Analysis & Validation“: tatsächlichen Code, Tests, sechs Ergebniszeilen und kompletten Diff einschließlich neuer Dateien prüfen; echte `0.1`-Fehlerkorrektur und deskriptive Grenzen sichern; vier Chats dokumentieren, Modell nutzerberichtet ausweisen; Tests ausführen; Schritt 5 abschließen und Schritt 6 als Nächstes markieren; auf vorhandenem Feature-Branch committen, sicher bevorzugt per Fast-forward in `main` integrieren, `main` pushen und sauberen Arbeitsbaum verifizieren. Keine Website implementieren.
+
+**Validation:** Erneut 19 Tests bestanden (13 Analyse + 6 API), einschließlich beider `0.1`-Regressionsfälle und unabhängig bekannter Lösungen. Alle sechs realen Gruppen mit `statistics` gegengeprüft (rel./abs. 1e-12). Neuberechnung erzeugt byte-identische Ergebnis-CSV; alle sechs Berichtzeilen stimmen einschließlich alpha mit den auf sechs Stellen gerundeten CSV-Werten überein. SHA-256 der Eingabe unverändert. Formeln entsprechen Pearson r und OLS mit Achsenabschnitt, x=Arbeitslosigkeit, y=Inflation. Keine kausale oder strukturelle Phillips-Kurven-Schätzung. Die zuvor tatsächlich beobachteten zwei fehlgeschlagenen Subtests bleiben als historische Chat-2-Evidenz beschrieben; kein neuer historischer Fehlerlauf wird behauptet. Kein unabhängiger menschlicher Code-Audit behauptet.
+
+**Outcome:** Code und Ergebnisse unverändert übernommen; Status, Modellzuordnung und veraltete Branch-Aussagen korrigiert. Die Vier-Chat-Strategie und das Folienkonzept bleiben erhalten. Schritt 5 abgeschlossen, Schritt 6 / Chat 3 als Nächstes und noch nicht begonnen. Der ursprüngliche Auftrag zum Uncommitted-Lassen bleibt in der Promptablage historisch unverändert; der Folgeauftrag autorisiert die Git-Integration.
+
+**Nachweise / Git:** `analysis/validation.md`, V-004, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`; vollständiger gestagter Diff und `git diff --check` vor Commit. Abschlusscommit auf `analysis/step-5-validation`: `analysis: finalize validated reference statistics`, Basis `952b6d4`. Hash und tatsächliches Merge-/Push-Ergebnis sind über Git-Historie und den Abschlussbericht nachvollziehbar. Für die Integration ausschließlich Fast-forward und normaler Push, kein Force-Push oder Verwerfen fremder Änderungen.
+
 ## Vorlage für neue Einträge
 
 ### AW-XXX: Kurzer Titel

@@ -29,7 +29,7 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 
 **Visual:** Website-Screenshot plus echtes Diagramm. Der Screenshot soll die Interaktion zeigen, nicht die ganze Seite verkleinern.
 
-**Noch offen:** Alle Ergebniswerte und die Aussage dieser Folie.
+**Stand nach Schritt 5:** Geprüfte Ergebniswerte stehen in `analysis/validation.md`; endgültige Folienaussage und Website-Screenshot folgen später.
 
 ## Folie 3: Research workflow
 
@@ -83,11 +83,13 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 - Review-Schleife `git diff`, Staging, Prüfung und Commit
 - echter Verlauf `5afcb89`, `dc9fe71`, `fa62b33`
 - `main` verfolgt `origin/main`; erster Push war erfolgreich
-- Feature-Branches und Pull Requests: optional, bisher nicht verwendet
+- Schritt 5 verwendet `analysis/step-5-validation`; kein Pull Request verwendet
 
 **Visual:** Ein zusammenhängendes Beispiel von Aufgabe zu Änderung zu Prüfung. Terminalbefehle müssen groß genug lesbar sein.
 
 **Vollständiger Entwurf:** [slides/06-codex-git.md](slides/06-codex-git.md)
+
+**Ergänzung aus Chat 2:** Derselbe Entwurf enthält das zukünftige Konzept "Context Management in AI-Assisted Development" (`AI Session → Git & Documentation → New AI Session`) und ein belegtes Statistik-/Testbeispiel. Je nach Vortragsdauer in Folie 6 integrieren oder als Workflow-Einschub verwenden; die endgültige Folienzahl bleibt offen.
 
 ## Folie 7: Validation, risks and one real correction
 

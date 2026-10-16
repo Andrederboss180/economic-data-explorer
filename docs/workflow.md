@@ -8,8 +8,8 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | 2 | Literatur und Theorie | Suchbegriffe, Source Matrix und Zusammenfassungen unterstützen | Drei zentrale Aussagen auf Originalseiten prüfen und Synthesen als Interpretationen freigeben | Drei Quellen; 12 faktische Zellen AI-geprüft; 3 Hauptaussagen menschlich bestätigt; kein vollständiger Human Audit | Abgeschlossen (Minimalumfang) |
 | 3 | Git und Projektaufbau (M7) | Struktur und Dokumentation vorbereiten | Diffs vor dem Staging und den gestagten Stand vor dem Commit prüfen | Lokales Repository außerhalb von OneDrive; `main` verfolgt `origin/main`; erster GitHub-Push erfolgreich | Abgeschlossen |
 | 4 | Datenbeschaffung (M5) | Minimalen Standardbibliothek-Abruf und Validierung implementieren | Echten Terminalnachweis nachvollziehen; Codex führte Datenchecks, sechs Unit-Tests und einen separaten PowerShell-Spotcheck aus; kein vollständiger Human Audit | 150 Quellbeobachtungen; 75 vollständige Länder-Jahr-Zeilen; Frankreich-Spotcheck bestanden | Abgeschlossen |
-| 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Mit Testdaten und unabhängiger Rechnung prüfen | Kennzahlen und Ergebnisdateien | Als Nächstes; noch nicht begonnen |
-| 6 | Website | Komponenten, Visualisierung und Tests implementieren | Funktionen und Darstellung manuell testen | Economic Data Explorer | Offen |
+| 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Bekannte Testlösungen, `statistics`-Abgleich und erneuter Codex-Review; Abschluss vom Nutzer beauftragt | Sechs Ergebniszeilen; 19 Tests insgesamt bestanden | Abgeschlossen |
+| 6 | Website | Komponenten, Visualisierung und Tests implementieren | Funktionen und Darstellung manuell testen | Economic Data Explorer | Als Nächstes; noch nicht begonnen |
 | 7 | Fehler und Grenzen | Risiken identifizieren und Erklärungen entwerfen | Nur tatsächlich beobachtete Fehler als Fälle verwenden | Risikoregister und Validierungsbeispiel | Laufend |
 | 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Vorbereitet |
 
@@ -22,6 +22,8 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 5. Diff kontrollieren und Tests ausführen.
 6. AI-Log aktualisieren.
 7. Verständlichen Git-Commit erstellen.
+
+Der ursprüngliche Chat-2-Auftrag endete vor dem Commit. Der Folgeauftrag autorisiert nach erneuter Prüfung Commit, sichere Integration in `main` und Push (AW-008). Die geplante Aufteilung auf vier Codex-Chats und die Übergabe über Git/Dokumentation stehen in [ai-workflow/README.md](../ai-workflow/README.md).
 
 ## Workflow für die spätere Übersichtsgrafik
 

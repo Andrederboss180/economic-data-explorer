@@ -36,3 +36,7 @@ Der Abruf vom `2026-10-16T12:35:25Z` enthält sechs unveränderte JSON-Antworten
 Alle sechs Antworten bestanden die Struktur-, Identitäts-, Jahres-, Duplikat- und Vollständigkeitsprüfungen. Sie enthalten insgesamt 150 Quellbeobachtungen und keine `null`-Werte. Das World-Bank-Metadatenfeld `lastupdated` lautet in allen Antworten `2026-10-08`.
 
 Der Abruf lässt sich mit dem dokumentierten Befehl in [API.md](API.md) wiederholen. Die vorhandenen Referenzdateien werden dabei bewusst durch einen neuen, mit neuem Zeitstempel dokumentierten Snapshot ersetzt.
+
+## Analyseergebnisse aus Schritt 5
+
+`results/analysis_results.csv` enthält sechs reproduzierbare Länder-Zeitraum-Ergebnisse (Pearson r, OLS-Steigung und Achsenabschnitt, n und Ausschlüsse). Die Analyse verwendet den vorhandenen Snapshot ohne erneuten Abruf. Ausführung und Validierung: [analysis/README.md](../analysis/README.md), [Ergebnisbericht](../analysis/validation.md). Die Quellmetadaten und die Referenz-CSV wurden in Schritt 5 nicht verändert.

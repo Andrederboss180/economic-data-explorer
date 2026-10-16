@@ -40,6 +40,20 @@ Hier sammeln wir tatsächliche Prüfungen und Fehler. Einträge werden erst als 
 - **Ergebnis nach Prüfung:** Schritt 4 abgeschlossen nach Codex-Review, technischen Datenprüfungen und sechs bestandenen Unit-Tests. Der separate PowerShell-Client liefert einen zusätzlichen technischen Nachweis; es wird kein unabhängiger menschlicher Vollaudit behauptet.
 - **Commit oder Nachweis:** `data/raw/world_bank_2000_2024_metadata.json`; Abschlusscommit `data: finalize validated World Bank API reference snapshot`
 
+## V-004: Statistik mit bekannten Lösungen und Bibliotheksabgleich
+
+- **Datum:** 2026-10-16
+- **AI-Ausgabe:** Standardbibliothek-Analyse und 13 neue Tests; Modell `GPT-6.1 Sol, Medium` laut berichteter Nutzerauswahl, nicht unabhängig als Runtime-Metadatum verifiziert.
+- **Risiko:** Variablen vertauscht, falsche Jahres-/Länderzuordnung, fehlende Werte als Null, scheinbar gültige undefinierte Kennzahl, ungeprüfte AI-Ergebniszahlen.
+- **Prüfmethode:** Vier analytisch bekannte Mini-Beispiele, Randfälle, CSV-Validierung, getrennte CSV-Gruppierung mit `statistics.correlation`/`linear_regression`, alle sechs gespeicherten Ergebnisse gegen Neuberechnung. Bestehende sechs API-Tests mit ausgeführt.
+- **Beobachtung und tatsächlicher Fehler:** Der erste 19-Test-Lauf bestand mit ganzzahligen Konstanten. Beim Code-Review lieferten konstante `0.1`-Reihen fälschlich `r=0.0` mit Status `ok`. Grund: Der Mittelwert kann auf `0.10000000000000002` runden; die Quadratsumme ist dann nicht exakt null. Zwei ergänzte Dezimal-Subtests schlugen vor der Korrektur fehl (`Ran 13 tests`, `FAILED (failures=2)`, `AssertionError: 0.0 is not None`).
+- **Korrektur und erneute Prüfung:** Konstante Reihen vor der Mittelwertbildung direkt über `min(values) == max(values)` erkennen. Undefiniertes r bleibt leer; konstantes y behält beta=0 und den exakten konstanten Achsenabschnitt. Anschließend alle 19 Tests bestanden. Reale Ergebnisse unverändert: n=25 bzw. 20, keine Ausschlüsse; alle Koeffizienten stimmen mit der Bibliothek innerhalb rel./abs. 1e-12 überein. Das ist ein tatsächlicher Fehler mit nachgewiesener Korrektur.
+- **Tatsächliche technische Hürde / Korrektur:** Der erste `git switch -c analysis/step-5-validation` konnte unter den Sandbox-Schreibrechten keine Branch-Referenz anlegen (`cannot lock ref`). Derselbe gezielte Branch-Befehl gelang mit freigegebenen erweiterten Rechten. Kein Commit und kein Push. Dies war eine Berechtigungshürde, kein Statistikfehler.
+- **Ergebnis:** Technisch erneut geprüft; Abschluss vom Nutzer ausdrücklich beauftragt, kein unabhängiger menschlicher Code-Audit behauptet. `git diff --check` und Diff-Review als Abschlusskontrolle. Kein TypeScript-/Website-Vergleich vor Schritt 6.
+- **Zusätzliche Abschlusskontrolle:** Die erste Prüfschleife für neue Dateien interpretierte Exitcode 1 von `git diff --no-index --check` fälschlich als Prozessfehler. Nach Korrektur der Exitcode-Auswertung (0/1 zulässig, keine Diagnoseausgabe) bestanden die Whitespace-Checks für alle fünf neuen Dateien. Relative Dateilinks in geänderten Markdown-Dateien lösen auf; `data/raw`, `data/reference` und `website` haben keinen Diff. Dies betraf nur die Prüfschleife, nicht Statistik oder Daten.
+- **Erneuter Finalisierungscheck:** 19 Tests erneut bestanden; reproduzierte CSV byte-identisch; alle sechs Ergebniszeilen im Analysebericht stimmen einschließlich Achsenabschnitt mit der CSV überein. Die historischen Fehlerausgaben stammen aus dem tatsächlich beobachteten Chat-2-Lauf vor der Korrektur, nicht aus einem erfundenen oder in Git gespeicherten früheren Testlauf. Beim Abschluss scheiterte ein vorbereiteter Textänderungsbefehl an der Unicode-Übertragung über PowerShell-stdin, bevor er Dateien änderte; die gezielten Änderungen wurden anschließend mit `apply_patch` vorgenommen. AW-008 dokumentiert den autorisierten Abschluss.
+- **Nachweise:** `analysis/validation.md`, `analysis/tests/test_analyze_reference_data.py`, `data/results/analysis_results.csv`; Basiscommit `952b6d4`; Abschlusscommit `analysis: finalize validated reference statistics` (Git-Historie, AW-008).
+
 ## Vorlage
 
 ### V-XXX: Titel

@@ -29,7 +29,7 @@ Das fachliche Produkt ist eine kleine interaktive Website. Der Schwerpunkt der P
 - [x] Lokales Git-Repository auf `main` vorbereitet
 - [x] Literaturreview im vereinbarten Minimalumfang abgeschlossen
 - [x] Minimalen API-Abruf und Referenzdatensatz prüfen und abschließen
-- [ ] Analyse implementieren und unabhängig validieren
+- [x] Analyse implementieren und unabhängig validieren
 - [ ] Website implementieren und testen
 - [ ] Präsentation erstellen, rendern und prüfen
 
@@ -62,7 +62,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 4 – World Bank API (M5) ist abgeschlossen. Sechs API-Antworten, der Referenzdatensatz, sechs Unit-Tests und ein separater PowerShell-Spotcheck wurden technisch geprüft. Als Nächstes folgt Schritt 5 – Mathematical Analysis & Validation; dieser Schritt wurde noch nicht begonnen.
+Schritt 5 – Mathematical Analysis & Validation ist abgeschlossen: sechs Länder-Zeitraum-Ergebnisse, bekannte Testlösungen und Bibliotheksabgleich; insgesamt 19 Tests bestanden. [Ergebnisse und Validierung](analysis/validation.md) dokumentieren auch den tatsächlich gefundenen und korrigierten Rundungsfehler. Als Nächstes folgt Schritt 6 – Website Development in Codex Chat 3; noch nicht begonnen.
 
 ## Git-Schnellstart
 
