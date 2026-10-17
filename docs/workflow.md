@@ -10,8 +10,8 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | 4 | Datenbeschaffung (M5) | Minimalen Standardbibliothek-Abruf und Validierung implementieren | Echten Terminalnachweis nachvollziehen; Codex führte Datenchecks, sechs Unit-Tests und einen separaten PowerShell-Spotcheck aus; kein vollständiger Human Audit | 150 Quellbeobachtungen; 75 vollständige Länder-Jahr-Zeilen; Frankreich-Spotcheck bestanden | Abgeschlossen |
 | 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Bekannte Testlösungen, `statistics`-Abgleich und erneuter Codex-Review; Abschluss vom Nutzer beauftragt | Sechs Ergebniszeilen; 19 Tests insgesamt bestanden | Abgeschlossen |
 | 6 | Website | Grundlage, Visualisierung und Ländervergleich implementiert | Automatisierte Tests, unabhängiger Python-Abgleich und nutzerberichtete Browserreviews; Git-Abschluss ausdrücklich freigegeben | Live-Daten, Plot, Kennzahlen und Vergleich | Abgeschlossen (6.1–6.3), AW-014 |
-| 7 | Risks, Failures & Limitations | Risiken und Erklärungen später auswerten | Nur tatsächlich beobachtete Fehler verwenden | Bestehende Logs als Grundlage | Als Nächstes; noch nicht begonnen |
-| 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Vorbereitet |
+| 7 | Risks, Failures & Limitations | Logs, Bilder und Nutzerberichte getrennt auditieren | Historische Nachweise gegen Code/Tests/Git prüfen; persönliche Erfahrung kennzeichnen | Risikoregister, Lecture-Matrix, zwei mögliche Risikofolien | Abgeschlossen nach Dokumentationsreview und Abschlussauftrag; AW-016 |
+| 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Nicht begonnen; bestehende Vorbereitungsnotizen vorhanden |
 
 ## Standardablauf pro Arbeitspaket
 
@@ -32,6 +32,8 @@ Chat 3 beginnt bei `4a28809`. Der ursprüngliche 6.1-Auftrag stoppte vor Commit/
 ## Zusammenarbeit: Nutzer, ChatGPT Chat und Codex
 
 6.3 startet bei `b74f4c3` auf `web/step-6-3-comparison` nach sauberem/synchronisiertem Handoff. Der ursprüngliche Implementierungsauftrag endet vor Commit/Merge/Push (AW-013). Der Folgeauftrag „Finalize Step 6.3 – Country Comparison & Website Development“ bestätigt den informellen Nutzerreview und autorisiert nach erneuten Prüfungen den Git-Abschluss (AW-014). [Abschlussnachweise](../website/tests/step-6-3-validation.md). Schritt 6 abgeschlossen; Schritte 7/8 noch nicht begonnen.
+
+Chat 4 beginnt bei sauberem `main` mit lokalem `origin/main` auf `d1be8bc`. Nur Schritt 7 wurde beauftragt: [Evidenzaudit und Lecture-Matrix](../ai-workflow/risk-register.md), Foliennotizen und Ordnerstruktur-Anforderung. Die Erstübergabe blieb uncommitted (AW-015); der Folgeauftrag AW-016 autorisiert nach erneutem Review/Checks Commit auf `docs/step-7-risk-audit`, sichere Fast-forward-Integration und normalen Push. Schritt 7 abgeschlossen; Schritt 8 als Nächstes, noch nicht begonnen. Die früheren Absätze dokumentieren den jeweiligen historischen Übergabestand.
 
 | Rolle | Aufgabe im Arbeitsmodell |
 |---|---|

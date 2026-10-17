@@ -45,6 +45,26 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 
 **Visual:** Ein horizontaler Prozess mit je einem echten Artefakt unter den Stationen, zum Beispiel Prompt, Quelle, Commit, Test und Website.
 
+## Separater früher Einschub nach Folie 3: Repository structure and evidence
+
+**Verbindlich vorgemerkt, noch keine Folie erstellt.** Eigene Folie im Workflow-/Git-/Reproduzierbarkeitsteil, nicht in der Step-7-Risikodiskussion. Die Arbeitsnummern bleiben bis zur finalen Reihenfolge vorläufig.
+
+**Aussage:** Die tatsächliche Ordnerstruktur verbindet Quellen, Code, Prüfung und Präsentation mit nachvollziehbarer Evidenz.
+
+**Auf die Folie:** ein reduzierter echter Repository-Baum mit Rollen:
+
+- `research/`: Frage, Methodik und Literaturprüfung
+- `data/`: originale API-Antworten, Referenz-CSV und berechnete Ergebnisse
+- `analysis/`: Python-Skripte, Tests und Validierungsbericht
+- `website/`: React-/TypeScript-Implementierung und Website-Tests
+- `ai-workflow/`: Prompts, AI-Log, Fehlerkorrekturen und Risiken
+- `docs/`: Statusübergänge, Entscheidungen, Workflow und Roadmap
+- `presentation/`: Storyboard, Foliennotizen, Quellen und echte Screenshots
+
+**Visual/Nachweis:** Die sieben Verzeichnisse existieren im am 17.10.2026 geprüften Arbeitsbaum. Später einen lesbaren tatsächlichen Dateibaum/Explorer-Ausschnitt aufnehmen oder den verifizierten Baum als Text setzen. `PROJECT_STATUS.md`, `AGENTS.md` und Git-Checkpoints kurz als Übergaberegeln zuordnen. Optional `archive/` als Ausgangsmaterial nennen; lokale `Literatur/`, `Vorlesungsfolien/`, `tmp/` und generierte Dateien nicht als vollständig versionierte Hauptartefakte ausgeben. Kein Screenshot wurde dafür neu erzeugt.
+
+**Einordnung:** Workflow-Folie über Prüfbarkeit und Git, keine zusätzliche Ergebnis-/Projektvorstellung. Höchstens drei Folien bleiben hauptsächlich beim fachlichen Projekt. [Ordnerrollen](../README.md#ordnerstruktur), [Strukturnotizen](../docs/folder-structure.md), [Nachweischeckliste](evidence-checklist.md).
+
 ## Folie 4: Ideation and narrowing the question
 
 **Zweck:** Zeigen, wie ein strukturierter Prompt Optionen erzeugte und wie der Mensch entschied.
@@ -91,22 +111,25 @@ Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zu
 
 **Ergänzung aus Chat 2:** Derselbe Entwurf enthält das zukünftige Konzept "Context Management in AI-Assisted Development" (`AI Session → Git & Documentation → New AI Session`) und ein belegtes Statistik-/Testbeispiel. Je nach Vortragsdauer in Folie 6 integrieren oder als Workflow-Einschub verwenden; die endgültige Folienzahl bleibt offen.
 
-## Folie 7: Validation, risks and one real correction
+## Mögliche Folie 7A: What Went Wrong? Real Failures and Fixes
 
-**Zweck:** Die wichtigste Qualitätssicherung konkret belegen.
+**Aussage:** Der erste grüne Testlauf reichte nicht; Review fand den echten `0.1`-Fehler. Python-/Dependency-/Testpfadprobleme und Codex-Kapazität waren zusätzliche Betriebsprobleme.
 
-**Auf die Folie:**
+**Visual:** Echter Fix-/Testausschnitt aus `4a28809`, kurzer Ausschnitt des vorhandenen Kapazitäts-/Compaction-Bilds. Historischer Fehlerlauf nur als protokollierten Lauf kennzeichnen; kein separater roter Testcommit/Screenshot vorhanden. Zeitangaben klar nutzerberichtet.
 
-- ein tatsächlich beobachteter Fehler oder eine konkrete Hochrisiko-Prüfung
-- wie der Fehler erkannt wurde
-- wie die Korrektur verifiziert wurde
-- zwei weitere Risiken in sehr kurzer Form
+## Mögliche Folie 7B: Remaining Risks: Human Oversight and AI Dependence
 
-**Visual:** Vorher/Nachher oder Test fehlgeschlagen/Test bestanden. Keine erfundene Fehlergeschichte.
+**Aussage:** Begrenzte eigene Code-Expertise, offene menschliche Prüfungen und AI-generierte Tests lassen Verification debt und Cognitive surrender als Risiken bestehen. Vier Chats/Git helfen bei Übergaben; Verfügbarkeit, Kontingente und Agentenrechte bleiben Grenzen.
+
+**Visual:** Echter Git-Verlauf und noch offene manuelle 6.3-Checkliste. Keine getestete Prompt-injection-Abwehr oder umfassenden technischen Hard Constraints behaupten.
+
+**Notizen für beide:** [Step-7-Folien A/B](slides/07-risks-failures-limitations.md), [Risikoregister und M3/Lab-3/M8-Evidenzmatrix](../ai-workflow/risk-register.md). Zwei mögliche Folien, noch kein Deck. Literatur-/Statistik-/API-Kontrollen mindern Risiken; sie beweisen keine Fehlerfreiheit. Vorlesungsnummern stammen vom Nutzer, lokale PDFs wurden für Schritt 7 nicht gelesen.
 
 ## Folie 8: Lessons learned
 
 **Zweck:** Präzise beantworten, wo AI nützlich war und wo menschliches Urteil entscheidend blieb.
+
+Bei Verwendung beider Step-7-Folien hier nur konkrete persönliche Lernentscheidung und Verbesserung ergänzen, keine Wiederholung der Risikoliste. Endgültige Gesamtzahl und Vortragsdauer bleiben offen.
 
 **Auf die Folie:**
 

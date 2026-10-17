@@ -1,6 +1,6 @@
 # Bezug zu den Vorlesungsmodulen
 
-Die Modulzuordnung basiert bisher auf den im Ausgangschat genannten Überschriften, nicht auf vollständig geprüften Vorlesungsskripten. Sobald die Skripte im Repository liegen, gleichen wir Begriffe und Schwerpunktsetzung exakt ab.
+Die Modulzuordnung basiert auf nutzerbereitgestelltem Kurskontext, nicht auf vollständig geprüften Vorlesungsskripten. Lokale Vorlesungs-PDFs sind vorhanden, wurden im Schritt-7-Audit aber nicht geöffnet. Die [M3-/Lab-3-/M8-Evidenzmatrix](../ai-workflow/risk-register.md) verwendet die vom Nutzer genannten Folien-/Übungsnummern als Orientierung und trennt beobachtete Fälle von ungetesteten theoretischen Risiken.
 
 | Modul | Einsatz im Projekt | Priorität | Geplanter Nachweis |
 |---|---|---:|---|

@@ -21,6 +21,16 @@
 - [ ] Reihenfolge entspricht dem tatsächlichen Projektverlauf
 - [ ] AI-Einsatz und menschliche Kontrolle unterscheidbar
 
+## Separater früher Einschub: Repository structure and evidence
+
+- [x] eigene frühe Folie nach der Workflow-Orientierung in der Deck-Outline vorgemerkt
+- [x] tatsächliche Verzeichnisse `research/`, `data/`, `analysis/`, `website/`, `ai-workflow/`, `docs/`, `presentation/` am 17.10.2026 geprüft und Rollen zugeordnet
+- [x] Einordnung als Workflow-/Git-/Reproduzierbarkeitsfolie, getrennt von Step 7; maximal drei hauptsächlich fachliche Projektfolien beibehalten
+- [ ] tatsächlichen Dateibaum als lesbaren Text oder echten Explorer-/Terminalausschnitt für die spätere Folie auswählen
+- [ ] prüfen, dass lokale Materialien und generierte Dateien nicht als vollständig versionierte Projektstruktur erscheinen
+
+Nur Anforderung und vorhandene Verzeichnisse dokumentiert; keine neue Folie oder Aufnahme erstellt. [Outline](deck-outline.md).
+
 ## Folie 4: Ideation
 
 - [x] finaler Ideation-Prompt gespeichert
@@ -72,10 +82,10 @@
 
 Nachweis: [Website-Validierung und Prüfgrenzen](../website/tests/step-6-1-validation.md), AW-010. Keine zusätzlichen Browser-/Geräteprüfungen oder vollständiger Code-Audit behauptet.
 
-- [ ] tatsächlicher Fehler oder echte Hochrisiko-Prüfung
-- [ ] reproduzierbarer Nachweis
-- [ ] Korrektur und erneuter Test
-- [ ] keine konstruierte Fehlergeschichte
+- [x] echter `0.1`-Fehler anhand V-004, Analysebericht, Code/Tests und `4a28809` nachvollzogen
+- [x] Fix und Regressionstests im aktuellen Code vorhanden; historischer Fehl-/Erfolgslauf protokolliert, kein separater Fehlercommit/Screenshot
+- [x] Korrektur und damaliger erneuter 19-Test-Lauf dokumentiert; in Chat 4 keine Produkttests wiederholt
+- [x] keine konstruierte Fehlergeschichte oder nachgestellte historische Terminalaufnahme
 
 ### Abschluss Website-Schritt 6.3
 
@@ -84,7 +94,22 @@ Nachweis: [Website-Validierung und Prüfgrenzen](../website/tests/step-6-1-valid
 - [x] ESLint, TypeScript, Build und separater Live-Check bestanden
 - [x] erfolgreicher informeller Browser-/Visualreview nutzerberichtet, getrennt von automatisierten Tests
 
-Fünf nutzerbereitgestellte Website-Screenshots bei Wiederaufnahme am 17.10. lokal vorhanden: Hero/Einleitung, Auswahl/Plot, Kennzahlen/Jahrestabelle, Vergleich und Quellen. Codex sah die statischen Bilder an; [konkrete Bildlinks und Prüfgrenzen](../website/tests/step-6-3-validation.md), AW-014/V-010. Weitere frühere Website- und Workflow-/Nutzungslimitbilder unverändert erhalten; noch keine inhaltliche Risikoauswertung. Keine umfassende Keyboard-/Geräte-/Endpoint-Retryprüfung oder eigener Codex-Browserlauf bestätigt. Diese Evidenznotizen beginnen weder Schritt 7 noch die finale Präsentation.
+Fünf nutzerbereitgestellte Website-Screenshots bei Wiederaufnahme am 17.10. lokal vorhanden: Hero/Einleitung, Auswahl/Plot, Kennzahlen/Jahrestabelle, Vergleich und Quellen. Codex sah die statischen Bilder an; [konkrete Bildlinks und Prüfgrenzen](../website/tests/step-6-3-validation.md), AW-014/V-010. Weitere frühere Website- und Workflow-/Nutzungslimitbilder unverändert erhalten. Keine umfassende Keyboard-/Geräte-/Endpoint-Retryprüfung oder eigener Codex-Browserlauf bestätigt. Beim damaligen Schritt-6-Abschluss war die Risikoauswertung noch nicht begonnen; der nachfolgende Chat-4-Audit ist separat dokumentiert.
+
+### Schritt 7: zwei mögliche Risikofolien A/B
+
+- [x] [A/B-Notizen](slides/07-risks-failures-limitations.md) mit englischen Aussagen und konkreten Code-/Git-/Bildbelegen vorbereitet
+- [x] beobachtete Fälle, aktiv geminderte Risiken und verbleibende Grenzen im [Audit](../ai-workflow/risk-register.md) getrennt
+- [x] vorhandenes Kapazitäts-/Compaction-Bild, Limitmeldung und Kontingentanzeige in Chat 4 tatsächlich geöffnet und verlinkt
+- [x] ungefähr zehn Minuten pro größerer Aufgabe, unproduktive Wartezeit und ungefähr einstündiger Reset als Nutzerberichte gekennzeichnet; kein Zeit-/Leistungsbenchmark
+- [x] OneDrive-Umzug belegt, kein unbelegter Ownership-/Datenverlustfehler behauptet
+- [x] M3-/Lab-3-/M8-Matrix mit sechs geforderten Spalten erstellt; Foliennummern nur Nutzerkontext, lokale PDFs nicht als gelesen ausgegeben
+- [x] Englisch als Kommunikationswahl dokumentiert; kein kontrollierter Sprach-/Tokenvergleich oder notwendiger Tokenvorteil behauptet
+- [x] historische Limitbilder von heutiger Pro-Produktregel unterschieden; neue Chats setzen Kontingente nicht zurück
+- [x] erneuter technischer Dokumentations-/Evidenzreview und ausdrücklicher Abschlussauftrag für Schritt 7 (AW-016); kein vollständiger unabhängiger menschlicher Audit behauptet
+- [ ] spätere Auswahl lesbarer Ausschnitte; keine neue Aufnahme historischer Fehler fingieren
+
+Die vorhandenen Bilder belegen Meldungen, keine umfassende Fehlerursache oder erfolgreich getestete Wiederherstellung. Prompt injection, Sycophancy und Kontextqualitätsabnahme wurden nicht systematisch getestet. Schritt 8 und finales Deck bleiben offen.
 
 ## Folie 8: Lessons learned
 

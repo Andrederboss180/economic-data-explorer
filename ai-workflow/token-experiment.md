@@ -2,6 +2,8 @@
 
 Dieses Experiment ist eine kleine Ergänzung zu M1/M2. Es darf nicht vom Kernprojekt ablenken.
 
+**Status am 17.10.2026:** Nicht durchgeführt, auch kein kontrollierter Englisch-/Deutsch-Tokenvergleich. Englische Codex-Aufträge sind eine Kommunikationswahl. Tokenbedarf hängt von Tokenizer und konkretem Text ab; keine gemessene Ersparnis oder generelle Sprachregel. Schritt 7 ergänzt keine Experimente. [Reflexion](risk-register.md).
+
 ## Frage
 
 Verbessert ein strukturierter Prompt die Brauchbarkeit einer Codeantwort ausreichend, um den zusätzlichen Kontext zu rechtfertigen?

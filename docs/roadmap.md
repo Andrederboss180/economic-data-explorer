@@ -88,11 +88,13 @@ Fertig, wenn:
 
 ## Schritt 7: Risks, Failures & Limitations
 
-**Status:** als Nächstes, noch nicht begonnen. Bestehende Fehler-/Validierungsnachweise bilden die Grundlage für diese spätere Phase; hier keine neue Auswertung.
+**Status:** am 17.10.2026 in Chat 4 nach finalem Dokumentationsreview und ausdrücklichem Abschlussauftrag abgeschlossen; Entwicklungsbranch `docs/step-7-risk-audit` (Basis `d1be8bc`), AW-016/V-012.
+
+[Risikoregister](../ai-workflow/risk-register.md): echte Fehler/Betriebsprobleme, aktiv geminderte Risiken und verbleibende Grenzen; M3/Lab-3/M8-Evidenzmatrix mit nutzerbereitgestellten Foliennummern. Drei vorhandene Limit-/Kapazitätsbilder tatsächlich angesehen, Zeit-/Expertiseangaben als Nutzerbericht getrennt. [Zwei mögliche Risikofolien](../presentation/slides/07-risks-failures-limitations.md), frühe separate Ordnerstruktur-Folie im Storyboard vorgemerkt. AW-015/V-011 dokumentieren die Erstübergabe ohne Commit; AW-016 autorisiert den geprüften Git-Abschluss. Kein Code-/Datenwechsel, keine Experimente und kein Schritt 8.
 
 ## Schritt 8 / Meilenstein 5: Präsentation
 
-**Status:** geplant, noch nicht begonnen; bestehende Vorbereitungsnotizen bleiben erhalten.
+**Status:** als Nächstes, noch nicht begonnen; bestehende Vorbereitungsnotizen bleiben erhalten.
 
 Fertig, wenn:
 

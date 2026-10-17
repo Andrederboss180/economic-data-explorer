@@ -8,8 +8,9 @@ Die Website ist das sichtbare Ergebnis. Der Hauptteil erzählt, wie AI in einem 
 
 ## Geplante Struktur
 
-- Folien 1 bis 3: Forschungsfrage, Tool und fachliches Ergebnis
-- Folien 4 bis 8: AI-Workflow, API, Codex/Git, Validierung und Learnings
+- höchstens drei Folien hauptsächlich zu Forschungsfrage, Tool und fachlichem Ergebnis
+- Hauptteil: AI-Workflow, API, Codex/Git, Validierung und Learnings; separate frühe Ordnerstruktur-Folie im Workflow-Teil vorgemerkt
+- Schritt 7: zwei mögliche Risikofolien vorbereitet; endgültige Nummerierung und Gesamtzahl offen, kein finales Deck/Schritt 8 begonnen
 
 Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im bisherigen Chat festgehalten.
 
@@ -20,6 +21,7 @@ Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im 
 - [slides/04b-source-grounded-literature-review.md](slides/04b-source-grounded-literature-review.md): Präsentationsnotizen zu Lab 4, Exercise 2.3
 - [slides/05-world-bank-api.md](slides/05-world-bank-api.md): M5-Notizen zu Endpoint, JSON-Antwort und Datenvalidierung
 - [slides/06-codex-git.md](slides/06-codex-git.md): belegbares Git- und Codex-Beispiel aus dem echten Commit-Verlauf
+- [slides/07-risks-failures-limitations.md](slides/07-risks-failures-limitations.md): zwei mögliche Risikofolien mit echten Fehlern, Kontrollen und verbleibenden Grenzen
 - [evidence-checklist.md](evidence-checklist.md): zu sammelnde Screenshots, Diffs, Daten und Quellen
 - [sources.md](sources.md): Quellen pro Folie
 - `assets/images/`: Fotos oder Illustrationen

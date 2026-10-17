@@ -30,7 +30,8 @@ Das fachliche Produkt ist eine kleine interaktive Website. Der Schwerpunkt der P
 - [x] Literaturreview im vereinbarten Minimalumfang abgeschlossen
 - [x] Minimalen API-Abruf und Referenzdatensatz prüfen und abschließen
 - [x] Analyse implementieren und unabhängig validieren
-- [ ] Website implementieren und testen
+- [x] Website implementieren und testen
+- [x] Schritt 7 – Risks, Failures & Limitations dokumentieren und abschließen
 - [ ] Präsentation erstellen, rendern und prüfen
 
 Den detaillierten Stand pflegen wir in [PROJECT_STATUS.md](PROJECT_STATUS.md).
@@ -62,7 +63,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 6 – Website Development einschließlich 6.3 ist abgeschlossen: Live-Daten, interaktive Einzelansicht und Ländervergleich. 71 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build und separater Live-Test erneut bestanden. Erfolgreicher informeller Browser-/Visualreview nutzerberichtet. [Lokal starten](website/README.md) · [Abschlussnachweise und Prüfgrenzen](website/tests/step-6-3-validation.md). Git-Abschluss ausdrücklich autorisiert (AW-014); tatsächlicher Commit im Git-Verlauf/Abschlussbericht. Als Nächstes Schritt 7 – Risks, Failures & Limitations; Schritte 7/8 noch nicht begonnen.
+Schritt 7 ist nach finalem Dokumentationsreview und ausdrücklichem Abschlussauftrag abgeschlossen (AW-016): [Fehler, Risiken, Grenzen und Lecture-Matrix](ai-workflow/risk-register.md), [zwei mögliche Risikofolien](presentation/slides/07-risks-failures-limitations.md). Als Nächstes Schritt 8 – Reproducibility & Final Presentation; noch nicht begonnen, kein finales Deck erstellt. Die Vier-Chat-Strategie bleibt erhalten. Schritt 6 bleibt unverändert bei `d1be8bc` dokumentiert: [Website starten](website/README.md), [Abschlussnachweise und Prüfgrenzen](website/tests/step-6-3-validation.md).
 
 ## Git-Schnellstart
 
