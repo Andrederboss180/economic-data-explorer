@@ -63,7 +63,9 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 7 ist nach finalem Dokumentationsreview und ausdrücklichem Abschlussauftrag abgeschlossen (AW-016): [Fehler, Risiken, Grenzen und Lecture-Matrix](ai-workflow/risk-register.md), [zwei mögliche Risikofolien](presentation/slides/07-risks-failures-limitations.md). Als Nächstes Schritt 8 – Reproducibility & Final Presentation; noch nicht begonnen, kein finales Deck erstellt. Die Vier-Chat-Strategie bleibt erhalten. Schritt 6 bleibt unverändert bei `d1be8bc` dokumentiert: [Website starten](website/README.md), [Abschlussnachweise und Prüfgrenzen](website/tests/step-6-3-validation.md).
+Codex Chat 5 – Presentation Preparation: Schritt 8.1 liefert einen vollständigen ersten Entwurf von [15 Folienplänen](presentation/slide-plans/README.md), uncommitted zur menschlichen Review. Bestätigt: 15 Minuten, 15 vorgeschlagene Folien und Canva als finaler Editor. Geschätztes Zeitbudget 14:10 plus 0:50 Puffer. Nächster Schritt: Folie 1 mit ChatGPT und dem Nutzer verstehen/prüfen, dann einzeln in Canva gestalten. Kein finales Deck erstellt; AW-017/V-013.
+
+Schritte 1–7 bleiben abgeschlossen. Schritt 7 bei `389564b`: [Fehler, Risiken, Grenzen und Lecture-Matrix](ai-workflow/risk-register.md), [erhaltene Risikonotizen](presentation/slides/07-risks-failures-limitations.md). Der ursprüngliche Vier-Chat-Plan ist historische Planung; Präsentationsvorbereitung läuft zusätzlich in Chat 5. Schritt 6 bleibt unverändert bei `d1be8bc`: [Website starten](website/README.md), [Abschlussnachweise und Prüfgrenzen](website/tests/step-6-3-validation.md). Produktcode, Daten, Analyse und alte Foliennotizen werden in Schritt 8.1 nicht verändert.
 
 ## Git-Schnellstart
 

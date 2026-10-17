@@ -1,5 +1,35 @@
 # Storyboard der Präsentation
 
+## Aktueller Arbeitsstand: Chat 5 / Schritt 8.1
+
+Am 17.10.2026 vom Nutzer bestätigt: **15 Folien, 15 Minuten, Canva**. Vollständiger erster Inhaltsentwurf in [slide-plans/README.md](slide-plans/README.md); noch keine fertigen Slides. Englischer Folientext, deutsche Erklärungen und vorläufige Sprechnotizen. Nach Inhaltsvorbereitung werden Folien einzeln mit ChatGPT und dem Nutzer verstanden, überprüft und in Canva gestaltet.
+
+| Nr. | Vorgeschlagener Titel und Plan | Zeit |
+|---:|---|---:|
+| 01 | [Economic Data Explorer](slide-plans/01-title.md) | 0:20 |
+| 02 | [The Project](slide-plans/02-the-project.md) | 1:05 |
+| 03 | [Our AI Research Workflow](slide-plans/03-ai-research-workflow.md) | 0:50 |
+| 04 | [Ideation & Feedback](slide-plans/04-ideation-feedback.md) | 0:50 |
+| 05 | [Literature Review](slide-plans/05-literature-review.md) | 1:15 |
+| 06 | [Project Structure](slide-plans/06-project-structure.md) | 0:40 |
+| 07 | [Human, ChatGPT & Codex](slide-plans/07-human-chatgpt-codex.md) | 0:55 |
+| 08 | [Git & Version Control](slide-plans/08-git-version-control.md) | 1:00 |
+| 09 | [World Bank API](slide-plans/09-world-bank-api.md) | 1:05 |
+| 10 | [AI-Assisted Analysis](slide-plans/10-ai-assisted-analysis.md) | 1:05 |
+| 11 | [Website Development](slide-plans/11-website-development.md) | 1:00 |
+| 12 | [Context Management](slide-plans/12-context-management.md) | 0:50 |
+| 13 | [Reproducibility & AI Disclosure](slide-plans/13-reproducibility-ai-disclosure.md) | 1:00 |
+| 14 | [Failures & Fixes](slide-plans/14-failures-fixes.md) | 1:15 |
+| 15 | [Limitations & Lessons Learned](slide-plans/15-limitations-lessons.md) | 1:00 |
+
+Teil 1: Folien 1–3 (2:15, Folie 3 als Workflow-Brücke). Teil 2: 4–13 (9:40). Teil 3: 14–15 (2:15). Gesamt **14:10 + 0:50 Puffer**; geschätzt, noch nicht geprobt. Nur Folien 1–2 führen hauptsächlich das fachliche Projekt ein. Die Ordnerstruktur-Folie bleibt eigenständig früh im Workflow-Teil.
+
+Zahlen und Belege stehen pro Plan mit Pfaden. Historische Tests werden nicht als aktuelle Läufe ausgegeben; 2000–2019-Screenshots bleiben entsprechend beschriftet. Exakte Lecture-Foliennummern sind noch zu prüfen. Bisherige [Foliennotizen](README.md) bleiben unverändert. [Evidenzcheckliste](evidence-checklist.md).
+
+## Historisches Storyboard bis Schritt 7
+
+Der folgende frühere Entwurf bleibt unverändert als Planungsgeschichte erhalten. Seine Nummerierung, offenen Formatfragen und damaligen Statusformulierungen sind historisch; für Schritt 8.1 gilt die Tabelle oben.
+
 Die Folienzahl ist ein Arbeitsstand. Inhalt und Reihenfolge sind stabil genug zum Sammeln von Nachweisen, aber erst nach Prüfung der echten Kursvorgaben final.
 
 ## Folie 1: Research question and scope

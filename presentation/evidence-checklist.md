@@ -1,5 +1,38 @@
 # Nachweis-Checkliste für die Präsentation
 
+## Chat 5 / Schritt 8.1: 15 Inhaltspläne
+
+Erster vollständiger Inhaltsentwurf, 17.10.2026. Ein vorhandener Beleg bedeutet noch keine final gestaltete oder menschlich freigegebene Folie. 15 Folien / 15 Minuten / Canva bestätigt; [Zeitbudget und Navigation](slide-plans/README.md). Technische Prüfung: V-013. Bestehende ältere Checkliste darunter bleibt als historischer Stand erhalten.
+
+| Plan | Vorhandene Evidenz | Noch notwendig vor finaler Verwendung |
+|---|---|---|
+| [01 Title](slide-plans/01-title.md) | Projekt/Website-Hero | Name/Datum, Titelgestaltung |
+| [02 Project](slide-plans/02-the-project.md) | Frage, CSV, sechs geprüfte Ergebniszeilen, Literaturmatrix | Lesbare Ergebnistabelle und Literaturbezug prüfen |
+| [03 Workflow](slide-plans/03-ai-research-workflow.md) | Tatsächliche Phasen und Artefakte | Editierbare Übersicht, M9-Quellenstelle prüfen |
+| [04 Ideation](slide-plans/04-ideation-feedback.md) | Prompt, drei ausgearbeitete Alternativen, Nutzerentscheidung | Kurzen Originalausschnitt auswählen |
+| [05 Literature](slide-plans/05-literature-review.md) | Matrix und getrennte AI-/Human-Prüfstände | Original-PDF-Ausschnitt auswählen/prüfen, Quellen in Canva-Notizen |
+| [06 Structure](slide-plans/06-project-structure.md) | Tatsächliche Hauptordner, Status/Regeln | Editierbaren reduzierten Baum setzen |
+| [07 Roles](slide-plans/07-human-chatgpt-codex.md) | Rollen und tatsächlich berichtete Nutzerchecks | Persönliche Formulierungen überprüfen |
+| [08 Git](slide-plans/08-git-version-control.md) | Branches, Commit-IDs, Reflog, echter Diff | Lesbaren aktuellen Ausschnitt oder treue Textübernahme auswählen |
+| [09 API](slide-plans/09-world-bank-api.md) | PowerShell-Bild, JSON, Metadaten, CSV | Lesbare Ausschnitte und finale Definitionsquellen prüfen |
+| [10 Analysis](slide-plans/10-ai-assisted-analysis.md) | Bekannte Testlösungen, Bibliothek/TS-Vergleich, historische Berichte | Assertion/Bericht auswählen; neuer Test-Screenshot nur nach echtem Lauf |
+| [11 Website](slide-plans/11-website-development.md) | Frühere und finale Screenshots, drei Testberichte | Bildauswahl; 2000–2019 korrekt beschriften |
+| [12 Context](slide-plans/12-context-management.md) | Vier-Chat-Plan und tatsächliche Chat-5-Fortsetzung | Übergabediagramm und aktuellen Statusausschnitt auswählen |
+| [13 Reproduction](slide-plans/13-reproducibility-ai-disclosure.md) | Anleitungen, Snapshot, Metadaten, Prompts, Git | Reproduktion/Vortrag proben, Freigabeweg für Repo klären |
+| [14 Failures](slide-plans/14-failures-fixes.md) | Echter Fix/Tests, historische Fehlerberichte, Kapazitätsbild | Lesbare Belege wählen; keine historische Fehleraufnahme nachstellen |
+| [15 Lessons](slide-plans/15-limitations-lessons.md) | Restrisiken, offene Prüfungen, Nutzerberichte, Limitbilder | Persönliches Fazit, nächste Schritte und Vortrag proben |
+
+- [x] 15 substanzielle Pläne mit einheitlichen Feldern erstellt; 14:10 Sprechzeit plus 0:50 Puffer vorgesehen.
+- [x] Datenstand, Perioden, technische versus menschliche Prüfung und ursprünglicher Vier-Chat-Plan getrennt.
+- [x] Alte Foliennotizen sowie Website, Analyse, Daten und Bildassets unverändert belassen.
+- [ ] Exakte Lecture-Foliennummern anhand der Original-PDFs prüfen; bisherige Nummern sind Nutzerkontext.
+- [ ] Jede Folie einzeln mit Nutzer/ChatGPT verstehen und freigeben; danach Canva-Gestaltung.
+- [ ] Finale Quellenzeilen, Lesbarkeit, Timing und Ausfallplan prüfen. Keine fertige Canva-Datei/PPTX/PDF in Schritt 8.1.
+
+## Historische Checkliste bis Schritt 7
+
+Die folgende Nummerierung gehört zum früheren Storyboard. Offene Häkchen sind keine pauschale Aussage über den heutigen Gesamtprojektstand; die Tabelle oben ordnet die neue Evidenz zu.
+
 ## Folie 1: Forschungsfrage
 
 - [ ] Indikatordefinitionen offiziell geprüft

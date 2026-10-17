@@ -1,6 +1,6 @@
 # Präsentation
 
-Die Präsentation wird inhaltlich hier vorbereitet, unabhängig davon, ob die finale Datei später in PowerPoint, als programmatisch erzeugte PPTX oder in einem Uni-Template entsteht.
+Die Präsentation wird inhaltlich hier vorbereitet. Seit dem Nutzerauftrag zu Schritt 8.1 bestätigt: 15 Minuten, 15 vorgeschlagene Folien, Canva als finaler Editor. Codex Chat 5 – Presentation Preparation erstellt zunächst [alle Inhaltspläne](slide-plans/README.md); danach werden Folien einzeln mit ChatGPT und dem Nutzer verstanden, geprüft und in Canva gestaltet. Noch kein finales Deck.
 
 ## Leitidee
 
@@ -10,12 +10,14 @@ Die Website ist das sichtbare Ergebnis. Der Hauptteil erzählt, wie AI in einem 
 
 - höchstens drei Folien hauptsächlich zu Forschungsfrage, Tool und fachlichem Ergebnis
 - Hauptteil: AI-Workflow, API, Codex/Git, Validierung und Learnings; separate frühe Ordnerstruktur-Folie im Workflow-Teil vorgemerkt
-- Schritt 7: zwei mögliche Risikofolien vorbereitet; endgültige Nummerierung und Gesamtzahl offen, kein finales Deck/Schritt 8 begonnen
+- Schritt 8.1: [15 nummerierte Pläne](slide-plans/README.md) mit englischem Folientext, deutschen Erklärungen/Sprechnotizen und 14:10 geschätzter Sprechzeit plus 0:50 Puffer; Inhaltsreview und Canva-Gestaltung stehen aus
+- Schritt-7-Risikonotizen und alle älteren Foliennotizen bleiben unverändert als Quellen erhalten
 
 Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im bisherigen Chat festgehalten.
 
 ## Dateien
 
+- [slide-plans/README.md](slide-plans/README.md): aktueller erster Inhaltsentwurf, Navigation und Zeitbudget für alle 15 Folien
 - [deck-outline.md](deck-outline.md): Funktion jeder Folie und notwendige Nachweise
 - [slides/04-ideation.md](slides/04-ideation.md): vollständig vorbereitete Ideation-Folie
 - [slides/04b-source-grounded-literature-review.md](slides/04b-source-grounded-literature-review.md): Präsentationsnotizen zu Lab 4, Exercise 2.3
@@ -33,7 +35,7 @@ Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im 
 
 - Folientext und Website: Englisch
 - Arbeitsnotizen und Erklärungen: Deutsch
-- Sprechertext: wird nach Bestätigung der Vortragssprache festgelegt
+- vorläufige Sprechnotizen für Schritt 8.1: ausdrücklich Deutsch; finale Vortragssprache und Formulierungen beim Einzelreview festlegen
 
 ## Gestaltungsprinzipien
 
@@ -47,4 +49,4 @@ Damit bleiben höchstens drei Folien hauptsächlich beim Projekt selbst, wie im 
 
 ## Formatentscheidung
 
-Noch offen. Ein vorhandenes Uni-Template hat Vorrang. Ohne Template erstellen wir eine editierbare PPTX und prüfen jede Folie gerendert auf Lesbarkeit, Überlappungen und Quellen.
+Canva ist als finaler Editor bestätigt. Ein verbindliches Kurstemplate ist noch zu klären. Schritt 8.1 erzeugt nur Markdown-Inhaltspläne; keine Canva-Datei, PPTX oder PDF. Bei der späteren Einzelgestaltung bleiben Text, Tabellen und Workflow-Diagramme möglichst editierbar; finale Lesbarkeit und Quellen werden dort geprüft.

@@ -33,7 +33,7 @@ Nicht jede kurze Nachfrage muss gespeichert werden. Wir dokumentieren die Entsch
 
 Später ergänzen wir Commit, Screenshot oder Datei als Nachweis.
 
-## Geplante Codex-Sitzungen
+## Ursprünglich geplante Codex-Sitzungen (historischer Stand vor Chat 5)
 
 | Chat | Umfang | Stand am 17.10.2026 |
 |---|---|---|
@@ -47,3 +47,9 @@ Die Trennung begrenzt mitgeführten Gesprächskontext und hält die Phasen über
 Chat 2: Codex, Modell `GPT-6.1 Sol, Medium` laut berichteter Nutzerauswahl, nicht unabhängig als Runtime-Metadatum verifiziert. Folienkonzept: [Context Management](../presentation/slides/06-codex-git.md#context-management-in-ai-assisted-development).
 
 Chat 4: relevante Codex-Aufträge auf Englisch, deutsche Arbeitsnotizen. Kein kontrollierter Sprach-/Tokenvergleich und kein notwendiger Tokenvorteil behauptet. Nutzerberichtete Wartezeiten/Expertise, historische Screenshots und heutige Produktregeln sind im [Audit](risk-register.md) getrennt. Der neue Chat setzt weder geltende Fünf-Stunden- noch Wochenkontingente zurück.
+
+## Tatsächliche Fortsetzung: Codex Chat 5 – Presentation Preparation
+
+17.10.2026: Chat 4 schloss Schritt 7 bei `389564b` ab. Die ursprünglich dort mitgeplante Präsentation wird zusätzlich in Chat 5 vorbereitet. Damit existieren fünf nummerierte Projektchats; es wird kein weiterer separater Risiko-Chat erfunden. Der Vier-Chat-Plan oben bleibt als historische Planung erhalten.
+
+Chat 5 begann mit einer ausdrücklich read-only beauftragten Evidenzinventur; Repository unverändert. Der Folgeauftrag Schritt 8.1 erlaubt jetzt [15 vollständige Folienpläne](../presentation/slide-plans/README.md), Navigation, Zeitbudget und aktuelle Dokumentation. Bestätigt: 15 Minuten, 15 Folien, Canva. Alle Pläne werden zuerst vorbereitet, danach einzeln mit ChatGPT/Nutzer geprüft, verstanden und gestaltet. [Prompt 09](prompts/09-slide-blueprints.md), AW-017/V-013. Kein Produktcode, Datenwechsel, neues Experiment, finales Deck oder Commit. Modelle früherer Chats werden nicht als Metadaten dieser Sitzung übernommen.

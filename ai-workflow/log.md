@@ -321,6 +321,21 @@ Das Repository enthält das Abrufskript, sechs originale JSON-Antworten, eine Pr
 
 **Git / Nachweis:** Basis `d1be8bc`, Branch `docs/step-7-risk-audit`. Erfolgreicher `git fetch origin` vor Abschluss bestätigt `main...origin/main = 0 0`. Der Folgeauftrag autorisiert ausdrücklich Staging, Commit, Fast-forward und normalen Push nach erfolgreicher Prüfung. Vollständiger staged Diff einschließlich beider neuen Dateien geprüft, staged Whitespace-Check bestanden; tatsächlicher Commit-Hash, Integrations-/Push-Erfolg und direkter Remote-Vergleich im Git-Verlauf/Abschlussbericht. Keine erfundene Selbstreferenz auf einen künftigen Hash. Produktcode, Statistik, Daten, Abhängigkeiten und Bilder unverändert; keine finalen Präsentationsdateien.
 
+## AW-017: Chat 5 – Presentation Preparation / Schritt 8.1
+
+- **Datum / Werkzeug:** 17.10.2026; Codex, Presentations-Skill, PowerShell/Git, `apply_patch` und Python-Standardbibliothek für Dokumentations-/Evidenzchecks. Keine neue Modell-/Effort-Angabe als verifiziert übernommen.
+- **Status:** vollständiger erster Inhaltsentwurf, technisch geprüft und uncommitted zur menschlichen Review. Keine fertige Präsentation.
+
+**Task / Prompt:** Der erste Chat-5-Auftrag verlangte nur eine read-only Evidenzinventur und ließ das Repository unverändert. Folgeauftrag „Step 8.1 – Prepare All 15 Presentation Slide Blueprints“: alle 15 nummerierten Pläne substantiell aus vorhandener Evidenz ausarbeiten, mit knappem englischem Folientext, einfacher deutscher Erklärung, deutschen vorläufigen Sprechnotizen, tatsächlichen Quellen/Commits, Lecture-Grenzen und Zeiten. Nutzer bestätigt 15 Minuten, 15 Folien und Canva; danach Einzelreview/Verständnis/Gestaltung mit ChatGPT und Nutzer. [Exakter Kernauszug und Scope-Zusammenfassung](prompts/09-slide-blueprints.md). Kein Canva-Deck, PPTX/PDF, Produktwechsel oder Commit.
+
+**AI usage / Entscheidungen:** Sauberes `main` bei `389564b`, lokales `origin/main` identisch; zehn Commits und tatsächliche Branch-/Fast-forward-Belege geprüft. Bestehende Inventur (zwölf tatsächlich angesehene PNGs), Notizen und Forschungs-/API-/Validierungsberichte wiederverwendet. Eigenes `presentation/slide-plans/` erhält 15 vollständige Pläne plus Navigation/Zeitbudget. Zwei Projekt-Einführungsfolien, Workflow-Brücke, zehn Workflow-Folien und zwei Reflexionsfolien. Historische Tests/nutzerberichtete Checks, 2000–2019-Bilder, technischer Bibliotheksvergleich und fehlender menschlicher Vollaudit ausdrücklich getrennt. Vier-Chat-Plan als historische Planung erhalten; Chat 4 war Risikoauswertung, Chat 5 ist zusätzliche Präsentationsvorbereitung. Keine präzise Lecture-Referenz ungeprüft als bestätigt ausgegeben.
+
+**Validation:** Inhalt gegen vorhandene Berichte, CSV/Metadaten und Code-/Git-Nachweise geprüft. Struktur, 15 Titel/Nummern, substantielle Pflichtfelder, relative Beleglinks und Zeitbudget technisch kontrolliert; neue Dateien in Whitespaceprüfung einbezogen. Datenzahlen und sechs gespeicherte Ergebnisse separat lesend geprüft. V-013 dokumentiert tatsächliche Checks/Grenzen. Keine 71 Website-/19 Python-Produkttests oder Live-API-Abfragen wiederholt. Nicht automatisch eine vollständige wissenschaftliche oder menschliche Inhaltsfreigabe.
+
+**Outcome / Übernahme:** Vollständiger erster Entwurf mit 850 Sekunden (14:10) geschätzter Sprechzeit und 50 Sekunden Puffer; kein gemessener Probelauf. Aktuelle Navigation, Status und bestätigte Rahmenbedingungen ergänzt; ältere Foliennotizen sowie historische Logeinträge erhalten. Nächster Schritt: Folie 1 mit ChatGPT/Nutzer verstehen/prüfen und anschließend in Canva gestalten. Alle Änderungen bleiben uncommitted.
+
+**Git / Nachweis:** Branch `slides/step-8-1-blueprints`, Basis `389564b`. Erste Branch-Anlage scheiterte an `.git`-Schreibrechten; derselbe gezielt freigegebene Befehl gelang. Kein Staging, Commit, Merge, Push oder Fetch. Website, Daten, Analyse, Forschung, Bilder, alte Foliennotizen und bisherige Git-Checkpoints unverändert. [Pläne](../presentation/slide-plans/README.md), [aktuelle Outline](../presentation/deck-outline.md), [Checkliste](../presentation/evidence-checklist.md), V-013.
+
 ## Vorlage für neue Einträge
 
 ### AW-XXX: Kurzer Titel
