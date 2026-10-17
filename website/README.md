@@ -1,6 +1,12 @@
 # Website: Economic Data Explorer
 
-**6.2 – Interactive Data Visualization ist abgeschlossen:** technische Prüfungen erneut bestanden, informeller Browser-/Visualcheck vom Nutzer positiv bestätigt. Scatterplot, OLS-Gerade, r/β/n und Zeitraumwahl ergänzen Live-Abruf, Tabelle, Quellen und Fehlerzustände ohne neue Abhängigkeit. Als Nächstes **6.3 – Country Comparison & Website Finalization**, noch nicht begonnen. Die 6.1-Checks und der informelle 6.2-Check bleiben getrennt dokumentiert.
+**Schritt 6 – Website Development einschließlich 6.3 abgeschlossen.** Live-Einzelansicht und Drei-Länder-Vergleich: 71 Website-Tests, 19 Python-Tests, ESLint/TypeScript/Build und separater Live-Test erneut bestanden. Erfolgreicher informeller Browser-/Visualreview vom Nutzer berichtet; fünf Website-Screenshots bei Wiederaufnahme lokal vorhanden und als Bildevidenz geprüft. [6.3-Abschlussbericht, Bildlinks und Prüfgrenzen](tests/step-6-3-validation.md). Als Nächstes Schritt 7; nicht Teil dieses Auftrags.
+
+## Vergleich in 6.3
+
+Die vorhandene Zeitraumwahl steuert auch alle drei Vergleichszeilen. Landwahl markiert die aktive Zeile und wechselt weiterhin Plot und Jahrestabelle. r/β auf drei Stellen, n als vollständige Paare; fehlende/undefinierte Werte mit Erklärung. Je Land bleiben Source-Update-Daten und API-Links zugeordnet. Auf schmalen Fenstern ist die beschriftete Vergleichstabelle intern scrollbar.
+
+Der neue kleine Hook `src/api/useCountryData.ts` übernimmt die bisherige Lade-/Retrylogik pro Land. Einzelansicht und Vergleich teilen denselben Länderzustand, sodass Retry aus beiden Ansichten konsistent ist. Alle Länder werden beim Start geladen (sechs Indikatoranfragen). Ein Länderfehler entfernt keine erfolgreichen anderen Ergebnisse; Retry betrifft nur das betroffene Land. Zeitraum-/Länderwechsel nach dem Laden verwenden Cache/lokale Filter, keine neuen Requests. API-Client, Cacheimplementierung und Statistikfunktionen unverändert, keine neue Abhängigkeit.
 
 ## Bedienung und Prüfung von 6.2
 
@@ -33,9 +39,9 @@ npm run validate:live
 
 Implementierung: [`src/api/worldBank.ts`](src/api/worldBank.ts) enthält Definitionen, Parser, Jahresverknüpfung und Request-Cache; [`src/App.tsx`](src/App.tsx) zeigt Lade-, Fehler-, Leer- und Erfolgszustände. Entscheidungen: [D-006/D-008](../docs/decisions.md). Automatisierte Prüfungen, Live-Werte, echte Fehler und separat gekennzeichnete nutzerberichtete Browserchecks: [tests/README.md](tests/README.md).
 
-## API-Verhalten in Schritt 6.1
+## API-Verhalten (Grundlage aus 6.1, erweitert in 6.3)
 
-- Zwei parallele native `fetch`-Aufrufe pro erstmals ausgewähltem Land. Exakte URLs und Definitionen wie [data/API.md](../data/API.md); kein Proxy.
+- Zwei parallele native `fetch`-Aufrufe je Land, in 6.3 für alle drei Länder beim Start. Exakte URLs und Definitionen wie [data/API.md](../data/API.md); kein Proxy. Der Promise-Cache verhindert doppelte Requests unter StrictMode/Rerender.
 - HTTP-Fehler, ungültiges JSON, falsche Identität, Duplikate, ungültige Jahre/Zahlen und unerwartete Pagination führen zu einer sichtbaren Fehlermeldung. Timeout: 30 Sekunden je Anfrage, Retry per Schaltfläche.
 - Jede angeforderte Jahreszeile bleibt sichtbar. `null` und fehlende Jahresdatensätze erscheinen als „Missing“, ohne Imputation; vollständige Paare und unvollständige Jahre werden gezählt. Im Unterschied zum streng vollständigen Snapshot-Abruf werden fehlende Jahre hier zur Anzeige erhalten. In späterer Statistik dürfen nur vollständige Paare verwendet werden.
 - Zahlen bleiben intern als JavaScript-`number` erhalten, entsprechend den Python-`float`-Eingaben für die Analyse. Nur die Anzeige rundet; die Statistik aus 6.2 verwendet ungerundete vollständige Paare.
@@ -57,7 +63,7 @@ Studierende können untersuchen, wie Inflation und Arbeitslosigkeit in Deutschla
 - Pearson `r`, Regressionssteigung `β` und Beobachtungen `n`
 - Vergleichsansicht aller drei Länder
 - Methodik, Datenquelle, Abrufstatus und Einschränkungen
-- Download oder Verweis auf den eingefrorenen Referenzdatensatz
+- Eingefrorener Referenzdatensatz im Repository als unabhängige Validierungsbasis (kein Website-Download)
 
 ## Geplante Nutzerführung
 
@@ -104,11 +110,11 @@ website/
 - Erfolgreiche Analyse
 - Referenzdaten-Demo, falls später umgesetzt
 
-## Definition of Done für den gesamten Schritt 6 (noch nicht erfüllt)
+## Definition of Done für Schritt 6 (vereinbarter Umfang 6.1–6.3 erfüllt)
 
 - Alle Funktionen der ersten Version sind nutzbar.
 - Werte im Diagramm und in den Kennzahlen stammen aus denselben gefilterten Beobachtungen.
 - TypeScript- und Python-Ergebnisse stimmen überein.
 - Quelle, Zeitraum, Indikatoren und Grenzen sind sichtbar.
 - Eine Person kann die Website nach README-Anleitung lokal starten.
-- Automatisierte Tests und ein dokumentierter manueller Testlauf sind vorhanden.
+- Automatisierte Tests und nutzerberichtete Browserreviews sind dokumentiert; keine vollständige manuelle Accessibility-/Geräteprüfung behauptet.

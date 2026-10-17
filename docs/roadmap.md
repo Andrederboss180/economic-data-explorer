@@ -70,11 +70,13 @@ Technischer Nachweis: [Analyse und Validierung](../analysis/validation.md), sech
 
 ## Schritt 6 / Meilenstein 4: Website Development
 
-**Status:** aktiv; 6.1 und 6.2 abgeschlossen; als Nächstes 6.3 – Country Comparison & Website Finalization (noch nicht begonnen)
+**Status:** abgeschlossen am 16.10.2026 (6.1–6.3), nach technischem Review, nutzerberichteter informeller Browser-/Visualprüfung und ausdrücklichem Finalisierungsauftrag
 
 6.1: React/TypeScript/Vite-Grundlage, Live-Tabelle, Quellen und Cache abgeschlossen; sechs nutzerberichtete Browserchecks separat von Automatisierung dokumentiert. [Historische Nachweise](../website/tests/step-6-1-validation.md), AW-010.
 
-6.2: SVG-Visualisierung, OLS über beobachtete X-Spanne, r/β/n und lokale Zeitraumfilter abgeschlossen. Erneut 65 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build bestanden; sechs eingefrorene Gruppen gegen Python geprüft. Nutzer berichtet positiven informellen Browser-/Visualcheck, ohne vollständige Detailcheckliste zu bestätigen. [Nachweise und Grenzen](../website/tests/step-6-2-validation.md), AW-012. Keine neue Abhängigkeit oder API-Anfrage beim Zeitraumwechsel; Daten/Analyse/API unverändert. Sichere Git-Finalisierung ausdrücklich autorisiert. 6.3 und Schritte 7/8 nicht begonnen; Schritt 6 insgesamt nicht abgeschlossen.
+6.2: SVG-Visualisierung, OLS, r/β/n und lokale Zeitraumfilter bei `b74f4c3` abgeschlossen, informeller Nutzercheck dokumentiert. [Nachweise](../website/tests/step-6-2-validation.md), AW-012.
+
+6.3: Ländervergleich mit gemeinsamem lokalen Zeitraumfilter, r/β/n, Landesmarkierung und unabhängigen Lade-/Fehler-/Retryzuständen abgeschlossen. 71 Website-Tests, 19 Python-Tests, ESLint/TypeScript/Build und separater Live-Test erneut bestanden; sechs eingefrorene Gruppen gegen Python geprüft. Nutzer berichtet erfolgreichen informellen Browser-/Visualreview und fünf Screenshots im ChatGPT-Gespräch, ohne vollständige Detailcheckliste zu bestätigen. [Abschlussbericht und Grenzen](../website/tests/step-6-3-validation.md), AW-013/AW-014, D-010. Commit, sichere Integration und Push autorisiert. Schritte 7/8 nicht begonnen.
 
 Fertig, wenn:
 
@@ -84,7 +86,13 @@ Fertig, wenn:
 - Quellen und Methodik sichtbar sind
 - automatisierte und manuelle Tests dokumentiert sind
 
-## Meilenstein 5: Präsentation
+## Schritt 7: Risks, Failures & Limitations
+
+**Status:** als Nächstes, noch nicht begonnen. Bestehende Fehler-/Validierungsnachweise bilden die Grundlage für diese spätere Phase; hier keine neue Auswertung.
+
+## Schritt 8 / Meilenstein 5: Präsentation
+
+**Status:** geplant, noch nicht begonnen; bestehende Vorbereitungsnotizen bleiben erhalten.
 
 Fertig, wenn:
 

@@ -9,7 +9,8 @@
 
 ## Folie 2: Website und Ergebnis
 
-- [ ] finaler Website-Screenshot
+- [x] fünf nutzerbereitgestellte Website-Screenshots lokal vorhanden und als statische Bildevidenz angesehen; Links im 6.3-Bericht
+- [ ] geeignete Website-Screenshots für die Folien auswählen
 - [ ] Ergebniswerte gegen Python geprüft
 - [ ] Abrufdatum oder Referenzdatenstand genannt
 - [ ] Achsen, Einheiten und `n` sichtbar
@@ -67,7 +68,7 @@
 - [x] sechs persönliche Browserchecks vom Nutzer berichtet, getrennt von Automatisierung dokumentiert
 - [x] Deutschland-Inflation 2024 ungefähr 2.26 % und Frankreich-Arbeitslosigkeit 2024 gleich 7.4 % manuell bestätigt
 - [x] Nutzbarkeit bei schmalem Browserfenster nutzerberichtet bestätigt
-- [ ] echter Website-Screenshot (nicht bereitgestellt/erstellt)
+- [ ] lokaler Website-Screenshot aus 6.1 (damals nicht bereitgestellt/erstellt)
 
 Nachweis: [Website-Validierung und Prüfgrenzen](../website/tests/step-6-1-validation.md), AW-010. Keine zusätzlichen Browser-/Geräteprüfungen oder vollständiger Code-Audit behauptet.
 
@@ -75,6 +76,15 @@ Nachweis: [Website-Validierung und Prüfgrenzen](../website/tests/step-6-1-valid
 - [ ] reproduzierbarer Nachweis
 - [ ] Korrektur und erneuter Test
 - [ ] keine konstruierte Fehlergeschichte
+
+### Abschluss Website-Schritt 6.3
+
+- [x] AI-generierter Vergleich und gemeinsame Länderzustände im Feature-Branch nachvollziehbar
+- [x] 71 Website-Tests, 19 Python-Tests und alle sechs numerischen Referenzgruppen erneut geprüft
+- [x] ESLint, TypeScript, Build und separater Live-Check bestanden
+- [x] erfolgreicher informeller Browser-/Visualreview nutzerberichtet, getrennt von automatisierten Tests
+
+Fünf nutzerbereitgestellte Website-Screenshots bei Wiederaufnahme am 17.10. lokal vorhanden: Hero/Einleitung, Auswahl/Plot, Kennzahlen/Jahrestabelle, Vergleich und Quellen. Codex sah die statischen Bilder an; [konkrete Bildlinks und Prüfgrenzen](../website/tests/step-6-3-validation.md), AW-014/V-010. Weitere frühere Website- und Workflow-/Nutzungslimitbilder unverändert erhalten; noch keine inhaltliche Risikoauswertung. Keine umfassende Keyboard-/Geräte-/Endpoint-Retryprüfung oder eigener Codex-Browserlauf bestätigt. Diese Evidenznotizen beginnen weder Schritt 7 noch die finale Präsentation.
 
 ## Folie 8: Lessons learned
 

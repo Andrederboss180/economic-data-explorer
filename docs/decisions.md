@@ -87,3 +87,13 @@
 **Rechnung:** Gleiche Pearson-/OLS-Definition wie Python, kompensierte zentrierte Summen und direkte Konstantenerkennung vor Mittelwertbildung (inklusive historischem `0.1`-Fall). Keine künstliche Epsilon-Schwelle für Konstanten. Undefinierte Fälle erklärt, horizontale Regression bei konstantem y erhalten, numerischer Überlauf sicher behandelt. Linienvorhersage zentriert und nur zwischen beobachteten min/max x; keine Extrapolation. Drei Dezimalstellen für r/β nur zur Anzeige.
 
 **Kontrolle/Grenze:** Alle sechs eingefrorenen Gruppen einschließlich α/r/β/n und Ausschlüssen gegen gespeicherte Python-Ergebnisse geprüft, Toleranz `1e-12 * max(1, |Python|)`. Kein neuer statistischer Schätzer, keine Änderung der Referenzen. Live-Revisionen können reale Websitewerte ändern; der Offlinevergleich isoliert Rechenfehler von späteren Datenständen. [Prüfbericht](../website/tests/step-6-2-validation.md). Keine 6.3-Vergleichsansicht oder Schritte 7/8.
+
+## D-010: Ein Vergleich, drei unabhängige Länderzustände
+
+**Status:** 6.3 abgeschlossen; technische Prüfung und erfolgreicher nutzerberichteter informeller Browser-/Visualreview, AW-014
+
+**Entscheidung:** Eine Tabelle statt weiterer Charts. Bestehender API-/Promise-Cache und unveränderte Statistik bleiben die Grundlage. Die bisherige Lade-/Retry-/Cleanup-Logik wird in einen kleinen Hook extrahiert und je festem Ländercode aufgerufen. Vergleich und Einzelansicht verwenden dieselben drei Zustände, damit Retries nicht widersprüchliche Ansichten erzeugen. Fehler pro Land statt globalem `Promise.all` über Länder; erfolgreiche Zeilen bleiben sichtbar.
+
+**Konsequenz:** Sechs initiale HTTP-Aufrufe statt der bisherigen zwei für die Einzelansicht. Länder-/Zeitraumwechsel nach Laden erzeugen keine neuen Requests; Retry nur für das fehlerhafte Land. Landwahl markiert den Vergleichseintrag und behält Einzelplotverhalten. Source-Update-Daten und URLs bleiben je Land/Indikator sichtbar; r/β/n gemeinsam lokal gefiltert, keine Referenzergebnisse im Produktcode. Scrollbare semantische Tabelle auf schmalen Fenstern. Kleine SVG-Labelkorrektur trennt Name/Beschreibung; keine Umgestaltung.
+
+**Kontrolle:** Sechs Vergleichsgruppen aus fixen Original-JSON-Fixtures gegen Python, Request-Zahl unter StrictMode, Teilfehler/Laden/Retry, fehlende Werte und Quellenmetadaten getestet. Erfolgreicher informeller Browser-/Visualreview nutzerberichtet, keine vollständige Keyboard-/Geräte-/Retryprüfung; [Nachweise](../website/tests/step-6-3-validation.md), AW-013/AW-014. Keine neue Abhängigkeit, Daten-/Python-/Statistik-/API-Clientänderung oder Arbeit an Schritten 7/8.

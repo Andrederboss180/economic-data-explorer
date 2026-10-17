@@ -40,7 +40,7 @@ Kleine Quellenzeile: `World Bank Indicators API; retrieved 2026-10-16T12:35:25Z`
 
 Eine zusammenhängende Kette mit drei echten Ausschnitten: links der Endpoint, in der Mitte die gekürzte JSON-Antwort und rechts die validierte CSV-Zeile. Darunter steht die Prüfzeile mit HTTP, Identität, Jahren, Nullwerten und Duplikaten. Keine dekorativen Dashboard-Karten verwenden.
 
-Als Terminalausschnitt dient der vorhandene Screenshot `presentation/assets/screenshots/Screenshot 2026-10-16 142607.png`. Er zeigt den echten PowerShell-Abruf, die Metadaten und die fünf Werte für 2020 bis 2024.
+Als Terminalausschnitt dient der vorhandene Screenshot `presentation/assets/screenshots/Erste API request.png` (byte-identisch umbenannt). Er zeigt den echten PowerShell-Abruf, die Metadaten und die fünf Werte für 2020 bis 2024.
 
 ## Sprechertext auf Englisch
 
@@ -84,4 +84,4 @@ Gekürzter JSON-Ausschnitt aus dem gespeicherten Original (weitere Felder ausgel
 - `data/API.md`
 - `data/raw/world_bank_2000_2024_metadata.json`
 - `data/reference/reference_2000_2024.csv`
-- `presentation/assets/screenshots/Screenshot 2026-10-16 142607.png`
+- `presentation/assets/screenshots/Erste API request.png`

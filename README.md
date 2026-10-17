@@ -62,7 +62,7 @@ Die Architektur ist in [docs/decisions.md](docs/decisions.md) dokumentiert.
 
 ## Aktueller Arbeitsschritt
 
-Schritt 6.2 ist abgeschlossen: Scatterplot, OLS, r/β/n und lokale Zeitraumwahl. 65 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build erneut bestanden; alle sechs Referenzgruppen gegen Python geprüft. Der Nutzer bestätigt einen erfolgreichen informellen Browser-/Visualcheck. [Lokal starten](website/README.md) · [Validierung und Prüfgrenzen](website/tests/step-6-2-validation.md). Als Nächstes 6.3 – Country Comparison & Website Finalization, noch nicht begonnen.
+Schritt 6 – Website Development einschließlich 6.3 ist abgeschlossen: Live-Daten, interaktive Einzelansicht und Ländervergleich. 71 Website-Tests, 19 Python-Tests, Lint/Typecheck/Build und separater Live-Test erneut bestanden. Erfolgreicher informeller Browser-/Visualreview nutzerberichtet. [Lokal starten](website/README.md) · [Abschlussnachweise und Prüfgrenzen](website/tests/step-6-3-validation.md). Git-Abschluss ausdrücklich autorisiert (AW-014); tatsächlicher Commit im Git-Verlauf/Abschlussbericht. Als Nächstes Schritt 7 – Risks, Failures & Limitations; Schritte 7/8 noch nicht begonnen.
 
 ## Git-Schnellstart
 

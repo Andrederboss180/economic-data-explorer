@@ -9,8 +9,8 @@ Jede Phase erzeugt ein fachliches Ergebnis und einen Nachweis für die Präsenta
 | 3 | Git und Projektaufbau (M7) | Struktur und Dokumentation vorbereiten | Diffs vor dem Staging und den gestagten Stand vor dem Commit prüfen | Lokales Repository außerhalb von OneDrive; `main` verfolgt `origin/main`; erster GitHub-Push erfolgreich | Abgeschlossen |
 | 4 | Datenbeschaffung (M5) | Minimalen Standardbibliothek-Abruf und Validierung implementieren | Echten Terminalnachweis nachvollziehen; Codex führte Datenchecks, sechs Unit-Tests und einen separaten PowerShell-Spotcheck aus; kein vollständiger Human Audit | 150 Quellbeobachtungen; 75 vollständige Länder-Jahr-Zeilen; Frankreich-Spotcheck bestanden | Abgeschlossen |
 | 5 | Mathematical Analysis & Validation | Korrelation und Regression implementieren | Bekannte Testlösungen, `statistics`-Abgleich und erneuter Codex-Review; Abschluss vom Nutzer beauftragt | Sechs Ergebniszeilen; 19 Tests insgesamt bestanden | Abgeschlossen |
-| 6 | Website | Grundlage und interaktive Visualisierung/Statistik implementiert | 6.1: sechs Nutzerchecks; 6.2: positiver informeller Browser-/Visualcheck, technische Prüfung wiederholt | Plot, OLS, r/β/n und lokale Zeitraumwahl | 6.2 abgeschlossen; als Nächstes 6.3 |
-| 7 | Fehler und Grenzen | Risiken identifizieren und Erklärungen entwerfen | Nur tatsächlich beobachtete Fehler als Fälle verwenden | Risikoregister und Validierungsbeispiel | Laufend |
+| 6 | Website | Grundlage, Visualisierung und Ländervergleich implementiert | Automatisierte Tests, unabhängiger Python-Abgleich und nutzerberichtete Browserreviews; Git-Abschluss ausdrücklich freigegeben | Live-Daten, Plot, Kennzahlen und Vergleich | Abgeschlossen (6.1–6.3), AW-014 |
+| 7 | Risks, Failures & Limitations | Risiken und Erklärungen später auswerten | Nur tatsächlich beobachtete Fehler verwenden | Bestehende Logs als Grundlage | Als Nächstes; noch nicht begonnen |
 | 8 | Reproduzierbarkeit und Präsentation | Storyline und Formulierungen unterstützen | Jede Zahl, Quelle und Grafik prüfen | README, Folien und Sprechertext | Vorbereitet |
 
 ## Standardablauf pro Arbeitspaket
@@ -30,6 +30,8 @@ Chat 3 beginnt bei `4a28809`. Der ursprüngliche 6.1-Auftrag stoppte vor Commit/
 6.2 beginnt sauber/synchronisiert bei `29b974f` auf `web/step-6-2-visualization`. Der Implementierungsauftrag stoppte vor Commit/Merge/Push (AW-011). Der Folgeauftrag bestätigt einen positiven informellen Nutzercheck und autorisiert nach erneuter technischer/staged Prüfung Commit, sichere Integration und normalen Push (AW-012). Die detaillierte Checkliste ist nicht vollständig menschlich bestätigt. Als Nächstes 6.3 – Country Comparison & Website Finalization; noch nicht begonnen, ebenso Schritte 7/8.
 
 ## Zusammenarbeit: Nutzer, ChatGPT Chat und Codex
+
+6.3 startet bei `b74f4c3` auf `web/step-6-3-comparison` nach sauberem/synchronisiertem Handoff. Der ursprüngliche Implementierungsauftrag endet vor Commit/Merge/Push (AW-013). Der Folgeauftrag „Finalize Step 6.3 – Country Comparison & Website Development“ bestätigt den informellen Nutzerreview und autorisiert nach erneuten Prüfungen den Git-Abschluss (AW-014). [Abschlussnachweise](../website/tests/step-6-3-validation.md). Schritt 6 abgeschlossen; Schritte 7/8 noch nicht begonnen.
 
 | Rolle | Aufgabe im Arbeitsmodell |
 |---|---|

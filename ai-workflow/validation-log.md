@@ -89,6 +89,23 @@ Hier sammeln wir tatsächliche Prüfungen und Fehler. Einträge werden erst als 
 - **Nachweis / Freigabe:** [6.2-Bericht](../website/tests/step-6-2-validation.md), AW-012; Commit, sichere Integration und normaler Push ausdrücklich beauftragt. 6.2 abgeschlossen; 6.3 bleibt nächster, nicht begonnener Schritt.
 - **Prüfskript-Korrektur:** Der Ignore-Check prüfte den nicht vorhandenen Ordner `website/coverage` zunächst wie einen Dateipfad. Prüfung eines Pfades darunter bestätigte die bestehende Directory-Ignore-Regel; keine `.gitignore`- oder Produktänderung nötig.
 
+## V-009: Vergleich 6.3 – sechs Gruppen, Teilfehler und gemeinsame Zustände
+
+- **Datum:** 2026-10-16
+- **Tatsächliches Ergebnis:** Erster Implementierungslauf und abschließender Lauf mit 71 Website-Tests bestanden, ebenso Lint/TypeScript/Build und 19 Python-Tests. Sechs eingefrorene Gruppen durch API-Parser/Statistik gegen Python und gerundete Tabellenanzeige geprüft. Keine Produkt- oder Statistikfehler im Testlauf beobachtet; keine künstliche Fehlergeschichte.
+- **Review-Korrekturen:** Die simulierte Teilfehler-Fixture beendet nach Review beide wartenden Indikatorpromises statt nur eines; kein offener Testrequest nötig. Alte Einzeltabellen-Tests wurden vor dem Lauf auf Caption-/Bereichsauswahl und sechs initiale Requests angepasst. Kein aufgegebener Abnahmepunkt: keine zusätzlichen Filterrequests, richtige Zahlen, keine alten Charts bei Fehler, Request-/Retrykontrolle bleiben geprüft. App-Testdatei auf LF vereinheitlicht; reine Zeilenendenkorrektur.
+- **Kontrolle:** Erfolgreiche Zeilen bleiben bei langsamem/fehlerhaftem anderem Land sichtbar; Retry betrifft nur das Land und aktualisiert auch die Einzelansicht. Fehlende Werte/Metadaten erklärt statt erfunden. Separater Live-Test am `2026-10-16T15:06:34Z` bestanden, Source-Updates `2026-10-08`, 18 echte Werte stimmen mit Snapshot überein.
+- **Grenze / Nachweis:** Browserinventar leer, kein echter 6.3-Browser-/Geräte-/Accessibilitycheck oder Screenshot behauptet. [6.3-Bericht und offene Checkliste](../website/tests/step-6-3-validation.md), AW-013/D-010. Technisch geprüft, menschlicher Review offen; kein Commit/Merge/Push, keine Schritte 7/8.
+
+## V-010: Finaler Website-Review und dokumentierter Nutzercheck
+
+- **Datum:** 2026-10-16
+- **Tatsächliches Ergebnis:** 71 Website-Tests und 19 Python-Tests erneut bestanden, ESLint/TypeScript/Build erfolgreich. Alle sechs Referenzgruppen innerhalb dokumentierter Toleranz, n exakt; bestehende Visualisierung/Jahrestabelle, lokale Filter, Landesmarkierung, Cache, Teilfehler und Retry durch Tests abgedeckt. Separater Live-Check `2026-10-16T15:23:29Z` bestanden: alle sechs Reihen und 18 Snapshot-Stichproben. Kein blockierender Produktfehler festgestellt.
+- **Menschlicher Nachweis:** Erfolgreicher informeller Browser-/Visualreview nutzerberichtet. Fünf Website-Screenshots bei Wiederaufnahme am 17.10. lokal vorhanden und von Codex als statische Bildevidenz angesehen/verlinkt; kein eigener Browserlauf. Weitere vom Nutzer ergänzte Workflow-/Websitebilder unverändert erhalten. Keine umfassende Tastatur-/Geräte-/Endpoint-Retryprüfung oder vollständige manuelle Detailabnahme behauptet. Alte fehlende Nutzerfreigabe aus V-009 bleibt historische Evidenz.
+- **Unterbrechung:** Staging am 16.10. nicht ausgeführt, weil automatischer Approval-Review wegen Nutzungslimit ausfiel; kein Urteil, dass die Aktion unsicher sei. Keine Umgehung. Am 17.10. auf ausdrücklichen Nutzerauftrag fortgesetzt; Fetch bestätigt weiterhin synchrones main. Erneut 71 Website-Tests, 19 Python-Tests, ESLint, TypeScript und Build bestanden. Technisch geprüfter Code/Tests unverändert, neue Dokumentation und Bilder erneut geprüft.
+- **Tatsächlicher Fehler / Korrektur:** Ein PowerShell-Pipe-Dokumentationsskript übertrug Nicht-ASCII-Zeichen als Fragezeichen und stoppte an einer Suchtext-Assertion. Nur Status-/AI-README-Text betroffen; mit Unicode-fähigem `apply_patch` korrigiert, weitere Texte direkt damit bearbeitet und vollständigen Diff/UTF-8 erneut geprüft. Keine Änderung von Daten, Statistik oder Produktcode nötig.
+- **Scope / Git:** Alle geänderten/neuen Dateien, Whitespace, Links, ausgeschlossene Build-/Dependency-/Env-Dateien und unveränderte Daten/Analyse/API/Pakete kontrolliert. AW-014 autorisiert staged Review, Commit und sichere Integration/Push; tatsächliche Git-Nachweise im Verlauf/Abschlussbericht. Schritt 6 abgeschlossen; Schritte 7/8 nicht begonnen.
+
 ## Vorlage
 
 ### V-XXX: Titel

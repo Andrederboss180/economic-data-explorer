@@ -43,7 +43,7 @@ export default function Scatterplot({ points, statistics, label }: { points: Com
   return <figure className="scatterplot">
     <figcaption><strong>Inflation and unemployment</strong><span>{label} · {points.length} annual observations</span></figcaption>
     <div className="chart-scroll" role="region" aria-label="Scatterplot, scroll horizontally on narrow screens" tabIndex={0}>
-      <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-labelledby={`${id}-title ${id}-desc`}>
+      <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-labelledby={`${id}-title`} aria-describedby={`${id}-desc`}>
         <title id={`${id}-title`}>{label}: inflation versus unemployment</title>
         <desc id={`${id}-desc`}>Unemployment on the horizontal axis, inflation on the vertical axis, both in percent. Each point is one complete annual observation. Hover, focus or tap a point to inspect its year and values.</desc>
         {ticks.map((tick) => {

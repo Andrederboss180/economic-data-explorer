@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import App from '../src/App'
 import { createCountryLoader, type CountryData } from '../src/api/worldBank'
@@ -15,13 +15,16 @@ const mockLoad = vi.mocked(loadCountry)
 const makeData = (country: 'DEU' | 'FRA' | 'ESP') => createCountryLoader(async (url) => response(payload(country, String(url).includes('FP.CPI') ? 'inflation' : 'unemployment')))(country)
 afterEach(() => { cleanup(); mockLoad.mockReset() })
 
+const annualTable = () => screen.getByRole('table', { name: /Values displayed/ })
+const findAnnualTable = () => screen.findByRole('table', { name: /Values displayed/ })
+
 describe('website states', () => {
   it('shows loading, data, missing values, source dates and counts', async () => {
     mockLoad.mockReturnValue(makeData('DEU'))
     render(<App />)
     expect(screen.getByRole('status').textContent).toContain('Loading Germany')
-    await screen.findByRole('table')
-    expect(screen.getAllByRole('row')).toHaveLength(26)
+    await findAnnualTable()
+    expect(within(annualTable()).getAllByRole('row')).toHaveLength(26)
     expect(screen.getAllByText('Missing')).toHaveLength(46)
     expect(screen.getByText('2 / 25 complete pairs')).toBeTruthy()
     expect(screen.getByRole('group', { name: /Germany, 2000–2024/ }).querySelectorAll('.chart-point')).toHaveLength(2)
@@ -35,25 +38,28 @@ describe('website states', () => {
     render(<App />)
     fireEvent.change(screen.getByLabelText('Country'), { target: { value: 'FRA' } })
     expect(screen.getByRole('status').textContent).toContain('Loading France')
-    expect(screen.queryByRole('table')).toBeNull()
-    await screen.findByRole('table')
+    expect(screen.queryByRole('table', { name: /Values displayed/ })).toBeNull()
+    await findAnnualTable()
     await act(async () => resolveGermany(await makeData('DEU')))
-    expect(screen.getByRole('table').textContent).toContain('France, 2000–2024')
+    expect(annualTable().textContent).toContain('France, 2000–2024')
   })
 
   it('shows errors without stale observations and allows retry', async () => {
-    mockLoad.mockImplementationOnce(() => makeData('DEU')).mockRejectedValueOnce(new Error('World Bank returned HTTP 503.')).mockImplementationOnce(() => makeData('ESP'))
+    let spainAttempts = 0
+    mockLoad.mockImplementation((country) => country === 'ESP' && spainAttempts++ === 0
+      ? Promise.reject(new Error('World Bank returned HTTP 503.')) : makeData(country))
     render(<App />)
-    await screen.findByRole('table')
+    await findAnnualTable()
     fireEvent.change(screen.getByLabelText('Country'), { target: { value: 'ESP' } })
     await screen.findByRole('alert')
-    expect(screen.queryByRole('table')).toBeNull()
+    expect(screen.queryByRole('table', { name: /Values displayed/ })).toBeNull()
     expect(screen.getByRole('alert').textContent).toContain('HTTP 503')
     expect(screen.queryByTestId('pearson-r')).toBeNull()
     expect(screen.queryByRole('group', { name: /inflation versus unemployment/ })).toBeNull()
     fireEvent.click(screen.getByRole('button', { name: 'Retry World Bank request' }))
-    await screen.findByRole('table')
-    expect(screen.getByRole('table').textContent).toContain('Spain, 2000–2024')
+    await findAnnualTable()
+    expect(annualTable().textContent).toContain('Spain, 2000–2024')
+    expect(screen.getByTestId('comparison-n-ESP').firstChild!.textContent).toBe('2')
   })
 
   it('shows all-missing data as unavailable pairs rather than zero observations', async () => {
@@ -61,7 +67,7 @@ describe('website states', () => {
     data.observations = data.observations.map((row) => ({ ...row, inflation: null, unemployment: null }))
     mockLoad.mockResolvedValue(data)
     render(<App />)
-    await screen.findByRole('table')
+    await findAnnualTable()
     expect(screen.getByText('0 / 25 complete pairs')).toBeTruthy()
     expect(screen.getAllByText('Missing')).toHaveLength(50)
     expect(screen.getByRole('note').textContent).toContain('No complete annual pairs')
@@ -69,23 +75,23 @@ describe('website states', () => {
 
   it('does not repeat HTTP calls under StrictMode, rerendering or return visits', async () => {
     const fetcher = vi.fn<typeof fetch>().mockImplementation(async (url) => {
-      const country = String(url).includes('/FRA/') ? 'FRA' : 'DEU'
+      const country = String(url).includes('/FRA/') ? 'FRA' : String(url).includes('/ESP/') ? 'ESP' : 'DEU'
       return response(payload(country, String(url).includes('FP.CPI') ? 'inflation' : 'unemployment'))
     })
     mockLoad.mockImplementation(createCountryLoader(fetcher))
     const { rerender } = render(<StrictMode><App /></StrictMode>)
-    await screen.findByRole('table')
+    await findAnnualTable()
     rerender(<StrictMode><App /></StrictMode>)
-    expect(fetcher).toHaveBeenCalledTimes(2)
+    expect(fetcher).toHaveBeenCalledTimes(6)
     fireEvent.change(screen.getByLabelText('Observation period'), { target: { value: '2019' } })
     expect(screen.getByLabelText('Observation period').getAttribute('id')).toBe('period')
-    expect(screen.getByRole('table').textContent).toContain('Germany, 2000–2019')
-    expect(fetcher).toHaveBeenCalledTimes(2)
+    expect(annualTable().textContent).toContain('Germany, 2000–2019')
+    expect(fetcher).toHaveBeenCalledTimes(6)
     fireEvent.change(screen.getByLabelText('Country'), { target: { value: 'FRA' } })
-    await waitFor(() => expect(screen.getByRole('table').textContent).toContain('France, 2000–2019'))
+    await waitFor(() => expect(annualTable().textContent).toContain('France, 2000–2019'))
     fireEvent.change(screen.getByLabelText('Country'), { target: { value: 'DEU' } })
-    await waitFor(() => expect(screen.getByRole('table').textContent).toContain('Germany, 2000–2019'))
-    expect(fetcher).toHaveBeenCalledTimes(4)
+    await waitFor(() => expect(annualTable().textContent).toContain('Germany, 2000–2019'))
+    expect(fetcher).toHaveBeenCalledTimes(6)
   })
 
   it('updates plot, line, statistics and table from the same local period without reloading', async () => {
@@ -93,7 +99,7 @@ describe('website states', () => {
     data.observations = data.observations.map((row) => ({ ...row, unemployment: row.year - 1999, inflation: row.year <= 2019 ? 2 * (row.year - 1999) + 1 : -10 }))
     mockLoad.mockResolvedValue(data)
     const { container } = render(<App />)
-    await screen.findByRole('table')
+    await findAnnualTable()
     expect(screen.getByTestId('observation-count').textContent).toBe('25')
     expect(container.querySelectorAll('.chart-point')).toHaveLength(25)
     const oldCorrelation = screen.getByTestId('pearson-r').textContent
@@ -108,13 +114,13 @@ describe('website states', () => {
     expect(oldCorrelation).not.toBe('1.000'); expect(oldSlope).not.toBe('2.000')
     expect(container.querySelectorAll('.chart-point')).toHaveLength(20)
     expect(container.querySelector('.regression-line')!.getAttribute('y2')).not.toBe(oldLine)
-    expect(screen.getAllByRole('row')).toHaveLength(21)
+    expect(within(annualTable()).getAllByRole('row')).toHaveLength(21)
     expect(container.querySelector('.point-detail')!.textContent).not.toContain('2024 ·')
-    expect(mockLoad).toHaveBeenCalledTimes(1)
+    expect(mockLoad).toHaveBeenCalledTimes(3)
     fireEvent.change(screen.getByLabelText('Observation period'), { target: { value: '2024' } })
     expect(screen.getByTestId('observation-count').textContent).toBe('25')
     expect(screen.getByTestId('pearson-r').textContent).toBe(oldCorrelation)
-    expect(mockLoad).toHaveBeenCalledTimes(1)
+    expect(mockLoad).toHaveBeenCalledTimes(3)
   })
 
   it('updates country-specific statistics while preserving the selected period', async () => {
@@ -125,13 +131,12 @@ describe('website states', () => {
       return data
     })
     const { container } = render(<App />)
-    await screen.findByRole('table')
+    await findAnnualTable()
     fireEvent.change(screen.getByLabelText('Observation period'), { target: { value: '2019' } })
     expect(screen.getByTestId('regression-slope').textContent).toBe('2.000')
     fireEvent.click(screen.getByRole('button', { name: /^2000: inflation/ }))
     fireEvent.change(screen.getByLabelText('Country'), { target: { value: 'FRA' } })
-    expect(screen.queryByTestId('regression-slope')).toBeNull()
-    await waitFor(() => expect(screen.getByRole('table').textContent).toContain('France, 2000–2019'))
+    await waitFor(() => expect(annualTable().textContent).toContain('France, 2000–2019'))
     expect(screen.getByTestId('regression-slope').textContent).toBe('-3.000')
     expect(screen.getByTestId('pearson-r').textContent).toBe('-1.000')
     expect(screen.getByTestId('observation-count').textContent).toBe('20')

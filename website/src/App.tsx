@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react'
-import { COUNTRIES, INDICATORS, loadCountry, type CountryCode, type CountryData } from './api/worldBank'
+import { useState } from 'react'
+import { COUNTRIES, INDICATORS, type CountryCode } from './api/worldBank'
+import { useCountryData } from './api/useCountryData'
 import Scatterplot from './components/Scatterplot'
+import CountryComparison from './components/CountryComparison'
 import { analyzeObservations, PERIODS, STATUS_TEXT, type EndYear } from './statistics/analysis'
-
-type LoadState =
-  | { status: 'loading'; country: CountryCode }
-  | { status: 'error'; country: CountryCode; message: string }
-  | { status: 'ready'; country: CountryCode; data: CountryData }
 
 const numberFormat = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
@@ -17,22 +14,8 @@ function formatValue(value: number | null) {
 export default function App() {
   const [country, setCountry] = useState<CountryCode>('DEU')
   const [endYear, setEndYear] = useState<EndYear>(2024)
-  const [attempt, setAttempt] = useState(0)
-  const [state, setState] = useState<LoadState>({ status: 'loading', country: 'DEU' })
-
-  useEffect(() => {
-    let active = true
-    loadCountry(country).then(
-      (data) => { if (active) setState({ status: 'ready', country, data }) },
-      (error: unknown) => {
-        if (active) setState({ status: 'error', country, message: error instanceof Error ? error.message : 'The data could not be loaded.' })
-      },
-    )
-    // A previous country's response must never replace the current selection.
-    return () => { active = false }
-  }, [country, attempt])
-
-  const current = state.country === country ? state : { status: 'loading' as const }
+  const requests = { DEU: useCountryData('DEU'), FRA: useCountryData('FRA'), ESP: useCountryData('ESP') }
+  const { state: current, retry } = requests[country]
   const data = current.status === 'ready' ? current.data : null
   const analysis = data ? analyzeObservations(data.observations, country, endYear) : null
   const complete = analysis?.statistics.n ?? 0
@@ -83,7 +66,7 @@ export default function App() {
 
           {current.status === 'error' && <div className="error-box" role="alert">
             <h3>We couldn’t load these observations.</h3><p>{current.message}</p>
-            <button onClick={() => { setState({ status: 'loading', country }); setAttempt((value) => value + 1) }}>Retry World Bank request</button>
+            <button onClick={retry}>Retry World Bank request</button>
           </div>}
 
           {analysis && <>
@@ -113,10 +96,12 @@ export default function App() {
           </>}
         </section>
 
+        <CountryComparison requests={requests} selectedCountry={country} endYear={endYear} />
+
         <section className="context" aria-label="Data source and reading notes">
           <div>
             <p className="eyebrow">01 / DATA SOURCE</p><h2>Public data. Traceable sources.</h2>
-            <p>Source: World Bank Indicators API. Each country uses the same two indicator definitions.</p>
+            <p>Source: World Bank Indicators API. Each country uses the same two indicator definitions. The source dates below refer to {COUNTRIES[country]}; comparison rows show their own source dates.</p>
             <ul className="sources">{Object.entries(INDICATORS).map(([key, indicator]) => {
               const source = data?.sources[key as keyof typeof INDICATORS]
               return <li key={key}>
