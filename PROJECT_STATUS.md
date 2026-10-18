@@ -32,7 +32,7 @@
 
 ## Nächster Schritt
 
-Mit ChatGPT und dem Nutzer [Folie 1](presentation/slide-plans/01-title.md) verstehen und prüfen, dann einzeln in Canva gestalten. Anschließend sequenziell weiterarbeiten. Der vollständige erste Inhaltsentwurf ist vorhanden, aber noch nicht menschlich freigegeben. AW-017/V-013 dokumentieren Vorbereitung und technische Checks. Keine Produkttests oder Live-Datenabrufe in diesem Dokumentationsschritt wiederholt; Änderungen uncommitted auf `slides/step-8-1-blueprints`, Basis `389564b`. Kein Canva-Projekt, keine PPTX/PDF erstellt.
+Mit ChatGPT und dem Nutzer [Folie 1](presentation/slide-plans/01-title.md) verstehen und prüfen, dann einzeln in Canva gestalten. Anschließend sequenziell weiterarbeiten. Der vollständige erste Inhaltsentwurf ist vorhanden, aber noch nicht menschlich freigegeben. AW-017/V-013 dokumentieren Vorbereitung und technische Checks. Keine Produkttests oder Live-Datenabrufe in diesem Dokumentationsschritt wiederholt; Änderungen uncommitted auf `slides/step-8-1-blueprints`, Basis `389564b`. Kein Canva-Projekt, keine PPTX/PDF erstellt.![alt text](image.png)
 
 ## Historischer Übergabestand vor Chat 5
 
