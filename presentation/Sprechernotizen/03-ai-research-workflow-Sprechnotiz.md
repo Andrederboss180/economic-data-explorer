@@ -1,6 +1,6 @@
 Deutsch:
 
-Was du selbst verstehen solltest
+Was ich verstehen sollte:
 
 Phase	Was haben wir konkret gemacht?
 Research	Mit ChatGPT Forschungsfragen entwickelt, eine ausgewählt und Literatur anhand von Originalquellen geprüft.
@@ -17,6 +17,3 @@ Wichtig ist: Die Prüfungen waren unterschiedlich. Bei der Literatur haben wir Q
 
 Deine Sprechernotiz – ca. 50 Sekunden
 Hier sehen Sie den Gesamtworkflow meines Projekts. Ich habe den Ablauf für die Präsentation auf fünf Phasen verdichtet. Zuerst kamen Forschungsfrage und Literatur. Danach habe ich die Arbeitsgrundlage aufgebaut, also Projektstruktur und Git. Anschließend wurden die Daten über die World Bank API abgerufen. Darauf aufbauend entstanden die statistische Analyse und die Website. Zum Schluss habe ich Fehler, Risiken und Grenzen reflektiert. Wichtig ist: Kontrolle fand nicht erst am Ende statt, sondern begleitete den gesamten Prozess – etwa durch Quellenprüfung, technische Tests, Dokumentation und Git-Checkpoints. Die nächsten Folien gehen diese Phasen nun nacheinander durch.
-
-
-Englisch

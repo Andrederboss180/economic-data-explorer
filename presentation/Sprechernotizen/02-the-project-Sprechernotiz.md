@@ -15,6 +15,3 @@ In der Literatur, beispielsweise bei Hindrayanto und Mitautoren, werden ähnlich
 Dieses kleine Forschungsprojekt bildet die Grundlage für den AI-gestützten Workflow, den ich im Folgenden vorstellen möchte.
 
 Meine Empfehlung: Die Folie genau so kompakt halten. Das wirtschaftliche Ergebnis ist nur ein Beispiel, nicht das Hauptthema des Vortrags.
-
-
-Englisch:

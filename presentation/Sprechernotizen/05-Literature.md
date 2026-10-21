@@ -14,14 +14,10 @@ Das ist genau das, was du mit deiner Folie demonstrierst.
 deutsche Sprechernotiz:
 
 "Bei meiner Literaturrecherche habe ich ChatGPT zunächst nach wissenschaftlichen Arbeiten gefragt, die zu meiner Forschungsfrage 
-Aus den Vorschlägen habe ich drei Papers ausgewählt und deren Original-PDFs be
+Aus den Vorschlägen habe ich drei Papers ausgewählt und deren Original-PDFs bereitgestellt. 
 Anschließend habe ich ChatGPT eine sogenannte Source Matrix erstellen lassen. Das ist eine Tabelle, in der Forschungsfragen, Daten, Methoden und Ergebnisse der verschiedenen Arbeiten miteinander verglichen werden.
 Ein wichtiger Punkt aus der Vorlesung war allerdings, dass man AI-generierte Aussagen nicht einfach übernehmen sollte.
 Deshalb haben wir die Aussagen AI-gestützt mit den Originalquellen abgeglichen. Die drei wichtigsten Ergebnisse habe ich zusätzlich selbst überprüft.
 Hier sieht man ein Beispiel: Links steht eine Aussage aus meiner Source Matrix und rechts die entsprechende Stelle im Originalpaper.
 Allerdings habe ich nicht alle Details selbst kontrolliert.
 Mein wichtigster Lernpunkt war deshalb: AI kann bei der Literaturrecherche viel Arbeit abnehmen, aber die wissenschaftliche Überprüfung bleibt wichtig."
-
-
-Englisch:
-
